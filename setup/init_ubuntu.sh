@@ -9,19 +9,16 @@ IFS=','
 [ ! -f $INPUT ] && { echo "$INPUT file not found"; exit 99; }
 while read type name category url
 do
-	if [ "$type" == "APT" ]
+	if [ "$type" == "apt" ] || [ "$type" == "snap" ]
 	then
-		echo "APT: $name"
+		echo "INSTALL: $name"
+		sudo $type install $name
 
-   	elif [ "$type" == "SNAP" ]
+	elif [ "$type" == "deb" ]
 	then
-		echo "SNAP: $name"
-
-	elif [ "$type" == "DEB" ]
-	then
-		echo "DEB: $name"	
+		echo "INSTALL: $name"	
 	
-	elif [ "$type" == "SH" ]
+	elif [ "$type" == "sh" ]
 	then
 		echo "SH: $name"
 	fi
