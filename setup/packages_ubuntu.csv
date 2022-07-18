@@ -1,15 +1,15 @@
 TYPE, Name, Category, URL
-APT, snapd, System,
-APT, git, Dev,
-APT, vim, Uitl,
-APT, tmux, Util,
-APT, zip, Util,
-APT, unzip, Util,
-SNAP, curl, Dev,
-SNAP, spotify, Music,
-SNAP, postman, Dev,
-SNAP, discord, Chat,
-SNAP, dbeaver-ce, DB,
-SNAP, flameshot, Util,
-DEB, google-chrome, Util, https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-SH, asdf, Dev, install_asdf.sh
+apt,snapd, System,
+apt,git, Dev,
+apt,vim, Uitl,
+apt,tmux, Util,
+apt,zip, Util,
+apt,unzip, Util,
+snap,curl, Dev,
+snap,spotify, Music,
+snap,postman, Dev,
+snap,discord, Chat,
+snap,dbeaver-ce, DB,
+snap,flameshot, Util,
+deb,google-chrome, Util, https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sh,asdf, Dev, install_asdf.sh
