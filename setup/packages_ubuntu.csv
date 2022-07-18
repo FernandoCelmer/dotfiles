@@ -1,2 +1,2 @@
-TYPE, Name, Description
-PAC, git, git
+TYPE, Name, Description, URL
+PAC, git, git, https://packages.ubuntu.com/jammy/git
