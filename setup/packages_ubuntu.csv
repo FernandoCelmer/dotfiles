@@ -1,7 +1,7 @@
 Type, Name, Category, URL
 apt,snapd, System,
 apt,git,Dev,
-apt,wget,System,
+apt,wget,Util,
 apt,tmux,Util,
 apt,zip,Util,
 apt,unzip,Util,
