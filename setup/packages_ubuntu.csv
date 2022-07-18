@@ -1,8 +1,8 @@
 TYPE, Name, Description, URL
 APT, git, fast scalable distributed revision control system, https://packages.ubuntu.com/jammy/git
-SNAP, curl, File Request
-SNAP, spotify, Music
-SNAP, postman, HTTP Request
-SNAP, discord, Chat
-SNAP, dbeaver-ce, DB
-SNAP, flameshot, Print
+SNAP, curl, File Request,,
+SNAP, spotify, Music,,
+SNAP, postman, HTTP Request,,
+SNAP, discord, Chat,,
+SNAP, dbeaver-ce, DB,,
+SNAP, flameshot, Print,,
