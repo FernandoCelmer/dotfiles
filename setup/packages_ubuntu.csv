@@ -1,6 +1,6 @@
 TYPE, Name, Category, URL
 APT, snapd, System,
-APT, git, Dev, https://packages.ubuntu.com/jammy/git
+APT, git, Dev,
 APT, vim, Uitl,
 SNAP, curl, Dev,
 SNAP, spotify, Music,
@@ -8,3 +8,4 @@ SNAP, postman, Dev,
 SNAP, discord, Chat,
 SNAP, dbeaver-ce, DB,
 SNAP, flameshot, Util,
+DEB, google-chrome, Util, https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
