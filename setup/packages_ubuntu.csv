@@ -14,4 +14,4 @@ snap,flameshot,Util,
 deb,google-chrome,Util,https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sh,asdf,Dev,install_asdf.sh
 sh,vim,Util,install_vim.sh
-sh.alias,System,install_alias.sh
+sh,alias,System,install_alias.sh
