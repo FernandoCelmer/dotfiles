@@ -23,7 +23,6 @@ if [ ! -f "/etc/vim/plugged" ]; then
 	sudo mkdir /etc/vim/plugged
 fi
 
-
 if [ ! -f "/etc/vim/vimplug-plugins" ]; then
 	echo "CREATE: vimplug-plugins"
 	sudo mkdir /etc/vim/vimplug-plugins
