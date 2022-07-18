@@ -12,7 +12,6 @@ do
 	if [ "$type" == "APT" ]
 	then
 		echo "APT: $name"
-		sudo apt install$name -y
 
    	elif [ "$type" == "SNAP" ]
 	then
