@@ -8,5 +8,7 @@ Plug 'scrooloose/nerdtree'
 
 Plug 'davidhalter/jedi-vim'
 
+Plug 'airblade/vim-gitgutter'
+
 call plug#end()
 
