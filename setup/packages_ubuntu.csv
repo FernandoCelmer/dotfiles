@@ -2,6 +2,7 @@ TYPE, Name, Category, URL
 APT, snapd, System,
 APT, git, Dev,
 APT, vim, Uitl,
+APT, tmux, Util,
 SNAP, curl, Dev,
 SNAP, spotify, Music,
 SNAP, postman, Dev,
