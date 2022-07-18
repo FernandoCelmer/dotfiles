@@ -1,4 +1,5 @@
 TYPE, Name, Category, URL
+APT, snapd, System,
 APT, git, Dev, https://packages.ubuntu.com/jammy/git
 APT, vim, Uitl,
 SNAP, curl, Dev,
