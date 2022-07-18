@@ -12,5 +12,5 @@ snap,discord, Chat,
 snap,dbeaver-ce, DB,
 snap,flameshot, Util,
 deb,google-chrome, Util, https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sh,asdf, Dev, install_asdf.sh
+sh,asdf, Dev, install_asdf.sh,
 sh,vim,Util, install_vim.sh,
