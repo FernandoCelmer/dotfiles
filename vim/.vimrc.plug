@@ -1,0 +1,12 @@
+call plug#begin('/etc/vim/plugged')
+
+"Quickrun.vim
+
+Plug 'thinca/vim-quickrun'
+
+Plug 'scrooloose/nerdtree'
+
+Plug 'davidhalter/jedi-vim'
+
+call plug#end()
+
