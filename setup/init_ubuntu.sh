@@ -1,5 +1,7 @@
 #!/bin/bash
 
+[ $(whoami) != "root" ] && echo "Please run as root" && exit 1
+
 INPUT=packages_ubuntu.csv
 OLDIFS=$IFS
 IFS=','
@@ -10,6 +12,7 @@ do
 	if [ "$type" == "APT" ]
 	then
 		echo "APT: $name"
+		sudo apt install$name -y
 
    	elif [ "$type" == "SNAP" ]
 	then
