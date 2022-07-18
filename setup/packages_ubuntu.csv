@@ -1,5 +1,6 @@
 TYPE, Name, Category, URL
 APT, git, Dev, https://packages.ubuntu.com/jammy/git
+APT, vim, Uitl,
 SNAP, curl, Dev,
 SNAP, spotify, Music,
 SNAP, postman, Dev,
