@@ -26,7 +26,7 @@ do
 
 	elif [ "$type" == "deb" ]
 	then
-		INSTALL: $name
+		echo "INSTALL: $name"
 		wget $url
 		sudo dpkg -i $file
 		sudo apt install -f
