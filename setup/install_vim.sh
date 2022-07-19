@@ -19,11 +19,15 @@ for file in ${array[@]}; do
 done
 
 if [ ! -f "/etc/vim/plugged" ]; then
+	echo "CHECK: plugged"
+else
 	echo "CREATE: plugged"
 	sudo mkdir /etc/vim/plugged
 fi
 
 if [ ! -f "/etc/vim/vimplug-plugins" ]; then
+	echo "CHECK: plugged"
+else
 	echo "CREATE: vimplug-plugins"
 	sudo mkdir /etc/vim/vimplug-plugins
 fi
