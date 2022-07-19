@@ -1,13 +1,13 @@
-Type, Name, Category, URL
-apt,snapd, System,
-apt,git,Dev,
-apt,wget,Util,
-apt,tmux,Util,
-apt,zip,Util,
-apt,unzip,Util,
-snap,curl,Util,
-snap,spotify,Music,
-snap,postman,Dev,
+Type, Name, Category, URL, File
+apt,snapd, System,null,
+apt,git,Dev,null,
+apt,wget,Util,null,
+apt,tmux,Util,null,
+apt,zip,Util,null,
+apt,unzip,Util,null
+snap,curl,Util,null
+snap,spotify,Music,null
+snap,postman,Dev,null
 snap,discord,Chat,
 snap,dbeaver-ce,DB,
 snap,flameshot,Util,
