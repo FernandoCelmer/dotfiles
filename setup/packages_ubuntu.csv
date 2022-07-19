@@ -11,7 +11,7 @@ snap,postman,Dev,null,null
 snap,discord,Chat,null,null
 snap,dbeaver-ce,DB,null,null
 snap,flameshot,Util,null,null
-deb,google-chrome,Util,https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb,null,null
+deb,google-chrome,Util,https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb,null
 sh,asdf,Dev,install_asdf.sh,null
 sh,vim,Util,install_vim.sh,null
 sh,alias,System,install_alias.sh,null
