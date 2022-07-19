@@ -26,13 +26,13 @@ create_alias() {
 	)
 	echo "" >> $FILE
 	for ali in ${!array[@]}; do
+		echo "CREATE: ${array[$ali]}"
 		echo "${array[$ali]}" >> $FILE
 	done
-
 }
 
 if [ -f "$FILE" ]; then
-	sudo rm -r ~/.bash_aliases
+	sudo rm -r $FILE
 	create_alias
 else 
 	create_alias
