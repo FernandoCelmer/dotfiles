@@ -1,6 +1,5 @@
 #!/bin/bash
 
-echo "INSTALL: vim"
 sudo apt install vim -y
 
 array=(
