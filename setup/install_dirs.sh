@@ -1,7 +1,5 @@
 #!/bin/bash
 
-DIR="/home/fernandocelmer"
-
 create_dirs() {
 	array=(
 		".ssh"
@@ -11,9 +9,9 @@ create_dirs() {
 		"Documents/Tests"
 		"Documents/Github"
 	)
-
+	
 	for ali in ${!array[@]}; do
-		FILE="$DIR/${array[$ali]}"
+		FILE="~/${array[$ali]}"
 
 		if [ -f "$FILE" ]; then
 			sudo mkdir $FILE
