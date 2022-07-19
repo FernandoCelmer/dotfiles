@@ -9,7 +9,12 @@ IFS=','
 [ ! -f $INPUT ] && { echo "$INPUT file not found"; exit 99; }
 while read type name category url
 do
-	if [ "$type" == "apt" ] || [ "$type" == "snap" ]
+	if [ "$type" == "apt" ]
+	then
+		echo "INSTALL: $name"
+		sudo $type install $name -y
+	
+	elif [ "$type" == "snap" ]
 	then
 		echo "INSTALL: $name"
 		sudo $type install $name
@@ -20,7 +25,9 @@ do
 	
 	elif [ "$type" == "sh" ]
 	then
-		echo "SH: $name"
+		echo "INSTALL: $name"
+		sudo chmod 777 $url
+		sudo ./$url
 	fi
 
 done < $INPUT
