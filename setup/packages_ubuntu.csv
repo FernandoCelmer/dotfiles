@@ -16,3 +16,4 @@ deb,google-chrome,Util,https://dl.google.com/linux/direct/google-chrome-stable_c
 sh,asdf,Dev,null,install_asdf.sh
 sh,vim,Util,null,install_vim.sh
 sh,alias,System,null,install_alias.sh
+sh,dirs,System,null,install_dirs.sh
