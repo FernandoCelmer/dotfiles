@@ -23,3 +23,8 @@ asdf plugin-add nodejs
 #asdf install nodejs 14.16.0
 #asdf install nodejs 16.14.2
 echo "=========="
+
+# PHP
+asdf plugin-add php
+#asdf install php 8.0.0
+echo "=========="
