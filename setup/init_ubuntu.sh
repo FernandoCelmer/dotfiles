@@ -6,6 +6,9 @@ INPUT=packages_ubuntu.csv
 OLDIFS=$IFS
 IFS=','
 
+sudo apt update -y
+sudo apt upgrade -y
+
 [ ! -f $INPUT ] && { echo "$INPUT file not found"; exit 99; }
 while read type name category url
 do
