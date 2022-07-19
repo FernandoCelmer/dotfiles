@@ -1,5 +1,5 @@
 Type, Name, Category, URL, File
-apt,snapd,System,null
+apt,snapd,System,null,null
 apt,git,Dev,null,null
 apt,wget,Util,null,null
 apt,tmux,Util,null,null
