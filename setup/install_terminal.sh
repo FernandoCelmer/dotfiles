@@ -10,5 +10,5 @@ for file in ${array[@]}; do
         sudo cp ../terminal/$file ~/.local/share/konsole/$file
 done
 
-echo "APPLY: Konsole"
+echo "APPLY: Terminal"
 konsoleprofile colors=Konsole
