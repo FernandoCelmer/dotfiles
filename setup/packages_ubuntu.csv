@@ -1,4 +1,4 @@
-Type, Name, Category, URL, File
+Type, Name, Category, URL
 apt,snapd,System,null
 apt,git,Dev,null
 apt,wget,Util,null
