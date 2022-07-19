@@ -1,16 +1,16 @@
-Type, Name, Category, URL
+Type, Name, Category, URL, File
 apt,snapd,System,null
-apt,git,Dev,null
-apt,wget,Util,null
-apt,tmux,Util,null
-apt,zip,Util,null
-apt,unzip,Util,null
-snap,curl,Util,null
-snap,spotify,Music,null
-snap,postman,Dev,null
-snap,discord,Chat,null
-snap,dbeaver-ce,DB,null
-snap,flameshot,Util,null
+apt,git,Dev,null,null
+apt,wget,Util,null,null
+apt,tmux,Util,null,null
+apt,zip,Util,null,null
+apt,unzip,Util,null,null
+snap,curl,Util,null,null
+snap,spotify,Music,null,null
+snap,postman,Dev,null,null
+snap,discord,Chat,null,null
+snap,dbeaver-ce,DB,null,null
+snap,flameshot,Util,null,null
 deb,google-chrome,Util,https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb,null,null
 sh,asdf,Dev,install_asdf.sh,null
 sh,vim,Util,install_vim.sh,null
