@@ -18,3 +18,4 @@ sh,vim,Util,null,install_vim.sh
 sh,alias,System,null,install_alias.sh
 sh,dirs,System,null,install_dirs.sh
 sh,terminal,System,null,install_terminal.sh
+sh,poetry,Dev,null,install_poetry.sh
