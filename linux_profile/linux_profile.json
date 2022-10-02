@@ -4,7 +4,7 @@
         "system": [
             {
                 "id": "E799B7124CDD4B8DB33506482ED8FCE9",
-                "type": "apt",
+                "type": "apt-get",
                 "name": "snapd",
                 "url": null,
                 "file": null
@@ -13,35 +13,35 @@
         "util": [
             {
                 "id": "DA80F36E96614808BF827CAE143BC983",
-                "type": "apt",
+                "type": "apt-get",
                 "name": "zip",
                 "url": null,
                 "file": null
             },
             {
                 "id": "44788ADA57274164A9BF4C4DEE552A06",
-                "type": "apt",
+                "type": "apt-get",
                 "name": "unzip",
                 "url": null,
                 "file": null
             },
             {
                 "id": "947514445C3F4582BFFA8E38A6E5B6B4",
-                "type": "apt",
+                "type": "apt-get",
                 "name": "curl",
                 "url": null,
                 "file": null
             },
             {
                 "id": "DB1CFD33A3A54CD2BDDBD172C2F38D3F",
-                "type": "apt",
+                "type": "apt-get",
                 "name": "wget",
                 "url": null,
                 "file": null
             },
             {
                 "id": "05853F3AB13C450382586162A69F30B8",
-                "type": "apt",
+                "type": "apt-get",
                 "name": "tmux",
                 "url": null,
                 "file": null
@@ -64,77 +64,77 @@
             },
             {
                 "id": "18F327C5A51B4FBFBFDE6E8B7DDADE22",
-                "type": "apt",
+                "type": "apt-get",
                 "name": "python3-virtualenv",
                 "url": null,
                 "file": null
             },
             {
                 "id": "0CAC3E0DBA7E44A99000D82CF05DF9FF",
-                "type": "apt",
+                "type": "apt-get",
                 "name": "build-essential",
                 "url": null,
                 "file": null
             },
             {
                 "id": "85AA8A24810A4A75B299F32E293A6EEF",
-                "type": "apt",
+                "type": "apt-get",
                 "name": "python-setuptools",
                 "url": null,
                 "file": null
             },
             {
                 "id": "9E1CCB766EEC4709A7CAC4F81B15420A",
-                "type": "apt",
+                "type": "apt-get",
                 "name": "python-pip",
                 "url": null,
                 "file": null
             },
             {
                 "id": "EEA00F028C0C484586D93EF0E1D4AB30",
-                "type": "apt",
+                "type": "apt-get",
                 "name": "libncursesw5-dev",
                 "url": null,
                 "file": null
             },
             {
                 "id": "A387432B2E9E444DBA5D6CFF0F72358C",
-                "type": "apt",
+                "type": "apt-get",
                 "name": "libgdbm-dev",
                 "url": null,
                 "file": null
             },
             {
                 "id": "D529B4BAD5904C53B7951B5F3F67B539",
-                "type": "apt",
+                "type": "apt-get",
                 "name": "libc6-dev",
                 "url": null,
                 "file": null
             },
             {
                 "id": "90AD4FE242694649945C9D334967468F",
-                "type": "apt",
+                "type": "apt-get",
                 "name": "zlib1g-dev",
                 "url": null,
                 "file": null
             },
             {
                 "id": "394162FED66C40C78E08C00A4FF5D5DA",
-                "type": "apt",
+                "type": "apt-get",
                 "name": "libsqlite3-dev",
                 "url": null,
                 "file": null
             },
             {
                 "id": "37DE13EB8D3F4CA7A52A4392443EE9C8",
-                "type": "apt",
+                "type": "apt-get",
                 "name": "tk-dev",
                 "url": null,
                 "file": null
             },
             {
                 "id": "1FEB99844BDD4F7189F00B030AFEEC4C",
-                "type": "apt",
+                "type": "apt-get",
                 "name": "openssl",
                 "url": null,
                 "file": null
@@ -148,7 +148,7 @@
             },
             {
                 "id": "0EB8B513FB4D4EF9950B35873536473F",
-                "type": "apt",
+                "type": "apt-get",
                 "name": "git",
                 "url": null,
                 "file": null
@@ -183,13 +183,7 @@
         ]
     },
     "alias": {
-        "default": [
-            {
-                "id": "46D942327FD14CA18AE6A9AE93D278CD",
-                "content": "echo '$HOME'",
-                "command": "home"
-            }
-        ],
+        "default": [],
         "dev": [
             {
                 "id": "6946575C14A546049278BBA65E58DEC2",
@@ -227,6 +221,33 @@
                 "id": "A6EFAF9E9BD1453B905544E73806058F",
                 "content": "virtualenv -p python3.9 venv",
                 "command": "venv39"
+            },
+            {
+                "id": "B07CE58DFD584E66B72E1C7247D0DEBA",
+                "content": "python ~/.scripts/ipython.py",
+                "command": "ipython"
+            },
+            {
+                "id": "6792FC9F888547AB90B409786CFED1DF",
+                "content": "source venv/bin/activate",
+                "command": "activate"
+            },
+            {
+                "id": "7FA1A01EFB83426DACBE1036AB8EC38C",
+                "content": "source venv/bin/activate",
+                "command": "act"
+            },
+            {
+                "id": "5884B816264B4ACBB652A42B375914DD",
+                "content": "deactivate",
+                "command": "dct"
+            }
+        ],
+        "django": [
+            {
+                "id": "22A99CDF304B4A6A97FF7354476190B7",
+                "content": "python manage.py runserver",
+                "command": "runserver"
             }
         ]
     }
