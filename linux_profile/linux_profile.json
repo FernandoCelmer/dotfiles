@@ -3,28 +3,14 @@
         "default": [],
         "system": [
             {
-                "id": "E799B7124CDD4B8DB33506482ED8FCE9",
-                "type": "apt-get",
+                "type": "apt",
                 "name": "snapd",
                 "url": null,
-                "file": null
+                "file": null,
+                "id": "E799B7124CDD4B8DB33506482ED8FCE9"
             }
         ],
         "util": [
-            {
-                "id": "DA80F36E96614808BF827CAE143BC983",
-                "type": "apt-get",
-                "name": "zip",
-                "url": null,
-                "file": null
-            },
-            {
-                "id": "44788ADA57274164A9BF4C4DEE552A06",
-                "type": "apt-get",
-                "name": "unzip",
-                "url": null,
-                "file": null
-            },
             {
                 "id": "947514445C3F4582BFFA8E38A6E5B6B4",
                 "type": "apt-get",
@@ -52,6 +38,20 @@
                 "name": "flameshot",
                 "url": null,
                 "file": null
+            },
+            {
+                "type": "apt",
+                "name": "unzip",
+                "url": null,
+                "file": null,
+                "id": "44788ADA57274164A9BF4C4DEE552A06"
+            },
+            {
+                "type": "apt",
+                "name": "zip",
+                "url": null,
+                "file": null,
+                "id": "DA80F36E96614808BF827CAE143BC983"
             }
         ],
         "dev": [
@@ -181,6 +181,38 @@
                 "url": null,
                 "file": null,
                 "id": "1FEB99844BDD4F7189F00B030AFEEC4C"
+            }
+        ],
+        "debian": [
+            {
+                "type": "deb",
+                "name": "google-chrome",
+                "url": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb",
+                "file": "google-chrome-stable_current_amd64.deb",
+                "id": "03FFEE31779E4D26A6054BC4D34528C6"
+            }
+        ],
+        "scripts": [
+            {
+                "type": "sh",
+                "name": "install_asdf",
+                "url": null,
+                "file": "install_asdf.sh",
+                "id": "05182AC598F0421C987DFF078D148E73"
+            },
+            {
+                "type": "sh",
+                "name": "install_vim",
+                "url": null,
+                "file": "install_vim.sh",
+                "id": "A529A8D593F044468A1F930E195A8358"
+            },
+            {
+                "type": "sh",
+                "name": "install_poetry",
+                "url": null,
+                "file": "install_poetry.sh",
+                "id": "DF11312E429145E3936016FE43F919DB"
             }
         ]
     },
