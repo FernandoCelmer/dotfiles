@@ -5,7 +5,7 @@
                 "id": "E799B7124CDD4B8DB33506482ED8FCE9",
                 "is_valid": true,
                 "category": "system",
-                "manager": "apt",
+                "type": "apt",
                 "name": "snapd",
                 "url": null,
                 "file": null
@@ -16,7 +16,7 @@
                 "id": "44788ADA57274164A9BF4C4DEE552A06",
                 "is_valid": true,
                 "category": "util",
-                "manager": "apt",
+                "type": "apt",
                 "name": "unzip",
                 "url": null,
                 "file": null
@@ -25,7 +25,7 @@
                 "id": "DA80F36E96614808BF827CAE143BC983",
                 "is_valid": true,
                 "category": "util",
-                "manager": "apt-get",
+                "type": "apt-get",
                 "name": "zip",
                 "url": null,
                 "file": null
@@ -34,7 +34,7 @@
                 "id": "947514445C3F4582BFFA8E38A6E5B6B4",
                 "is_valid": true,
                 "category": "util",
-                "manager": "apt-get",
+                "type": "apt-get",
                 "name": "curl",
                 "url": null,
                 "file": null
@@ -43,7 +43,7 @@
                 "id": "DB1CFD33A3A54CD2BDDBD172C2F38D3F",
                 "is_valid": true,
                 "category": "util",
-                "manager": "apt-get",
+                "type": "apt-get",
                 "name": "wget",
                 "url": null,
                 "file": null
@@ -52,7 +52,7 @@
                 "id": "05853F3AB13C450382586162A69F30B8",
                 "is_valid": true,
                 "category": "util",
-                "manager": "apt-get",
+                "type": "apt-get",
                 "name": "tmux",
                 "url": null,
                 "file": null
@@ -61,7 +61,7 @@
                 "id": "4F5C84B19A3E4FCDAE37BDDF48D606B4",
                 "is_valid": true,
                 "category": "util",
-                "manager": "snap",
+                "type": "snap",
                 "name": "flameshot",
                 "url": null,
                 "file": null
@@ -72,7 +72,7 @@
                 "id": "7298E7711B5D48DE88F9E9DC02E2B458",
                 "is_valid": true,
                 "category": "dev",
-                "manager": "snap",
+                "type": "snap",
                 "name": "postman",
                 "url": null,
                 "file": null
@@ -81,7 +81,7 @@
                 "id": "BB9C3497D4134FFFAB81A8CF547AC117",
                 "is_valid": true,
                 "category": "dev",
-                "manager": "snap",
+                "type": "snap",
                 "name": "docker",
                 "url": null,
                 "file": null
@@ -90,7 +90,7 @@
                 "id": "0EB8B513FB4D4EF9950B35873536473F",
                 "is_valid": true,
                 "category": "dev",
-                "manager": "apt-get",
+                "type": "apt-get",
                 "name": "git",
                 "url": null,
                 "file": null
@@ -101,7 +101,7 @@
                 "id": "D60B10B107C2415C8E0F91CC8C2DB5C1",
                 "is_valid": true,
                 "category": "music",
-                "manager": "snap",
+                "type": "snap",
                 "name": "spotify",
                 "url": null,
                 "file": null
@@ -112,7 +112,7 @@
                 "id": "0BD32ECDB98444C3A8E5CB09891BB584",
                 "is_valid": true,
                 "category": "social",
-                "manager": "snap",
+                "type": "snap",
                 "name": "discord",
                 "url": null,
                 "file": null
@@ -123,7 +123,7 @@
                 "id": "D83A8DC95A75476C90B26EB7CA050272",
                 "is_valid": true,
                 "category": "database",
-                "manager": "snap",
+                "type": "snap",
                 "name": "dbeaver-ce",
                 "url": null,
                 "file": null
@@ -134,7 +134,7 @@
                 "id": "18F327C5A51B4FBFBFDE6E8B7DDADE22",
                 "is_valid": true,
                 "category": "python",
-                "manager": "apt-get",
+                "type": "apt-get",
                 "name": "python3-virtualenv",
                 "url": null,
                 "file": null
@@ -143,7 +143,7 @@
                 "id": "168BDE25B78B46A387C9EEFAC2CF4217",
                 "is_valid": true,
                 "category": "python",
-                "manager": "apt-get",
+                "type": "apt-get",
                 "name": "build-essential",
                 "url": null,
                 "file": null
@@ -152,7 +152,7 @@
                 "id": "1FEB99844BDD4F7189F00B030AFEEC4C",
                 "is_valid": true,
                 "category": "python",
-                "manager": "apt-get",
+                "type": "apt-get",
                 "name": "openssl",
                 "url": null,
                 "file": null
@@ -161,7 +161,7 @@
                 "id": "37DE13EB8D3F4CA7A52A4392443EE9C8",
                 "is_valid": true,
                 "category": "python",
-                "manager": "apt-get",
+                "type": "apt-get",
                 "name": "tk-dev",
                 "url": null,
                 "file": null
@@ -170,7 +170,7 @@
                 "id": "394162FED66C40C78E08C00A4FF5D5DA",
                 "is_valid": true,
                 "category": "python",
-                "manager": "apt-get",
+                "type": "apt-get",
                 "name": "libsqlite3-dev",
                 "url": null,
                 "file": null
@@ -179,7 +179,7 @@
                 "id": "90AD4FE242694649945C9D334967468F",
                 "is_valid": true,
                 "category": "python",
-                "manager": "apt-get",
+                "type": "apt-get",
                 "name": "zlib1g-dev",
                 "url": null,
                 "file": null
@@ -188,7 +188,7 @@
                 "id": "D529B4BAD5904C53B7951B5F3F67B539",
                 "is_valid": true,
                 "category": "python",
-                "manager": "apt-get",
+                "type": "apt-get",
                 "name": "libc6-dev",
                 "url": null,
                 "file": null
@@ -197,7 +197,7 @@
                 "id": "A387432B2E9E444DBA5D6CFF0F72358C",
                 "is_valid": true,
                 "category": "python",
-                "manager": "apt-get",
+                "type": "apt-get",
                 "name": "libgdbm-dev",
                 "url": null,
                 "file": null
@@ -206,7 +206,7 @@
                 "id": "EEA00F028C0C484586D93EF0E1D4AB30",
                 "is_valid": true,
                 "category": "python",
-                "manager": "apt-get",
+                "type": "apt-get",
                 "name": "libncursesw5-dev",
                 "url": null,
                 "file": null
@@ -215,7 +215,7 @@
                 "id": "9E1CCB766EEC4709A7CAC4F81B15420A",
                 "is_valid": true,
                 "category": "python",
-                "manager": "apt-get",
+                "type": "apt-get",
                 "name": "python-pip",
                 "url": null,
                 "file": null
@@ -224,7 +224,7 @@
                 "id": "85AA8A24810A4A75B299F32E293A6EEF",
                 "is_valid": true,
                 "category": "python",
-                "manager": "apt-get",
+                "type": "apt-get",
                 "name": "python-setuptools",
                 "url": null,
                 "file": null
@@ -233,7 +233,7 @@
                 "id": "0CAC3E0DBA7E44A99000D82CF05DF9FF",
                 "is_valid": true,
                 "category": "python",
-                "manager": "apt-get",
+                "type": "apt-get",
                 "name": "build-essential",
                 "url": null,
                 "file": null
@@ -242,7 +242,7 @@
                 "id": "7F7934AEA6094A56ACFFCDE44113FAAF",
                 "is_valid": true,
                 "category": "python",
-                "manager": "apt",
+                "type": "apt",
                 "name": "pep8",
                 "url": null,
                 "file": null
@@ -253,7 +253,7 @@
                 "id": "03FFEE31779E4D26A6054BC4D34528C6",
                 "is_valid": true,
                 "category": "debian",
-                "manager": "deb",
+                "type": "deb",
                 "name": "google-chrome",
                 "url": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb",
                 "file": "google-chrome-stable_current_amd64.deb"
@@ -264,7 +264,7 @@
                 "id": "05182AC598F0421C987DFF078D148E73",
                 "is_valid": true,
                 "category": "scripts",
-                "manager": "sh",
+                "type": "sh",
                 "name": "install_asdf",
                 "url": "https://raw.githubusercontent.com/FernandoCelmer/my-linux/master/setup/install_asdf.sh",
                 "file": "install_asdf.sh"
@@ -273,7 +273,7 @@
                 "id": "A529A8D593F044468A1F930E195A8358",
                 "is_valid": true,
                 "category": "scripts",
-                "manager": "sh",
+                "type": "sh",
                 "name": "install_vim",
                 "url": null,
                 "file": "install_vim.sh"
@@ -282,7 +282,7 @@
                 "id": "DF11312E429145E3936016FE43F919DB",
                 "is_valid": true,
                 "category": "scripts",
-                "manager": "sh",
+                "type": "sh",
                 "name": "install_poetry",
                 "url": null,
                 "file": "install_poetry.sh"
