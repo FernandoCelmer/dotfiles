@@ -1,77 +1,96 @@
 {
     "package": {
-        "default": [],
         "system": [
             {
-                "type": "apt",
+                "id": "E799B7124CDD4B8DB33506482ED8FCE9",
+                "is_valid": true,
+                "category": "system",
+                "manager": "apt",
                 "name": "snapd",
                 "url": null,
-                "file": null,
-                "id": "E799B7124CDD4B8DB33506482ED8FCE9"
+                "file": null
             }
         ],
         "util": [
             {
+                "id": "44788ADA57274164A9BF4C4DEE552A06",
+                "is_valid": true,
+                "category": "util",
+                "manager": "apt",
+                "name": "unzip",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "DA80F36E96614808BF827CAE143BC983",
+                "is_valid": true,
+                "category": "util",
+                "manager": "apt-get",
+                "name": "zip",
+                "url": null,
+                "file": null
+            },
+            {
                 "id": "947514445C3F4582BFFA8E38A6E5B6B4",
-                "type": "apt-get",
+                "is_valid": true,
+                "category": "util",
+                "manager": "apt-get",
                 "name": "curl",
                 "url": null,
                 "file": null
             },
             {
                 "id": "DB1CFD33A3A54CD2BDDBD172C2F38D3F",
-                "type": "apt-get",
+                "is_valid": true,
+                "category": "util",
+                "manager": "apt-get",
                 "name": "wget",
                 "url": null,
                 "file": null
             },
             {
                 "id": "05853F3AB13C450382586162A69F30B8",
-                "type": "apt-get",
+                "is_valid": true,
+                "category": "util",
+                "manager": "apt-get",
                 "name": "tmux",
                 "url": null,
                 "file": null
             },
             {
                 "id": "4F5C84B19A3E4FCDAE37BDDF48D606B4",
-                "type": "snap",
+                "is_valid": true,
+                "category": "util",
+                "manager": "snap",
                 "name": "flameshot",
                 "url": null,
                 "file": null
-            },
-            {
-                "type": "apt",
-                "name": "unzip",
-                "url": null,
-                "file": null,
-                "id": "44788ADA57274164A9BF4C4DEE552A06"
-            },
-            {
-                "type": "apt",
-                "name": "zip",
-                "url": null,
-                "file": null,
-                "id": "DA80F36E96614808BF827CAE143BC983"
             }
         ],
         "dev": [
             {
                 "id": "7298E7711B5D48DE88F9E9DC02E2B458",
-                "type": "snap",
+                "is_valid": true,
+                "category": "dev",
+                "manager": "snap",
                 "name": "postman",
                 "url": null,
                 "file": null
             },
             {
                 "id": "BB9C3497D4134FFFAB81A8CF547AC117",
-                "type": "snap",
+                "is_valid": true,
+                "category": "dev",
+                "manager": "snap",
                 "name": "docker",
                 "url": null,
                 "file": null
             },
             {
                 "id": "0EB8B513FB4D4EF9950B35873536473F",
-                "type": "apt-get",
+                "is_valid": true,
+                "category": "dev",
+                "manager": "apt-get",
                 "name": "git",
                 "url": null,
                 "file": null
@@ -80,7 +99,9 @@
         "music": [
             {
                 "id": "D60B10B107C2415C8E0F91CC8C2DB5C1",
-                "type": "snap",
+                "is_valid": true,
+                "category": "music",
+                "manager": "snap",
                 "name": "spotify",
                 "url": null,
                 "file": null
@@ -89,7 +110,9 @@
         "social": [
             {
                 "id": "0BD32ECDB98444C3A8E5CB09891BB584",
-                "type": "snap",
+                "is_valid": true,
+                "category": "social",
+                "manager": "snap",
                 "name": "discord",
                 "url": null,
                 "file": null
@@ -98,7 +121,9 @@
         "database": [
             {
                 "id": "D83A8DC95A75476C90B26EB7CA050272",
-                "type": "snap",
+                "is_valid": true,
+                "category": "database",
+                "manager": "snap",
                 "name": "dbeaver-ce",
                 "url": null,
                 "file": null
@@ -106,182 +131,260 @@
         ],
         "python": [
             {
-                "type": "apt-get",
+                "id": "18F327C5A51B4FBFBFDE6E8B7DDADE22",
+                "is_valid": true,
+                "category": "python",
+                "manager": "apt-get",
                 "name": "python3-virtualenv",
                 "url": null,
-                "file": null,
-                "id": "18F327C5A51B4FBFBFDE6E8B7DDADE22"
+                "file": null
             },
             {
-                "type": "apt-get",
+                "id": "168BDE25B78B46A387C9EEFAC2CF4217",
+                "is_valid": true,
+                "category": "python",
+                "manager": "apt-get",
                 "name": "build-essential",
                 "url": null,
-                "file": null,
-                "id": "0CAC3E0DBA7E44A99000D82CF05DF9FF"
+                "file": null
             },
             {
-                "type": "apt-get",
-                "name": "python-setuptools",
-                "url": null,
-                "file": null,
-                "id": "85AA8A24810A4A75B299F32E293A6EEF"
-            },
-            {
-                "type": "apt-get",
-                "name": "python-pip",
-                "url": null,
-                "file": null,
-                "id": "9E1CCB766EEC4709A7CAC4F81B15420A"
-            },
-            {
-                "type": "apt-get",
-                "name": "libncursesw5-dev",
-                "url": null,
-                "file": null,
-                "id": "EEA00F028C0C484586D93EF0E1D4AB30"
-            },
-            {
-                "type": "apt-get",
-                "name": "libgdbm-dev",
-                "url": null,
-                "file": null,
-                "id": "A387432B2E9E444DBA5D6CFF0F72358C"
-            },
-            {
-                "type": "apt-get",
-                "name": "libc6-dev",
-                "url": null,
-                "file": null,
-                "id": "D529B4BAD5904C53B7951B5F3F67B539"
-            },
-            {
-                "type": "apt-get",
-                "name": "zlib1g-dev",
-                "url": null,
-                "file": null,
-                "id": "90AD4FE242694649945C9D334967468F"
-            },
-            {
-                "type": "apt-get",
-                "name": "libsqlite3-dev",
-                "url": null,
-                "file": null,
-                "id": "394162FED66C40C78E08C00A4FF5D5DA"
-            },
-            {
-                "type": "apt-get",
-                "name": "tk-dev",
-                "url": null,
-                "file": null,
-                "id": "37DE13EB8D3F4CA7A52A4392443EE9C8"
-            },
-            {
-                "type": "apt-get",
+                "id": "1FEB99844BDD4F7189F00B030AFEEC4C",
+                "is_valid": true,
+                "category": "python",
+                "manager": "apt-get",
                 "name": "openssl",
                 "url": null,
-                "file": null,
-                "id": "1FEB99844BDD4F7189F00B030AFEEC4C"
+                "file": null
+            },
+            {
+                "id": "37DE13EB8D3F4CA7A52A4392443EE9C8",
+                "is_valid": true,
+                "category": "python",
+                "manager": "apt-get",
+                "name": "tk-dev",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "394162FED66C40C78E08C00A4FF5D5DA",
+                "is_valid": true,
+                "category": "python",
+                "manager": "apt-get",
+                "name": "libsqlite3-dev",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "90AD4FE242694649945C9D334967468F",
+                "is_valid": true,
+                "category": "python",
+                "manager": "apt-get",
+                "name": "zlib1g-dev",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "D529B4BAD5904C53B7951B5F3F67B539",
+                "is_valid": true,
+                "category": "python",
+                "manager": "apt-get",
+                "name": "libc6-dev",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "A387432B2E9E444DBA5D6CFF0F72358C",
+                "is_valid": true,
+                "category": "python",
+                "manager": "apt-get",
+                "name": "libgdbm-dev",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "EEA00F028C0C484586D93EF0E1D4AB30",
+                "is_valid": true,
+                "category": "python",
+                "manager": "apt-get",
+                "name": "libncursesw5-dev",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "9E1CCB766EEC4709A7CAC4F81B15420A",
+                "is_valid": true,
+                "category": "python",
+                "manager": "apt-get",
+                "name": "python-pip",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "85AA8A24810A4A75B299F32E293A6EEF",
+                "is_valid": true,
+                "category": "python",
+                "manager": "apt-get",
+                "name": "python-setuptools",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "0CAC3E0DBA7E44A99000D82CF05DF9FF",
+                "is_valid": true,
+                "category": "python",
+                "manager": "apt-get",
+                "name": "build-essential",
+                "url": null,
+                "file": null
             }
         ],
         "debian": [
             {
-                "type": "deb",
+                "id": "03FFEE31779E4D26A6054BC4D34528C6",
+                "is_valid": true,
+                "category": "debian",
+                "manager": "deb",
                 "name": "google-chrome",
                 "url": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb",
-                "file": "google-chrome-stable_current_amd64.deb",
-                "id": "03FFEE31779E4D26A6054BC4D34528C6"
+                "file": "google-chrome-stable_current_amd64.deb"
             }
         ],
         "scripts": [
             {
-                "type": "sh",
+                "id": "05182AC598F0421C987DFF078D148E73",
+                "is_valid": true,
+                "category": "scripts",
+                "manager": "sh",
                 "name": "install_asdf",
-                "url": null,
-                "file": "install_asdf.sh",
-                "id": "05182AC598F0421C987DFF078D148E73"
+                "url": "https://raw.githubusercontent.com/FernandoCelmer/my-linux/master/setup/install_asdf.sh",
+                "file": "install_asdf.sh"
             },
             {
-                "type": "sh",
+                "id": "A529A8D593F044468A1F930E195A8358",
+                "is_valid": true,
+                "category": "scripts",
+                "manager": "sh",
                 "name": "install_vim",
                 "url": null,
-                "file": "install_vim.sh",
-                "id": "A529A8D593F044468A1F930E195A8358"
+                "file": "install_vim.sh"
             },
             {
-                "type": "sh",
+                "id": "DF11312E429145E3936016FE43F919DB",
+                "is_valid": true,
+                "category": "scripts",
+                "manager": "sh",
                 "name": "install_poetry",
                 "url": null,
-                "file": "install_poetry.sh",
-                "id": "DF11312E429145E3936016FE43F919DB"
+                "file": "install_poetry.sh"
             }
         ]
     },
     "alias": {
-        "default": [],
-        "dev": [
-            {
-                "id": "6946575C14A546049278BBA65E58DEC2",
-                "content": "git config --global user.email email@fernandocelmer.com",
-                "command": "gitsetemail"
-            },
-            {
-                "id": "8FF4F09F487C45A9BBCAB723A0921EB2",
-                "content": "git config --global user.name FernandoCelmer",
-                "command": "gitsetname"
-            },
-            {
-                "id": "BD3F63052FE0492B89D55E2B63F130EE",
-                "content": "git config --global user.name",
-                "command": "gitname"
-            },
-            {
-                "id": "A69DCB1C5F5D4558A6F73DBAAD7039B2",
-                "content": "git config --global user.email",
-                "command": "gitemail"
-            }
-        ],
         "python": [
             {
-                "id": "070C62C980BF4FDC9CA3902F0CE1A44C",
-                "content": "virtualenv -p python2.7 venv",
-                "command": "venv27"
-            },
-            {
-                "id": "E88DFE88EF9C40B5838DE25E48573E77",
-                "content": "virtualenv -p python3.6 venv",
-                "command": "venv36"
-            },
-            {
-                "id": "A6EFAF9E9BD1453B905544E73806058F",
-                "content": "virtualenv -p python3.9 venv",
-                "command": "venv39"
-            },
-            {
-                "id": "B07CE58DFD584E66B72E1C7247D0DEBA",
-                "content": "python ~/.scripts/ipython.py",
-                "command": "ipython"
+                "id": "5884B816264B4ACBB652A42B375914DD",
+                "is_valid": true,
+                "category": "python",
+                "command": "dct",
+                "content": "deactivate",
+                "type": "exec"
             },
             {
                 "id": "6792FC9F888547AB90B409786CFED1DF",
+                "is_valid": true,
+                "category": "python",
+                "command": "activate",
                 "content": "source venv/bin/activate",
-                "command": "activate"
+                "type": "exec"
             },
             {
                 "id": "7FA1A01EFB83426DACBE1036AB8EC38C",
+                "is_valid": true,
+                "category": "python",
+                "command": "act",
                 "content": "source venv/bin/activate",
-                "command": "act"
+                "type": "exec"
             },
             {
-                "id": "5884B816264B4ACBB652A42B375914DD",
-                "content": "deactivate",
-                "command": "dct"
+                "id": "A6EFAF9E9BD1453B905544E73806058F",
+                "is_valid": true,
+                "category": "python",
+                "command": "venv39",
+                "content": "virtualenv -p python3.9 venv",
+                "type": "exec"
+            },
+            {
+                "id": "E88DFE88EF9C40B5838DE25E48573E77",
+                "is_valid": true,
+                "category": "python",
+                "command": "venv36",
+                "content": "virtualenv -p python3.6 venv",
+                "type": "exec"
+            },
+            {
+                "id": "070C62C980BF4FDC9CA3902F0CE1A44C",
+                "is_valid": true,
+                "category": "python",
+                "command": "venv27",
+                "content": "virtualenv -p python2.7 venv",
+                "type": "exec"
             }
         ],
         "django": [
             {
                 "id": "22A99CDF304B4A6A97FF7354476190B7",
+                "is_valid": true,
+                "category": "django",
+                "command": "runserver",
                 "content": "python manage.py runserver",
-                "command": "runserver"
+                "type": "exec"
+            }
+        ],
+        "scripts": [
+            {
+                "id": "B07CE58DFD584E66B72E1C7247D0DEBA",
+                "is_valid": true,
+                "category": "scripts",
+                "command": "ipython",
+                "content": "python ~/.scripts/ipython.py",
+                "type": "exec"
+            }
+        ],
+        "git": [
+            {
+                "id": "6946575C14A546049278BBA65E58DEC2",
+                "is_valid": true,
+                "category": "git",
+                "command": "gitsetemail",
+                "content": "git config --global user.email email@fernandocelmer.com",
+                "type": "exec"
+            },
+            {
+                "id": "8FF4F09F487C45A9BBCAB723A0921EB2",
+                "is_valid": true,
+                "category": "git",
+                "command": "gitsetname",
+                "content": "git config --global user.name FernandoCelmer",
+                "type": "exec"
+            },
+            {
+                "id": "BD3F63052FE0492B89D55E2B63F130EE",
+                "is_valid": true,
+                "category": "git",
+                "command": "gitname",
+                "content": "git config --global user.name",
+                "type": "exec"
+            }
+        ],
+        "gitemail": [
+            {
+                "id": "A69DCB1C5F5D4558A6F73DBAAD7039B2",
+                "is_valid": true,
+                "category": "gitemail",
+                "command": "gitemail",
+                "content": "git config --global user.email",
+                "type": "exec"
             }
         ]
     }
