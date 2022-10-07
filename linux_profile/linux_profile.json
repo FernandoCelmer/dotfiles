@@ -237,6 +237,15 @@
                 "name": "build-essential",
                 "url": null,
                 "file": null
+            },
+            {
+                "id": "7F7934AEA6094A56ACFFCDE44113FAAF",
+                "is_valid": true,
+                "category": "python",
+                "manager": "apt",
+                "name": "pep8",
+                "url": null,
+                "file": null
             }
         ],
         "debian": [
