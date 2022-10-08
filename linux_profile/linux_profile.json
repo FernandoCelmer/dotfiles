@@ -2,6 +2,33 @@
     "package": {
         "util": [
             {
+                "id": "4F5C84B19A3E4FCDAE37BDDF48D606B4",
+                "is_valid": true,
+                "category": "util",
+                "type": "snap",
+                "name": "flameshot",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "947514445C3F4582BFFA8E38A6E5B6B4",
+                "is_valid": true,
+                "category": "util",
+                "type": "apt",
+                "name": "curl",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "DB1CFD33A3A54CD2BDDBD172C2F38D3F",
+                "is_valid": true,
+                "category": "util",
+                "type": "apt",
+                "name": "wget",
+                "url": null,
+                "file": null
+            },
+            {
                 "id": "44788ADA57274164A9BF4C4DEE552A06",
                 "is_valid": true,
                 "category": "util",
@@ -14,44 +41,8 @@
                 "id": "DA80F36E96614808BF827CAE143BC983",
                 "is_valid": true,
                 "category": "util",
-                "type": "apt-get",
+                "type": "apt",
                 "name": "zip",
-                "url": null,
-                "file": null
-            },
-            {
-                "id": "947514445C3F4582BFFA8E38A6E5B6B4",
-                "is_valid": true,
-                "category": "util",
-                "type": "apt-get",
-                "name": "curl",
-                "url": null,
-                "file": null
-            },
-            {
-                "id": "DB1CFD33A3A54CD2BDDBD172C2F38D3F",
-                "is_valid": true,
-                "category": "util",
-                "type": "apt-get",
-                "name": "wget",
-                "url": null,
-                "file": null
-            },
-            {
-                "id": "05853F3AB13C450382586162A69F30B8",
-                "is_valid": true,
-                "category": "util",
-                "type": "apt-get",
-                "name": "tmux",
-                "url": null,
-                "file": null
-            },
-            {
-                "id": "4F5C84B19A3E4FCDAE37BDDF48D606B4",
-                "is_valid": true,
-                "category": "util",
-                "type": "snap",
-                "name": "flameshot",
                 "url": null,
                 "file": null
             }
@@ -284,6 +275,26 @@
                 "category": "system",
                 "type": "apt-get",
                 "name": "task-gnome-desktop",
+                "url": null,
+                "file": null
+            }
+        ],
+        "text": [
+            {
+                "id": "05EE79814C714A11964177860539426C",
+                "is_valid": true,
+                "category": "text",
+                "type": "apt",
+                "name": "vim",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "05853F3AB13C450382586162A69F30B8",
+                "is_valid": true,
+                "category": "text",
+                "type": "apt",
+                "name": "tmux",
                 "url": null,
                 "file": null
             }
