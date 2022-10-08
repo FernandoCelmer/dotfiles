@@ -1,16 +1,5 @@
 {
     "package": {
-        "system": [
-            {
-                "id": "E799B7124CDD4B8DB33506482ED8FCE9",
-                "is_valid": true,
-                "category": "system",
-                "type": "apt",
-                "name": "snapd",
-                "url": null,
-                "file": null
-            }
-        ],
         "util": [
             {
                 "id": "44788ADA57274164A9BF4C4DEE552A06",
@@ -287,6 +276,17 @@
                 "url": null,
                 "file": "install_poetry.sh"
             }
+        ],
+        "system": [
+            {
+                "id": "836635553688471DA26DF1B720F2BF17",
+                "is_valid": true,
+                "category": "system",
+                "type": "apt-get",
+                "name": "task-gnome-desktop",
+                "url": null,
+                "file": null
+            }
         ]
     },
     "alias": {
@@ -383,16 +383,6 @@
                 "category": "git",
                 "command": "gitname",
                 "content": "git config --global user.name",
-                "type": "exec"
-            }
-        ],
-        "gitemail": [
-            {
-                "id": "A69DCB1C5F5D4558A6F73DBAAD7039B2",
-                "is_valid": true,
-                "category": "gitemail",
-                "command": "gitemail",
-                "content": "git config --global user.email",
                 "type": "exec"
             }
         ]
