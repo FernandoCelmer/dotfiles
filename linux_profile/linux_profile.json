@@ -111,60 +111,6 @@
         ],
         "python": [
             {
-                "id": "18F327C5A51B4FBFBFDE6E8B7DDADE22",
-                "is_valid": true,
-                "category": "python",
-                "type": "apt-get",
-                "name": "python3-virtualenv",
-                "url": null,
-                "file": null
-            },
-            {
-                "id": "168BDE25B78B46A387C9EEFAC2CF4217",
-                "is_valid": true,
-                "category": "python",
-                "type": "apt-get",
-                "name": "build-essential",
-                "url": null,
-                "file": null
-            },
-            {
-                "id": "1FEB99844BDD4F7189F00B030AFEEC4C",
-                "is_valid": true,
-                "category": "python",
-                "type": "apt-get",
-                "name": "openssl",
-                "url": null,
-                "file": null
-            },
-            {
-                "id": "37DE13EB8D3F4CA7A52A4392443EE9C8",
-                "is_valid": true,
-                "category": "python",
-                "type": "apt-get",
-                "name": "tk-dev",
-                "url": null,
-                "file": null
-            },
-            {
-                "id": "394162FED66C40C78E08C00A4FF5D5DA",
-                "is_valid": true,
-                "category": "python",
-                "type": "apt-get",
-                "name": "libsqlite3-dev",
-                "url": null,
-                "file": null
-            },
-            {
-                "id": "90AD4FE242694649945C9D334967468F",
-                "is_valid": true,
-                "category": "python",
-                "type": "apt-get",
-                "name": "zlib1g-dev",
-                "url": null,
-                "file": null
-            },
-            {
                 "id": "D529B4BAD5904C53B7951B5F3F67B539",
                 "is_valid": true,
                 "category": "python",
@@ -224,6 +170,69 @@
                 "category": "python",
                 "type": "apt",
                 "name": "pep8",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "097E301A94EA4F2EA5882C8B83D60D3A",
+                "is_valid": true,
+                "category": "python",
+                "type": "apt",
+                "name": "python3-pip",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "18F327C5A51B4FBFBFDE6E8B7DDADE22",
+                "is_valid": true,
+                "category": "python",
+                "type": "apt",
+                "name": "python3-virtualenv",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "168BDE25B78B46A387C9EEFAC2CF4217",
+                "is_valid": true,
+                "category": "python",
+                "type": "apt",
+                "name": "build-essential",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "1FEB99844BDD4F7189F00B030AFEEC4C",
+                "is_valid": true,
+                "category": "python",
+                "type": "apt",
+                "name": "openssl",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "37DE13EB8D3F4CA7A52A4392443EE9C8",
+                "is_valid": true,
+                "category": "python",
+                "type": "apt",
+                "name": "tk-dev",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "394162FED66C40C78E08C00A4FF5D5DA",
+                "is_valid": true,
+                "category": "python",
+                "type": "apt",
+                "name": "libsqlite3-dev",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "90AD4FE242694649945C9D334967468F",
+                "is_valid": true,
+                "category": "python",
+                "type": "apt",
+                "name": "zlib1g-dev",
                 "url": null,
                 "file": null
             }
@@ -295,6 +304,17 @@
                 "category": "text",
                 "type": "apt",
                 "name": "tmux",
+                "url": null,
+                "file": null
+            }
+        ],
+        "pip": [
+            {
+                "id": "593E7B28B7B5474A80737A5BA1447FC9",
+                "is_valid": true,
+                "category": "pip",
+                "type": "pip",
+                "name": "IPython",
                 "url": null,
                 "file": null
             }
@@ -394,6 +414,14 @@
                 "category": "git",
                 "command": "gitname",
                 "content": "git config --global user.name",
+                "type": "exec"
+            },
+            {
+                "id": "65780977FA8443F38FCA18EBDE56A757",
+                "is_valid": true,
+                "category": "git",
+                "command": "gitemail",
+                "content": "git config --global user.email",
                 "type": "exec"
             }
         ]
