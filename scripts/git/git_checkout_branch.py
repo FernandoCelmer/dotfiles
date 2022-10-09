@@ -1,7 +1,7 @@
 import os
 
 print('Option: ')
-options = ['UPY-#', 'CS-', 'No Task', 'Sem Tarefa']
+options = ['⚙️ NO-TASK', '📝 PEP8', '📌 ISSUE', '🪲 BUG']
 
 for index, text_option in enumerate(options):
     print(str(index) + " - "+ options[index])
