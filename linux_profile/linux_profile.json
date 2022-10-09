@@ -361,6 +361,15 @@
                 "body": "python3 -c \"from IPython import embed; embed()\"",
                 "type": "exec"
             }
+        ],
+        "util": [
+            {
+                "id": "1F540CE01C9B43C48327D2200404AD58",
+                "tag": "util",
+                "command": "profile",
+                "body": "google-chrome ~/.config/linuxp/linux_profile.json",
+                "type": "exec"
+            }
         ]
     },
     "terminal": {
