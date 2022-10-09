@@ -309,7 +309,7 @@
                 "id": "B92201ED60D24D2FBE7C2A11D10A0AE9",
                 "category": "python",
                 "command": "ipython",
-                "body": "linuxp install --module script --category system --value ipython",
+                "body": "python3 -c 'from IPython import embed; embed()'",
                 "type": "exec"
             }
         ],
@@ -404,18 +404,6 @@
                     "git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2",
                     "echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc",
                     "echo '. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc"
-                ]
-            }
-        ],
-        "python": [
-            {
-                "id": "4960688A327C4226A9E1F41A08BC6CA0",
-                "category": "python",
-                "type": "python3",
-                "name": "ipython",
-                "shebang": null,
-                "body": [
-                    "from IPython import embed; embed()"
                 ]
             }
         ],
