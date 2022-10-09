@@ -258,16 +258,6 @@
                 "url": null,
                 "file": null
             }
-        ],
-        "script": [
-            {
-                "id": "18BC79CC32AB4DD0A444BAF9BA38CF68",
-                "tag": "script",
-                "type": "shell",
-                "name": "asdf",
-                "url": "https://raw.githubusercontent.com/FernandoCelmer/my-linux/master/setup/install_asdf.sh",
-                "file": "asdf.sh"
-            }
         ]
     },
     "alias": {
@@ -396,7 +386,7 @@
             {
                 "id": "6838D757DAD4491CB74E47454953B434",
                 "tag": "dev",
-                "type": "bash",
+                "type": "shell",
                 "name": "install_poetry",
                 "shebang": null,
                 "body": [
@@ -407,7 +397,7 @@
             {
                 "id": "DC7EC742C7BA4AD5AE0A393AB6398A8B",
                 "tag": "dev",
-                "type": "bash",
+                "type": "shell",
                 "name": "install_asdf",
                 "shebang": null,
                 "body": [
@@ -422,7 +412,7 @@
             {
                 "id": "1C6B2B554D53441FB8C98CC1C8979679",
                 "tag": "system",
-                "type": "bash",
+                "type": "shell",
                 "name": "clean_linux",
                 "shebang": null,
                 "body": [
