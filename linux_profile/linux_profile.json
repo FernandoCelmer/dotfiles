@@ -309,7 +309,7 @@
                 "id": "B92201ED60D24D2FBE7C2A11D10A0AE9",
                 "category": "python",
                 "command": "ipython",
-                "body": "linux_profile install --module script --category system --value ipython",
+                "body": "linuxp install --module script --category system --value ipython",
                 "type": "exec"
             }
         ],
@@ -357,7 +357,7 @@
                 "id": "A90C2DE6A14F4379844DB56E43EA6885",
                 "category": "system",
                 "command": "clean_linux",
-                "body": "linux_profile install --module script --category system --value clean_linux",
+                "body": "linuxp install --module script --category system --value clean_linux",
                 "type": "exec"
             }
         ]
