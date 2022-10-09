@@ -304,6 +304,13 @@
                 "command": "venv27",
                 "body": "virtualenv -p python2.7 venv",
                 "type": "exec"
+            },
+            {
+                "id": "B92201ED60D24D2FBE7C2A11D10A0AE9",
+                "category": "python",
+                "command": "ipython",
+                "body": "linux_profile install --module script --category system --value ipython",
+                "type": "exec"
             }
         ],
         "django": [
@@ -369,23 +376,21 @@
             {
                 "id": "6838D757DAD4491CB74E47454953B434",
                 "category": "dev",
-                "type": "sh",
+                "type": "bash",
                 "name": "install_poetry",
+                "shebang": null,
                 "body": [
-                    "#!/bin/bash",
-                    "",
                     "sudo apt install curl git",
-                    "curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -"
+                    "curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -"
                 ]
             },
             {
                 "id": "DC7EC742C7BA4AD5AE0A393AB6398A8B",
                 "category": "dev",
-                "type": "sh",
+                "type": "bash",
                 "name": "install_asdf",
+                "shebang": null,
                 "body": [
-                    "#!/bin/bash",
-                    "",
                     "sudo apt install curl git",
                     "git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2",
                     "echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc",
@@ -397,11 +402,34 @@
             {
                 "id": "4960688A327C4226A9E1F41A08BC6CA0",
                 "category": "python",
-                "type": "py",
+                "type": "python3",
                 "name": "ipython",
+                "shebang": null,
                 "body": [
-                    "python3",
                     "from IPython import embed; embed()"
+                ]
+            }
+        ],
+        "system": [
+            {
+                "id": "1C6B2B554D53441FB8C98CC1C8979679",
+                "category": "system",
+                "type": "bash",
+                "name": "clean_linux",
+                "shebang": null,
+                "body": [
+                    "sudo apt clean",
+                    "sudo apt autoclean",
+                    "sudo apt autoremove",
+                    "sudo apt-get autoremove",
+                    "sudo apt-get autoclean",
+                    "sudo apt-get clean",
+                    "journalctl --disk-usage",
+                    "sudo journalctl --vacuum-time=7d",
+                    "sudo du -sh /var/cache/apt",
+                    "sudo du -sh ~/.cache/thumbnails",
+                    "sudo rm -rf ~/.cache/thumbnails/*",
+                    "sudo du -h /var/cache/apt/archives"
                 ]
             }
         ]
