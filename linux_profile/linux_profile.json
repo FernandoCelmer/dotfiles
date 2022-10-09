@@ -351,6 +351,15 @@
                 "body": "git config --global user.email",
                 "type": "exec"
             }
+        ],
+        "system": [
+            {
+                "id": "A90C2DE6A14F4379844DB56E43EA6885",
+                "category": "system",
+                "command": "clean_linux",
+                "body": "linux_profile install --module script --category system --value clean_linux",
+                "type": "exec"
+            }
         ]
     },
     "terminal": {
