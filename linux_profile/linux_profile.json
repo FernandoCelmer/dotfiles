@@ -383,6 +383,13 @@
                 "command": "venv27",
                 "body": "virtualenv -p python2.7 venv",
                 "type": "exec"
+            },
+            {
+                "id": "6E19701F9D3246B6A3B2AE99692DE819",
+                "tag": "python",
+                "command": "ipython",
+                "body": "python -c 'from IPython import embed; embed()'",
+                "type": "exec"
             }
         ],
         "django": [
@@ -433,15 +440,7 @@
                 "type": "exec"
             }
         ],
-        "pyhton": [
-            {
-                "id": "6E19701F9D3246B6A3B2AE99692DE819",
-                "tag": "pyhton",
-                "command": "ipython",
-                "body": "python3 -c \"from IPython import embed; embed()\"",
-                "type": "exec"
-            }
-        ],
+        "pyhton": [],
         "util": [
             {
                 "id": "1F540CE01C9B43C48327D2200404AD58",
