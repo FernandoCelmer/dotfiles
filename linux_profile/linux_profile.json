@@ -124,14 +124,6 @@
                 "file": null
             },
             {
-                "id": "EEA00F028C0C484586D93EF0E1D4AB30",
-                "tag": "python",
-                "type": "apt-get",
-                "name": "libncursesw5-dev",
-                "url": null,
-                "file": null
-            },
-            {
                 "id": "9E1CCB766EEC4709A7CAC4F81B15420A",
                 "tag": "python",
                 "type": "apt-get",
@@ -144,14 +136,6 @@
                 "tag": "python",
                 "type": "apt-get",
                 "name": "python-setuptools",
-                "url": null,
-                "file": null
-            },
-            {
-                "id": "0CAC3E0DBA7E44A99000D82CF05DF9FF",
-                "tag": "python",
-                "type": "apt-get",
-                "name": "build-essential",
                 "url": null,
                 "file": null
             },
@@ -180,7 +164,15 @@
                 "file": null
             },
             {
-                "id": "168BDE25B78B46A387C9EEFAC2CF4217",
+                "id": "1FEB99844BDD4F7189F00B030AFEEC4C",
+                "tag": "python",
+                "type": "apt",
+                "name": "openssl",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "0CAC3E0DBA7E44A99000D82CF05DF9FF",
                 "tag": "python",
                 "type": "apt",
                 "name": "build-essential",
@@ -188,10 +180,34 @@
                 "file": null
             },
             {
-                "id": "1FEB99844BDD4F7189F00B030AFEEC4C",
+                "id": "62012024618347FB94062E04997A01A8",
                 "tag": "python",
                 "type": "apt",
-                "name": "openssl",
+                "name": "liblzma-dev",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "242780C216554B9CB785F3F4A0C5C92B",
+                "tag": "python",
+                "type": "apt",
+                "name": "libffi-dev",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "548DC0FB16924AC9BED4C112F0826E3B",
+                "tag": "python",
+                "type": "apt",
+                "name": "libxmlsec1-dev",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "5551144C6D404FA290D17D723AD5CCC2",
+                "tag": "python",
+                "type": "apt",
+                "name": "libxml2-dev",
                 "url": null,
                 "file": null
             },
@@ -204,6 +220,30 @@
                 "file": null
             },
             {
+                "id": "0686AE797E7E4D84B1FBB2815C13E468",
+                "tag": "python",
+                "type": "apt",
+                "name": "xz-utils",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "EEA00F028C0C484586D93EF0E1D4AB30",
+                "tag": "python",
+                "type": "apt",
+                "name": "libncursesw5-dev",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "F081A50ADB5645C0815983DD344EBA74",
+                "tag": "python",
+                "type": "apt",
+                "name": "llvm",
+                "url": null,
+                "file": null
+            },
+            {
                 "id": "394162FED66C40C78E08C00A4FF5D5DA",
                 "tag": "python",
                 "type": "apt",
@@ -212,10 +252,50 @@
                 "file": null
             },
             {
+                "id": "A59A7D6DDBA1430F8F55A2978CB25D6A",
+                "tag": "python",
+                "type": "apt",
+                "name": "libreadline-dev",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "CB86F930FAFB4F5F8268F717A0805330",
+                "tag": "python",
+                "type": "apt",
+                "name": "libbz2-dev",
+                "url": null,
+                "file": null
+            },
+            {
                 "id": "90AD4FE242694649945C9D334967468F",
                 "tag": "python",
                 "type": "apt",
                 "name": "zlib1g-dev",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "0B15EC6B7F5F46189A8CCC8EF82057CF",
+                "tag": "python",
+                "type": "apt",
+                "name": "libssl-dev",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "168BDE25B78B46A387C9EEFAC2CF4217",
+                "tag": "python",
+                "type": "apt",
+                "name": "build-essential",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "57EC8F93B7584816B5927A7AAD7DF48D",
+                "tag": "python",
+                "type": "apt",
+                "name": "make",
                 "url": null,
                 "file": null
             }
