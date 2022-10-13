@@ -337,6 +337,24 @@
                 "url": null,
                 "file": null
             }
+        ],
+        "mysql": [
+            {
+                "id": "F78BD93C70C4466E98EA0CF5751CFCC7",
+                "tag": "mysql",
+                "type": "apt",
+                "name": "libmysqlclient-dev",
+                "url": null,
+                "file": null
+            },
+            {
+                "id": "331E154568194BF6990D3BD862749909",
+                "tag": "mysql",
+                "type": "apt",
+                "name": "default-libmysqlclient-dev",
+                "url": null,
+                "file": null
+            }
         ]
     },
     "alias": {
@@ -384,10 +402,10 @@
                 "type": "exec"
             },
             {
-                "id": "6E19701F9D3246B6A3B2AE99692DE819",
+                "id": "A487A7CC0CBD403B89F5D426E67DD91E",
                 "tag": "python",
-                "command": "ipython",
-                "body": "python -c 'from IPython import embed; embed()'",
+                "command": "venv38",
+                "body": "virtualenv -p python3.8 venv",
                 "type": "exec"
             }
         ],
@@ -446,24 +464,6 @@
                 "command": "profile",
                 "body": "google-chrome ~/.config/linuxp/linux_profile.json",
                 "type": "exec"
-            }
-        ]
-    },
-    "terminal": {
-        "default": [
-            {
-                "name": "Konsole",
-                "colorscheme": {},
-                "profile": {
-                    "Appearance": {
-                        "ColorScheme": null
-                    },
-                    "General": {
-                        "Name": null,
-                        "Parent": null
-                    }
-                },
-                "id": "55FEAE14DD0D4F4BBA925456A90CDECA"
             }
         ]
     },
