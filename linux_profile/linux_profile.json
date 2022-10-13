@@ -436,15 +436,22 @@
             {
                 "id": "BD3F63052FE0492B89D55E2B63F130EE",
                 "tag": "git",
-                "command": "gitname",
+                "command": "git_name",
                 "body": "git config --global user.name",
                 "type": "exec"
             },
             {
                 "id": "65780977FA8443F38FCA18EBDE56A757",
                 "tag": "git",
-                "command": "gitemail",
+                "command": "git_email",
                 "body": "git config --global user.email",
+                "type": "exec"
+            },
+            {
+                "id": "026A4965E1DB4C38965CA5605B55A5B5",
+                "tag": "git",
+                "command": "git_setpass",
+                "body": "git config --global credential.helper store",
                 "type": "exec"
             }
         ],
@@ -464,6 +471,24 @@
                 "command": "profile",
                 "body": "google-chrome ~/.config/linuxp/linux_profile.json",
                 "type": "exec"
+            }
+        ]
+    },
+    "terminal": {
+        "default": [
+            {
+                "name": "Konsole",
+                "colorscheme": {},
+                "profile": {
+                    "Appearance": {
+                        "ColorScheme": null
+                    },
+                    "General": {
+                        "Name": null,
+                        "Parent": null
+                    }
+                },
+                "id": "55FEAE14DD0D4F4BBA925456A90CDECA"
             }
         ]
     },
