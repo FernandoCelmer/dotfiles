@@ -407,6 +407,13 @@
                 "command": "venv38",
                 "body": "virtualenv -p python3.8 venv",
                 "type": "exec"
+            },
+            {
+                "id": "DA8D3467697B42BB84CFF8DF8C983E51",
+                "tag": "python",
+                "command": "venv10",
+                "body": "virtualenv -p python3.10 venv",
+                "type": "exec"
             }
         ],
         "django": [
