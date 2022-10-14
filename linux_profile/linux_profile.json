@@ -421,7 +421,28 @@
                 "id": "22A99CDF304B4A6A97FF7354476190B7",
                 "tag": "django",
                 "command": "runserver",
-                "body": "python manage.py runserver",
+                "body": "python src/manage.py runserver",
+                "type": "exec"
+            },
+            {
+                "id": "5BC4593D035347ED9C3475B7DD8D924A",
+                "tag": "django",
+                "command": "makemigrations",
+                "body": "python src/manage.py makemigrations",
+                "type": "exec"
+            },
+            {
+                "id": "1F6C36D7C00045B59D49B70C20739A8D",
+                "tag": "django",
+                "command": "migrate",
+                "body": "python src/manage.py migrate",
+                "type": "exec"
+            },
+            {
+                "id": "CB7F18D2A9DB4E5F9DF7A7636D11A813",
+                "tag": "django",
+                "command": "sqlmigrate",
+                "body": "linuxp install --module script --tag django --item sqlmigrate",
                 "type": "exec"
             }
         ],
@@ -546,6 +567,22 @@
                     "sudo du -sh ~/.cache/thumbnails",
                     "sudo rm -rf ~/.cache/thumbnails/*",
                     "sudo du -h /var/cache/apt/archives"
+                ]
+            }
+        ],
+        "django": [
+            {
+                "id": "0A50759C27B34C279668219F84972F91",
+                "tag": "django",
+                "type": "python3",
+                "name": "sqlmigrate",
+                "shebang": null,
+                "body": [
+                    "from os import system",
+                    "",
+                    "module = input(\"Module: \")",
+                    "migration_name = input(\"Migration Name: \")",
+                    "system(f\"python src/manage.py sqlmigrate {module} {migration_name}\")"
                 ]
             }
         ]
