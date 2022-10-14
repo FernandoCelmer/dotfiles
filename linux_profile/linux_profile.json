@@ -502,24 +502,6 @@
             }
         ]
     },
-    "terminal": {
-        "default": [
-            {
-                "name": "Konsole",
-                "colorscheme": {},
-                "profile": {
-                    "Appearance": {
-                        "ColorScheme": null
-                    },
-                    "General": {
-                        "Name": null,
-                        "Parent": null
-                    }
-                },
-                "id": "55FEAE14DD0D4F4BBA925456A90CDECA"
-            }
-        ]
-    },
     "script": {
         "dev": [
             {
@@ -580,9 +562,9 @@
                 "body": [
                     "from os import system",
                     "",
-                    "module = input(\"Module: \")",
-                    "migration_name = input(\"Migration Name: \")",
-                    "system(f\"python src/manage.py sqlmigrate {module} {migration_name}\")"
+                    "module = input('Module: ')",
+                    "migration_name = input('Migration Name: ')",
+                    "system(f'python src/manage.py sqlmigrate {module} {migration_name}')"
                 ]
             }
         ]
