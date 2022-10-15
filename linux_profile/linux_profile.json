@@ -362,6 +362,7 @@
             {
                 "id": "5884B816264B4ACBB652A42B375914DD",
                 "tag": "python",
+                "name": "dct",
                 "description": "Disable Python virtual environment",
                 "command": "dct",
                 "body": "deactivate",
@@ -370,6 +371,7 @@
             {
                 "id": "6792FC9F888547AB90B409786CFED1DF",
                 "tag": "python",
+                "name": "activate",
                 "description": "Enable Python virtual environment",
                 "command": "activate",
                 "body": "source venv/bin/activate",
@@ -378,6 +380,7 @@
             {
                 "id": "7FA1A01EFB83426DACBE1036AB8EC38C",
                 "tag": "python",
+                "name": "act",
                 "description": "Enable Python virtual environment",
                 "command": "act",
                 "body": "source venv/bin/activate",
@@ -386,6 +389,7 @@
             {
                 "id": "A6EFAF9E9BD1453B905544E73806058F",
                 "tag": "python",
+                "name": "venv39",
                 "description": "Ambiente virtual Python 3.9",
                 "command": "venv39",
                 "body": "virtualenv -p python3.9 venv",
@@ -394,6 +398,7 @@
             {
                 "id": "E88DFE88EF9C40B5838DE25E48573E77",
                 "tag": "python",
+                "name": "venv36",
                 "description": "Ambiente virtual Python 3.6",
                 "command": "venv36",
                 "body": "virtualenv -p python3.6 venv",
@@ -402,6 +407,7 @@
             {
                 "id": "070C62C980BF4FDC9CA3902F0CE1A44C",
                 "tag": "python",
+                "name": "venv27",
                 "description": "Ambiente virtual Python 2.7",
                 "command": "venv27",
                 "body": "virtualenv -p python2.7 venv",
@@ -410,6 +416,7 @@
             {
                 "id": "A487A7CC0CBD403B89F5D426E67DD91E",
                 "tag": "python",
+                "name": "venv38",
                 "description": "Ambiente virtual Python 3.8",
                 "command": "venv38",
                 "body": "virtualenv -p python3.8 venv",
@@ -418,6 +425,7 @@
             {
                 "id": "DA8D3467697B42BB84CFF8DF8C983E51",
                 "tag": "python",
+                "name": "venv10",
                 "description": "Ambiente virtual Python 3.10",
                 "command": "venv10",
                 "body": "virtualenv -p python3.10 venv",
@@ -428,6 +436,7 @@
             {
                 "id": "22A99CDF304B4A6A97FF7354476190B7",
                 "tag": "django",
+                "name": "runserver",
                 "description": "Django Framework CLI",
                 "command": "runserver",
                 "body": "python src/manage.py runserver",
@@ -436,6 +445,7 @@
             {
                 "id": "5BC4593D035347ED9C3475B7DD8D924A",
                 "tag": "django",
+                "name": "makemigrations",
                 "description": "Django Framework CLI",
                 "command": "makemigrations",
                 "body": "python src/manage.py makemigrations",
@@ -444,6 +454,7 @@
             {
                 "id": "1F6C36D7C00045B59D49B70C20739A8D",
                 "tag": "django",
+                "name": "migrate",
                 "description": "Django Framework CLI",
                 "command": "migrate",
                 "body": "python src/manage.py migrate",
@@ -452,6 +463,7 @@
             {
                 "id": "CB7F18D2A9DB4E5F9DF7A7636D11A813",
                 "tag": "django",
+                "name": "sqlmigrate",
                 "description": "Django Framework CLI",
                 "command": "sqlmigrate",
                 "body": "linuxp install --module script --tag django --item sqlmigrate",
@@ -462,6 +474,7 @@
             {
                 "id": "6946575C14A546049278BBA65E58DEC2",
                 "tag": "git",
+                "name": "git_setemail",
                 "command": "git_setemail",
                 "body": "git config --global user.email email@fernandocelmer.com",
                 "type": "exec"
@@ -469,6 +482,7 @@
             {
                 "id": "8FF4F09F487C45A9BBCAB723A0921EB2",
                 "tag": "git",
+                "name": "git_setname",
                 "command": "git_setname",
                 "body": "git config --global user.name FernandoCelmer",
                 "type": "exec"
@@ -476,6 +490,7 @@
             {
                 "id": "BD3F63052FE0492B89D55E2B63F130EE",
                 "tag": "git",
+                "name": "git_name",
                 "command": "git_name",
                 "body": "git config --global user.name",
                 "type": "exec"
@@ -483,6 +498,7 @@
             {
                 "id": "65780977FA8443F38FCA18EBDE56A757",
                 "tag": "git",
+                "name": "git_email",
                 "command": "git_email",
                 "body": "git config --global user.email",
                 "type": "exec"
@@ -490,6 +506,7 @@
             {
                 "id": "026A4965E1DB4C38965CA5605B55A5B5",
                 "tag": "git",
+                "name": "git_setpass",
                 "command": "git_setpass",
                 "body": "git config --global credential.helper store",
                 "type": "exec"
@@ -499,13 +516,15 @@
             {
                 "id": "A90C2DE6A14F4379844DB56E43EA6885",
                 "tag": "system",
+                "name": "clean_linux",
                 "command": "clean_linux",
-                "body": "linuxp install --module script --tag system --value clean_linux",
+                "body": "linuxp install --module script --tag system --item clean_linux",
                 "type": "exec"
             },
             {
                 "id": "502CC2444BF7423DB51162D836782B18",
                 "tag": "system",
+                "name": "clean_alias",
                 "description": "No description",
                 "command": "clean_alias",
                 "body": "true > ~/.bash_aliases",
@@ -516,6 +535,7 @@
             {
                 "id": "1F540CE01C9B43C48327D2200404AD58",
                 "tag": "util",
+                "name": "profile",
                 "command": "profile",
                 "body": "code ~/linuxp/.config/linux_profile.json",
                 "type": "exec"
