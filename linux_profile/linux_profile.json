@@ -490,6 +490,14 @@
                 "command": "clean_linux",
                 "body": "linuxp install --module script --tag system --value clean_linux",
                 "type": "exec"
+            },
+            {
+                "id": "502CC2444BF7423DB51162D836782B18",
+                "tag": "system",
+                "description": "No description",
+                "command": "clean_alias",
+                "body": "true > ~/.bash_aliases",
+                "type": "exec"
             }
         ],
         "util": [
@@ -497,7 +505,7 @@
                 "id": "1F540CE01C9B43C48327D2200404AD58",
                 "tag": "util",
                 "command": "profile",
-                "body": "google-chrome ~/linuxp/.config/linux_profile.json",
+                "body": "code ~/linuxp/.config/linux_profile.json",
                 "type": "exec"
             }
         ]
@@ -509,6 +517,7 @@
                 "tag": "dev",
                 "type": "shell",
                 "name": "install_poetry",
+                "description": "Poetry installation script",
                 "shebang": null,
                 "body": [
                     "sudo apt install curl git",
@@ -520,6 +529,7 @@
                 "tag": "dev",
                 "type": "shell",
                 "name": "install_asdf",
+                "description": "ASDF installation script",
                 "shebang": null,
                 "body": [
                     "sudo apt install curl git",
@@ -535,6 +545,7 @@
                 "tag": "system",
                 "type": "shell",
                 "name": "clean_linux",
+                "description": "Script to clear linux memory",
                 "shebang": null,
                 "body": [
                     "sudo apt clean",
