@@ -497,7 +497,7 @@
                 "id": "1F540CE01C9B43C48327D2200404AD58",
                 "tag": "util",
                 "command": "profile",
-                "body": "google-chrome ~/.config/linuxp/linux_profile.json",
+                "body": "google-chrome ~/linuxp/.config/linux_profile.json",
                 "type": "exec"
             }
         ]
@@ -558,6 +558,7 @@
                 "tag": "django",
                 "type": "python3",
                 "name": "sqlmigrate",
+                "description": "Script to generate 'sqlmigrate' from Django framework",
                 "shebang": null,
                 "body": [
                     "from os import system",
