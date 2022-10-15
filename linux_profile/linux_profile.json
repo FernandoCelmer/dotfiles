@@ -48,6 +48,15 @@
                 "name": "google-chrome",
                 "url": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb",
                 "file": "google-chrome-stable_current_amd64.deb"
+            },
+            {
+                "id": "6AD39FE3C1D14A81ABA9BF8B10602F21",
+                "tag": "util",
+                "type": "snap",
+                "name": "firefox",
+                "url": null,
+                "file": null,
+                "description": "No description"
             }
         ],
         "dev": [
@@ -74,6 +83,51 @@
                 "name": "git",
                 "url": null,
                 "file": null
+            },
+            {
+                "id": "6FC9D2116DBB40F9AFDA1FADA95B7950",
+                "tag": "dev",
+                "type": "snap",
+                "name": "code --classic",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "80D7DEF3F57F4E7DA2A74FB9A311235F",
+                "tag": "dev",
+                "type": "apt-get",
+                "name": "docker-ce",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "1883E39896A749278E5D044A537B032E",
+                "tag": "dev",
+                "type": "apt-get",
+                "name": "docker-ce-cli",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "1A71FA931C7B4A0B9CF11889B1D1D58A",
+                "tag": "dev",
+                "type": "apt-get",
+                "name": "containerd.io",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "1D75B65F1C064010B24D65ACD85568F9",
+                "tag": "dev",
+                "type": "apt-get",
+                "name": "docker-compose-plugin",
+                "url": null,
+                "file": null,
+                "description": "No description"
             }
         ],
         "music": [
