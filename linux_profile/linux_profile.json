@@ -85,15 +85,6 @@
                 "file": null
             },
             {
-                "id": "6FC9D2116DBB40F9AFDA1FADA95B7950",
-                "tag": "dev",
-                "type": "snap",
-                "name": "code --classic",
-                "url": null,
-                "file": null,
-                "description": "No description"
-            },
-            {
                 "id": "80D7DEF3F57F4E7DA2A74FB9A311235F",
                 "tag": "dev",
                 "type": "apt-get",
@@ -380,6 +371,15 @@
                 "name": "tmux",
                 "url": null,
                 "file": null
+            },
+            {
+                "id": "6FC9D2116DBB40F9AFDA1FADA95B7950",
+                "tag": "text",
+                "type": "snap",
+                "name": "code --classic",
+                "url": null,
+                "file": null,
+                "description": "No description"
             }
         ],
         "pip": [
@@ -591,7 +591,16 @@
                 "tag": "util",
                 "name": "profile",
                 "command": "profile",
-                "body": "code ~/linuxp/.config/linux_profile.json",
+                "body": "code ~/.config/linuxp/linux_profile.json",
+                "type": "exec"
+            },
+            {
+                "id": "70EDC3BA086E4C1CAF84B69D37D5BB07",
+                "tag": "util",
+                "name": "config",
+                "command": "config",
+                "body": "code ~/.config/linuxp/",
+                "description": "No description",
                 "type": "exec"
             }
         ]
