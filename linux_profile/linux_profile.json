@@ -343,6 +343,15 @@
                 "name": "make",
                 "url": null,
                 "file": null
+            },
+            {
+                "id": "D5B23729FBF34BE68E58E40DA220C9F5",
+                "tag": "python",
+                "type": "apt",
+                "name": "virtualenv",
+                "url": null,
+                "file": null,
+                "description": "No description"
             }
         ],
         "system": [
