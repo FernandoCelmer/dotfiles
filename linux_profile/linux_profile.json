@@ -418,6 +418,17 @@
                 "url": null,
                 "file": null
             }
+        ],
+        "teste": [
+            {
+                "id": "FE7B3F81434E4087A24821C5D1068639",
+                "tag": "teste",
+                "type": "apt",
+                "name": "teste",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            }
         ]
     },
     "alias": {
@@ -453,7 +464,7 @@
                 "id": "A6EFAF9E9BD1453B905544E73806058F",
                 "tag": "python",
                 "name": "venv39",
-                "description": "Ambiente virtual Python 3.9",
+                "description": "Python 3.9 virtual environment ",
                 "command": "venv39",
                 "body": "virtualenv -p python3.9 venv",
                 "type": "exec"
@@ -462,7 +473,7 @@
                 "id": "E88DFE88EF9C40B5838DE25E48573E77",
                 "tag": "python",
                 "name": "venv36",
-                "description": "Ambiente virtual Python 3.6",
+                "description": "Python 3.6 virtual environment ",
                 "command": "venv36",
                 "body": "virtualenv -p python3.6 venv",
                 "type": "exec"
@@ -471,7 +482,7 @@
                 "id": "070C62C980BF4FDC9CA3902F0CE1A44C",
                 "tag": "python",
                 "name": "venv27",
-                "description": "Ambiente virtual Python 2.7",
+                "description": "Python 2.7 virtual environment ",
                 "command": "venv27",
                 "body": "virtualenv -p python2.7 venv",
                 "type": "exec"
@@ -480,7 +491,7 @@
                 "id": "A487A7CC0CBD403B89F5D426E67DD91E",
                 "tag": "python",
                 "name": "venv38",
-                "description": "Ambiente virtual Python 3.8",
+                "description": "Python 3.8 virtual environment ",
                 "command": "venv38",
                 "body": "virtualenv -p python3.8 venv",
                 "type": "exec"
@@ -489,9 +500,18 @@
                 "id": "DA8D3467697B42BB84CFF8DF8C983E51",
                 "tag": "python",
                 "name": "venv10",
-                "description": "Ambiente virtual Python 3.10",
+                "description": "Python 3.10 virtual environment ",
                 "command": "venv10",
                 "body": "virtualenv -p python3.10 venv",
+                "type": "exec"
+            },
+            {
+                "id": "A3D75F3910D549EFA8904860D77BB88A",
+                "tag": "pip",
+                "name": "pip_install",
+                "command": "pip_install",
+                "body": "pip install -r requirements.txt --no-cache-dir",
+                "description": "No description",
                 "type": "exec"
             }
         ],
@@ -569,8 +589,8 @@
             {
                 "id": "026A4965E1DB4C38965CA5605B55A5B5",
                 "tag": "git",
-                "name": "git_setpass",
-                "command": "git_setpass",
+                "name": "git_setpwd",
+                "command": "git_setpwd",
                 "body": "git config --global credential.helper store",
                 "type": "exec"
             }
@@ -609,6 +629,17 @@
                 "name": "config",
                 "command": "config",
                 "body": "code ~/.config/linuxp/",
+                "description": "No description",
+                "type": "exec"
+            }
+        ],
+        "pip": [
+            {
+                "id": "495ACB6080E5490CB7EB9B2D0F88734F",
+                "tag": "pip",
+                "name": "pip_uninstall",
+                "command": "pip_uninstall",
+                "body": "pip freeze > uninstall.txt && pip uninstall -r uninstall.txt -y && rm -r uninstall.txt",
                 "description": "No description",
                 "type": "exec"
             }
