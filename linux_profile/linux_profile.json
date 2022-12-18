@@ -418,17 +418,6 @@
                 "url": null,
                 "file": null
             }
-        ],
-        "teste": [
-            {
-                "id": "FE7B3F81434E4087A24821C5D1068639",
-                "tag": "teste",
-                "type": "apt",
-                "name": "teste",
-                "url": null,
-                "file": null,
-                "description": "No description"
-            }
         ]
     },
     "alias": {
