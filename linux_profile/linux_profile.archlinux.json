@@ -39,6 +39,150 @@
                 "file": null,
                 "description": "No description"
             }
+        ],
+        "i3": [
+            {
+                "id": "90A3FCD160C94C8AB88360617CE4DDC4",
+                "type": "pacman",
+                "name": "i3-gaps",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "E01399CD7F0148619C7B7DA3C5B4A489",
+                "type": "pacman",
+                "name": "dmenu",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "AB09A120727548DEAB3179446A18D240",
+                "type": "pacman",
+                "name": "i3status",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "E2B9F72B48094EBBAD578E7D579F6E33",
+                "type": "pacman",
+                "name": "i3blocks",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            }
+        ],
+        "system": [
+            {
+                "id": "6673F8A636FC4F53B69A666C32ACB686",
+                "type": "pacman",
+                "name": "alsa-utils",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "0C06CD0ABCCB4A7C8A167BBFF959E267",
+                "type": "pacman",
+                "name": "dolphin",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "DC96CE0A646B48C49A413675A298F91C",
+                "type": "pacman",
+                "name": " konsole",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "8BB34748BB4A4F4CA2A9F39D25E70540",
+                "type": "pacman",
+                "name": "dosfstools",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "9574068190DB4E90B688985179175EC3",
+                "type": "pacman",
+                "name": "os-prober",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "A419B10F684B4005BE187F7A4C00E64F",
+                "type": "pacman",
+                "name": "mtools",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "3FDEE89A85E2478AB0639B65415347D2",
+                "type": "pacman",
+                "name": "network-manager-applet",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "0F7A1B38D4D440038E4769B419652DE5",
+                "type": "pacman",
+                "name": "networkmanager",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "7651F8E0097141A5B345A3EB5EC23259",
+                "type": "pacman",
+                "name": "wpa_supplicant",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "1BB68E29644F4ED6965415BC2315186B",
+                "type": "pacman",
+                "name": "wireless_tools",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "51A3924EAD1F49E4B4F724749195CA07",
+                "type": "pacman",
+                "name": "dialog",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            }
+        ],
+        "util": [
+            {
+                "id": "59F4A953A9104D0086BBB2A020B37C8A",
+                "type": "pacman",
+                "name": "firefox",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            }
+        ],
+        "driver": [
+            {
+                "id": "93606118D7A1490DAD13786BC2A7C6A5",
+                "type": "pacman",
+                "name": "nvidia",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            }
         ]
     }
 }
