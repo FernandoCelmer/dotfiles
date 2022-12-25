@@ -76,6 +76,15 @@
                 "url": null,
                 "file": null,
                 "description": "No description"
+            },
+            {
+                "id": "FCD4533AE6464967BC7505B80241F063",
+                "tag": "i3",
+                "type": "pacman",
+                "name": "picom",
+                "url": null,
+                "file": null,
+                "description": "No description"
             }
         ],
         "system": [
@@ -196,6 +205,17 @@
                 "tag": "driver",
                 "type": "pacman",
                 "name": "nvidia",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            }
+        ],
+        "driver_virtual_box": [
+            {
+                "id": "E89230C8BFD5433CA9362C2730CC83CA",
+                "tag": "driver_virtual_box",
+                "type": "pacman",
+                "name": "virtualbox-guest-utils",
                 "url": null,
                 "file": null,
                 "description": "No description"
