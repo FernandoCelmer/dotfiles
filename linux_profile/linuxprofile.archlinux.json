@@ -1,0 +1,44 @@
+{
+    "package": {
+        "python": [
+            {
+                "id": "10B4A3B31E074452850EF882BA96F8AD",
+                "tag": "python",
+                "type": "pacman",
+                "name": "python-pip",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            }
+        ],
+        "xorg": [
+            {
+                "id": "30EB1EAE439243BF92167B284143387C",
+                "tag": "xorg",
+                "type": "pacman",
+                "name": "xorg-server",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "5FC14448157E40F29619C17467DEF29F",
+                "tag": "xorg",
+                "type": "pacman",
+                "name": "xorg-xinit",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "785CA99BAE0C4C87A0B746D075FFB239",
+                "tag": "xorg",
+                "type": "pacman",
+                "name": "xorg-apps",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            }
+        ]
+    }
+}
