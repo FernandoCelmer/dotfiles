@@ -1,6 +1,25 @@
 {
     "package": {
-        "python": [],
+        "python": [
+            {
+                "id": "A021ED0EC7CF4C2D8C3B5BAC1DE094BE",
+                "tag": "system",
+                "type": "pacman",
+                "name": "python",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "10B4A3B31E074452850EF882BA96F8AD",
+                "tag": "system",
+                "type": "pacman",
+                "name": "python-pip",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            }
+        ],
         "xorg": [
             {
                 "id": "30EB1EAE439243BF92167B284143387C",
@@ -182,24 +201,6 @@
                 "tag": "system",
                 "type": "pacman",
                 "name": "nano",
-                "url": null,
-                "file": null,
-                "description": "No description"
-            },
-            {
-                "id": "A021ED0EC7CF4C2D8C3B5BAC1DE094BE",
-                "tag": "system",
-                "type": "pacman",
-                "name": "python",
-                "url": null,
-                "file": null,
-                "description": "No description"
-            },
-            {
-                "id": "10B4A3B31E074452850EF882BA96F8AD",
-                "tag": "system",
-                "type": "pacman",
-                "name": "python-pip",
                 "url": null,
                 "file": null,
                 "description": "No description"
