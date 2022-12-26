@@ -219,10 +219,10 @@
                 "description": "No description"
             }
         ],
-        "driver_virtual_box": [
+        "driver_vbox": [
             {
                 "id": "E89230C8BFD5433CA9362C2730CC83CA",
-                "tag": "driver_virtual_box",
+                "tag": "driver_vbox",
                 "type": "pacman",
                 "name": "virtualbox-guest-utils",
                 "url": null,
@@ -237,7 +237,7 @@
                 "id": "E9D32D2523AE4FC9B8DE01A3C9B43D15",
                 "tag": "init",
                 "type": "shell",
-                "name": "create_username",
+                "name": "create_user",
                 "body": [
                     "read -p 'Username: ' username",
                     "echo $username",
