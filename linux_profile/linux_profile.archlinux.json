@@ -234,17 +234,6 @@
     "script": {
         "init": [
             {
-                "id": "3A16CADE09674FF4962713CDFB72E690",
-                "tag": "init",
-                "type": "shell",
-                "name": "enable_keys",
-                "body": [
-                    "loadkeys br-abnt2"
-                ],
-                "shebang": null,
-                "description": "No description"
-            },
-            {
                 "id": "EE959D7607694622B030BEEA1174AF56",
                 "tag": "init",
                 "type": "shell",
@@ -362,14 +351,14 @@
                 "id": "066F46BBF6F44F9CA69D6BB47EEE8FBB",
                 "tag": "init",
                 "type": "shell",
-                "name": "enable_network",
+                "name": "step_10",
                 "body": [
                     "systemctl enable NetworkManager",
                     "systemctl start NetworkManager"
                 ],
                 "shebang": null,
                 "description": "ROOT: Network settings"
-            },
+            }
         ]
     }
 }
