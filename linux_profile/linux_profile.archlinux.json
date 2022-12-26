@@ -234,17 +234,6 @@
     "script": {
         "init": [
             {
-                "id": "066F46BBF6F44F9CA69D6BB47EEE8FBB",
-                "tag": "init",
-                "type": "shell",
-                "name": "enable_network",
-                "body": [
-                    "systemctl enable NetworkManager"
-                ],
-                "shebang": null,
-                "description": "No description"
-            },
-            {
                 "id": "3A16CADE09674FF4962713CDFB72E690",
                 "tag": "init",
                 "type": "shell",
@@ -274,7 +263,7 @@
                     "swapon /dev/$swap_partition"
                 ],
                 "shebang": null,
-                "description": "Disk partitioning"
+                "description": "LIVE: Disk partitioning"
             },
             {
                 "id": "946356F798A64B7FADDD93DB351ADE92",
@@ -285,7 +274,7 @@
                     "pacman -S archlinux-keyring"
                 ],
                 "shebang": null,
-                "description": "Arch Linux PGP keyring"
+                "description": "LIVE: Arch Linux PGP keyring"
             },
             {
                 "id": "946356F798A64B7FADDD93DB351ADE92",
@@ -296,7 +285,7 @@
                     "pacstrap /mnt base linux linux-firmware nano vim dhcpcd"
                 ],
                 "shebang": null,
-                "description": "Installation of Base Packages"
+                "description": "LIVE: Installation of Base Packages"
             },
             {
                 "id": "6C5C1A13EC434063983A80CC40EAB25C",
@@ -307,7 +296,7 @@
                     "genfstab -U -p /mnt >> /mnt/etc/fstab"
                 ],
                 "shebang": null,
-                "description": "Configuration FSTAB"
+                "description": "LIVE: Configuration FSTAB"
             },
             {
                 "id": "6C5C1A13EC434063983A80CC40EAB25C",
@@ -318,7 +307,7 @@
                     "arch-chroot /mnt"
                 ],
                 "shebang": null,
-                "description": "Logging in with arch-chroot"
+                "description": "LIVE: Logging in with arch-chroot"
             },
             {
                 "id": "6C5C1A13EC434063983A80CC40EAB25C",
@@ -329,7 +318,7 @@
                     "passwd"
                 ],
                 "shebang": null,
-                "description": "Changing root password"
+                "description": "ROOT: Changing root password"
             },
             {
                 "id": "E9D32D2523AE4FC9B8DE01A3C9B43D15",
@@ -343,7 +332,7 @@
                     "passwd $username"
                 ],
                 "shebang": null,
-                "description": "Script to create a new user"
+                "description": "ROOT: Script to create a new user"
             },
             {
                 "id": "207E199830634A86A05265CCA4D7FD6F",
@@ -354,7 +343,7 @@
                     "linuxp install -m package -t system"
                 ],
                 "shebang": null,
-                "description": "Installation of Useful Packages"
+                "description": "ROOT: Installation of Useful Packages"
             },
             {
                 "id": "C6B37E991C4144288EFC582305CD9D66",
@@ -367,8 +356,20 @@
                     "grub-mkconfig -o /boot/grub/grub.cfg"
                 ],
                 "shebang": null,
-                "description": "Installing GRUB Settings"
-            }
+                "description": "ROOT: Installing GRUB Settings"
+            },
+            {
+                "id": "066F46BBF6F44F9CA69D6BB47EEE8FBB",
+                "tag": "init",
+                "type": "shell",
+                "name": "enable_network",
+                "body": [
+                    "systemctl enable NetworkManager",
+                    "systemctl start NetworkManager"
+                ],
+                "shebang": null,
+                "description": "ROOT: Network settings"
+            },
         ]
     }
 }
