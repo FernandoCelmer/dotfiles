@@ -1,16 +1,6 @@
 {
     "package": {
-        "python": [
-            {
-                "id": "10B4A3B31E074452850EF882BA96F8AD",
-                "tag": "python",
-                "type": "pacman",
-                "name": "python-pip",
-                "url": null,
-                "file": null,
-                "description": "No description"
-            }
-        ],
+        "python": [],
         "xorg": [
             {
                 "id": "30EB1EAE439243BF92167B284143387C",
@@ -156,6 +146,60 @@
                 "tag": "system",
                 "type": "pacman",
                 "name": "dialog",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "B22A79FAA22C413DB71275A290EEA3E8",
+                "tag": "system",
+                "type": "pacman",
+                "name": "sudo",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "C3191ED2549E482EAFEE03B6BC2477A7",
+                "tag": "system",
+                "type": "pacman",
+                "name": "vi",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "BD8CDE944D444EFA8B1765F8BA44EAF1",
+                "tag": "system",
+                "type": "pacman",
+                "name": "vim",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "87ABEE9643EE4039A9A8B610C2248E95",
+                "tag": "system",
+                "type": "pacman",
+                "name": "nano",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "A021ED0EC7CF4C2D8C3B5BAC1DE094BE",
+                "tag": "system",
+                "type": "pacman",
+                "name": "python",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "10B4A3B31E074452850EF882BA96F8AD",
+                "tag": "system",
+                "type": "pacman",
+                "name": "python-pip",
                 "url": null,
                 "file": null,
                 "description": "No description"
