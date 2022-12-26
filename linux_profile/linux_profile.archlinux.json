@@ -310,10 +310,32 @@
                 "description": "Configuration FSTAB"
             },
             {
-                "id": "E9D32D2523AE4FC9B8DE01A3C9B43D15",
+                "id": "6C5C1A13EC434063983A80CC40EAB25C",
                 "tag": "init",
                 "type": "shell",
                 "name": "step_5",
+                "body": [
+                    "arch-chroot /mnt"
+                ],
+                "shebang": null,
+                "description": "Logging in with arch-chroot"
+            },
+            {
+                "id": "6C5C1A13EC434063983A80CC40EAB25C",
+                "tag": "init",
+                "type": "shell",
+                "name": "step_6",
+                "body": [
+                    "passwd"
+                ],
+                "shebang": null,
+                "description": "Changing root password"
+            },
+            {
+                "id": "E9D32D2523AE4FC9B8DE01A3C9B43D15",
+                "tag": "init",
+                "type": "shell",
+                "name": "step_7",
                 "body": [
                     "read -p 'Username: ' username",
                     "echo $username",
@@ -327,7 +349,7 @@
                 "id": "207E199830634A86A05265CCA4D7FD6F",
                 "tag": "init",
                 "type": "shell",
-                "name": "step_6",
+                "name": "step_8",
                 "body": [
                     "linuxp install -m package -t system"
                 ],
@@ -338,7 +360,7 @@
                 "id": "C6B37E991C4144288EFC582305CD9D66",
                 "tag": "init",
                 "type": "shell",
-                "name": "step_7",
+                "name": "step_9",
                 "body": [
                     "pacman -S grub efibootmgr",
                     "grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB --recheck",
