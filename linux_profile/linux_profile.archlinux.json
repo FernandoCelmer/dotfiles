@@ -234,27 +234,6 @@
     "script": {
         "init": [
             {
-                "id": "EE959D7607694622B030BEEA1174AF56",
-                "tag": "init",
-                "type": "shell",
-                "name": "step_1",
-                "body": [
-                    "read -p 'Root Partition: ' root_partition",
-                    "read -p 'Swap Partition: ' swap_partition",
-                    "read -p 'EFI System Partition: ' efi_system_partition",
-                    "",
-                    "mkfs.ext4 /dev/$root_partition",
-                    "mkswap /dev/$swap_partition",
-                    "mkfs.fat -F 32 /dev/$efi_system_partition",
-                    "",
-                    "mount /dev/$root_partition /mnt",
-                    "mount --mkdir /dev/$efi_system_partition /mnt/boot",
-                    "swapon /dev/$swap_partition"
-                ],
-                "shebang": null,
-                "description": "LIVE: Disk partitioning"
-            },
-            {
                 "id": "946356F798A64B7FADDD93DB351ADE92",
                 "tag": "init",
                 "type": "shell",
@@ -358,6 +337,21 @@
                 ],
                 "shebang": null,
                 "description": "ROOT: Network settings"
+            }
+        ],
+        "pos": [
+            {
+                "id": "EE959D7607694622B030BEEA1174AF56",
+                "tag": "pos",
+                "type": "shell",
+                "name": "step_1",
+                "body": [
+                    "loadkeys br-abnt2",
+                    "setxkbmap -layout br -model pc105 -option grp:alt_caps_toggle",
+                    "echo 'exec --no-startup-id \"setxkbmap -layout br -model pc105 -option grp:alt_caps_toggle\"' >> ~/.config/i3/config"
+                ],
+                "shebang": null,
+                "description": "USER: Keyboard Settings (i3)"
             }
         ]
     }
