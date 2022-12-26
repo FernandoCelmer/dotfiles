@@ -208,6 +208,15 @@
                 "url": null,
                 "file": null,
                 "description": "No description"
+            },
+            {
+                "id": "8B54D20C826945AE8DA2C36A71AEB986",
+                "tag": "driver",
+                "type": "pacman",
+                "name": "nvidia-settings",
+                "url": null,
+                "file": null,
+                "description": "No description"
             }
         ],
         "driver_virtual_box": [
@@ -218,6 +227,37 @@
                 "name": "virtualbox-guest-utils",
                 "url": null,
                 "file": null,
+                "description": "No description"
+            }
+        ]
+    },
+    "script": {
+        "init": [
+            {
+                "id": "E9D32D2523AE4FC9B8DE01A3C9B43D15",
+                "tag": "init",
+                "type": "shell",
+                "name": "create_username",
+                "body": [
+                    "read -p 'Username: ' username",
+                    "echo $username",
+                    "useradd -m -g users -G wheel,storage,power -s /bin/bash $username",
+                    "passwd $username"
+                ],
+                "shebang": null,
+                "description": "No description"
+            },
+            {
+                "id": "C6B37E991C4144288EFC582305CD9D66",
+                "tag": "init",
+                "type": "shell",
+                "name": "install_grub",
+                "body": [
+                    "pacman -S grub efibootmgr",
+                    "grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB --recheck",
+                    "grub-mkconfig -o /boot/grub/grub.cfg"
+                ],
+                "shebang": null,
                 "description": "No description"
             }
         ]
