@@ -2,19 +2,19 @@
     "package": {
         "python": [
             {
-                "id": "A021ED0EC7CF4C2D8C3B5BAC1DE094BE",
+                "id": "10B4A3B31E074452850EF882BA96F8AD",
                 "tag": "python",
                 "type": "pacman",
-                "name": "python",
+                "name": "python-pip",
                 "url": null,
                 "file": null,
                 "description": "No description"
             },
             {
-                "id": "10B4A3B31E074452850EF882BA96F8AD",
+                "id": "A021ED0EC7CF4C2D8C3B5BAC1DE094BE",
                 "tag": "python",
                 "type": "pacman",
-                "name": "python-pip",
+                "name": "python",
                 "url": null,
                 "file": null,
                 "description": "No description"
@@ -423,6 +423,39 @@
                 ],
                 "shebang": null,
                 "description": "USER: Keyboard Settings (i3)"
+            }
+        ]
+    },
+    "file": {
+        "i3": [
+            {
+                "id": "0713673951EF409AAB56B09858C4DEA8",
+                "tag": "i3",
+                "type": "update",
+                "name": ".xinitrc",
+                "file_path": "~/.xinitrc",
+                "line_operation": "39",
+                "body": "# exec xterm -geometry 80x66+0+0 -name login"
+            },
+            {
+                "id": "55AC5E0BDF9D43A98B17568D870F000E",
+                "tag": "i3",
+                "type": "update",
+                "name": ".xinitrc",
+                "file_path": "~/.xinitrc",
+                "line_operation": "40",
+                "body": "exec i3"
+            }
+        ],
+        "sudoers": [
+            {
+                "id": "8BA46D4A446940859AFDCB4D0D79362D",
+                "tag": "sudoers",
+                "type": "update",
+                "name": "sudoers",
+                "file_path": "/etc/sudoers",
+                "line_operation": "38",
+                "body": "%wheel ALL=(ALL) ALL"
             }
         ]
     }
