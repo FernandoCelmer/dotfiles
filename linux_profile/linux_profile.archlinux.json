@@ -300,28 +300,6 @@
                 "description": "LIVE: Disk partitioning"
             },
             {
-                "id": "946356F798A64B7FADDD93DB351ADE92",
-                "tag": "init",
-                "type": "shell",
-                "name": "step_2",
-                "body": [
-                    "pacstrap /mnt base linux linux-firmware nano vim dhcpcd"
-                ],
-                "shebang": null,
-                "description": "LIVE: Installation of Base Packages"
-            },
-            {
-                "id": "6C5C1A13EC434063983A80CC40EAB25C",
-                "tag": "init",
-                "type": "shell",
-                "name": "step_3",
-                "body": [
-                    "genfstab -U -p /mnt >> /mnt/etc/fstab"
-                ],
-                "shebang": null,
-                "description": "LIVE: Configuration FSTAB"
-            },
-            {
                 "id": "6C5C1A13EC434063983A80CC40EAB25C",
                 "tag": "init",
                 "type": "shell",
@@ -410,10 +388,35 @@
                 "description": "ROOT: User permissions"
             },
             {
-                "id": "EE959D7607694622B030BEEA1174AF56",
+                "id": "946356F798A64B7FADDD93DB351ADE92",
                 "tag": "pos",
                 "type": "shell",
                 "name": "step_1",
+                "body": [
+                    "linuxp install -m package -t xorg",
+                    "linuxp install -m package -t i3",
+                    "linuxp install -m package -t util",
+                    "linuxp install -m package -t driver_vbox"
+                ],
+                "shebang": null,
+                "description": "USER: Window manager installation (i3)"
+            },
+            {
+                "id": "6C5C1A13EC434063983A80CC40EAB25C",
+                "tag": "pos",
+                "type": "shell",
+                "name": "step_2",
+                "body": [
+                    "curl https://raw.githubusercontent.com/FernandoCelmer/dotfiles/master/.xinitrc --output ~/.xinitrc"
+                ],
+                "shebang": null,
+                "description": "USER: Window manager configuration (i3)"
+            },
+            {
+                "id": "EE959D7607694622B030BEEA1174AF56",
+                "tag": "pos",
+                "type": "shell",
+                "name": "step_3",
                 "body": [
                     "loadkeys br-abnt2",
                     "setxkbmap -layout br -model pc105 -option grp:alt_caps_toggle",
