@@ -259,7 +259,7 @@
                 "id": "EE959D7607694622B030BEEA1174AF56",
                 "tag": "init",
                 "type": "shell",
-                "name": "init_disk_partitioning",
+                "name": "step_1",
                 "body": [
                     "read -p 'Root Partition: ' root_partition",
                     "read -p 'Swap Partition: ' swap_partition",
@@ -280,7 +280,18 @@
                 "id": "946356F798A64B7FADDD93DB351ADE92",
                 "tag": "init",
                 "type": "shell",
-                "name": "init_installation_base",
+                "name": "step_2",
+                "body": [
+                    "pacman -S archlinux-keyring"
+                ],
+                "shebang": null,
+                "description": "Arch Linux PGP keyring"
+            },
+            {
+                "id": "946356F798A64B7FADDD93DB351ADE92",
+                "tag": "init",
+                "type": "shell",
+                "name": "step_3",
                 "body": [
                     "pacstrap /mnt base linux linux-firmware nano vim dhcpcd"
                 ],
@@ -291,7 +302,7 @@
                 "id": "6C5C1A13EC434063983A80CC40EAB25C",
                 "tag": "init",
                 "type": "shell",
-                "name": "init_configuration_fstab",
+                "name": "step_4",
                 "body": [
                     "genfstab -U -p /mnt >> /mnt/etc/fstab"
                 ],
@@ -302,7 +313,7 @@
                 "id": "E9D32D2523AE4FC9B8DE01A3C9B43D15",
                 "tag": "init",
                 "type": "shell",
-                "name": "init_create_user",
+                "name": "step_5",
                 "body": [
                     "read -p 'Username: ' username",
                     "echo $username",
@@ -316,7 +327,7 @@
                 "id": "207E199830634A86A05265CCA4D7FD6F",
                 "tag": "init",
                 "type": "shell",
-                "name": "init_installation_utils",
+                "name": "step_6",
                 "body": [
                     "linuxp install -m package -t system"
                 ],
@@ -327,7 +338,7 @@
                 "id": "C6B37E991C4144288EFC582305CD9D66",
                 "tag": "init",
                 "type": "shell",
-                "name": "init_install_grub_uefi",
+                "name": "step_7",
                 "body": [
                     "pacman -S grub efibootmgr",
                     "grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB --recheck",
