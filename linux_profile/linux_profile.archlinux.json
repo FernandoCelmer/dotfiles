@@ -432,7 +432,7 @@
                 "id": "0713673951EF409AAB56B09858C4DEA8",
                 "tag": "i3",
                 "type": "update",
-                "name": ".xinitrc",
+                "name": "xinitrc_step_0",
                 "file_path": "~/.xinitrc",
                 "line_operation": "39",
                 "body": "# exec xterm -geometry 80x66+0+0 -name login"
@@ -441,7 +441,7 @@
                 "id": "55AC5E0BDF9D43A98B17568D870F000E",
                 "tag": "i3",
                 "type": "update",
-                "name": ".xinitrc",
+                "name": "xinitrc_step_1",
                 "file_path": "~/.xinitrc",
                 "line_operation": "40",
                 "body": "exec i3"
@@ -452,7 +452,7 @@
                 "id": "8BA46D4A446940859AFDCB4D0D79362D",
                 "tag": "sudoers",
                 "type": "update",
-                "name": "sudoers",
+                "name": "sudoers_step_0",
                 "file_path": "/etc/sudoers",
                 "line_operation": "38",
                 "body": "%wheel ALL=(ALL) ALL"
