@@ -42,14 +42,6 @@
                 "file": null
             },
             {
-                "id": "03FFEE31779E4D26A6054BC4D34528C6",
-                "tag": "util",
-                "type": "deb",
-                "name": "google-chrome",
-                "url": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb",
-                "file": "google-chrome-stable_current_amd64.deb"
-            },
-            {
                 "id": "6AD39FE3C1D14A81ABA9BF8B10602F21",
                 "tag": "util",
                 "type": "snap",
