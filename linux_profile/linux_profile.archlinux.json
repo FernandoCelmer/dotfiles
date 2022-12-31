@@ -345,17 +345,31 @@
                 "description": "LIVE: Configuration FSTAB"
             },
             {
-                "id": "6C5C1A13EC434063983A80CC40EAB25C",
+                "id": "6A1C02C42EC3492699B8E2954C9EFB91",
                 "tag": "init",
                 "type": "shell",
                 "name": "step_4",
                 "body": [
-                    "cp -r /opt/linuxp/* /mnt/opt/linuxp",
-                    "cp -r .config/linuxp/* /mnt/root/.config/linuxp/",
-                    "cp -r ~/.bashrc /mnt/root/.bashrc"
+                    "APP=\"/mnt/opt/linuxp\"",
+                    "ROOT_CONFIG=\"/mnt/root/.config/linuxp/\"",
+                    "USER_CONFIG=\"/mnt/root/home/fernandocelmer/.config/linuxp/\"",
+                    "",
+                    "ROO_BASHRC=\"/mnt/root/.bashrc\"",
+                    "USER_BASHRC=\"/mnt/root/home/fernandocelmer/.config/linuxp/\"",
+                    "",
+                    "mkdir -p \"$APP\"",
+                    "mkdir -p \"$ROOT_CONFIG\"",
+                    "mkdir -p \"$USER_CONFIG\"",
+                    "",
+                    "cp -r \"/opt/linuxp/*\" \"$APP\"",
+                    "cp -r \"$HOME/.config/linuxp/*\" \"$ROOT_CONFIG\"",
+                    "cp -r \"$HOME/.config/linuxp/*\" \"$USER_CONFIG\"",
+                    "",
+                    "cp \"$HOME/.bashrc\" \"$ROO_BASHRC\"",
+                    "cp \"$HOME/.bashrc\" \"$USER_BASHRC\""
                 ],
                 "shebang": null,
-                "description": "LIVE: Preparing to switch users"
+                "description": "No description"
             },
             {
                 "id": "6C5C1A13EC434063983A80CC40EAB25C",
