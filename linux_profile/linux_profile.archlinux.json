@@ -316,7 +316,7 @@
                 "type": "shell",
                 "name": "step_1",
                 "body": [
-                    "pacman install -m package -t config --sudo of",
+                    "linuxp install -m package -t config --sudo of",
                     "linuxp install -m package -t python --sudo of"
                 ],
                 "shebang": null,
