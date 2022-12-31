@@ -362,8 +362,7 @@
                 "type": "shell",
                 "name": "step_5",
                 "body": [
-                    "arch-chroot /mnt",
-                    "linuxp install -m package -t python --sudo of"
+                    "arch-chroot /mnt"
                 ],
                 "shebang": null,
                 "description": "LIVE: Logging in with arch-chroot"
