@@ -361,9 +361,9 @@
                     "mkdir -p \"$ROOT_CONFIG\"",
                     "mkdir -p \"$USER_CONFIG\"",
                     "",
-                    "cp -r \"/opt/linuxp/*\" \"$APP\"",
-                    "cp -r \"/root/.config/linuxp/*\" \"$ROOT_CONFIG\"",
-                    "cp -r \"/root/.config/linuxp/*\" \"$USER_CONFIG\"",
+                    "cp -r /opt/linuxp/* \"$APP\"",
+                    "cp -r /root/.config/linuxp/* \"$ROOT_CONFIG\"",
+                    "cp -r /root/.config/linuxp/* \"$USER_CONFIG\"",
                     "",
                     "cp \"/root/.bashrc\" \"$ROO_BASHRC\"",
                     "cp \"/root/.bashrc\" \"$USER_BASHRC\""
