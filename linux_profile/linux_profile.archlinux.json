@@ -351,7 +351,8 @@
                 "name": "step_4",
                 "body": [
                     "cp -r /opt/linuxp /mnt/opt/linuxp",
-                    "cp ~/.bashrc /mnt/root/.bashrc"
+                    "cp -r .config/linuxp/linux_profile.json /mnt/root/.config/linuxp/linux_profile.json",
+                    "cp -r ~/.bashrc /mnt/root/.bashrc"
                 ],
                 "shebang": null,
                 "description": "LIVE: Preparing to switch users"
