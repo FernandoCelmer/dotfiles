@@ -352,21 +352,21 @@
                 "body": [
                     "APP=\"/mnt/opt/linuxp\"",
                     "ROOT_CONFIG=\"/mnt/root/.config/linuxp/\"",
-                    "USER_CONFIG=\"/mnt/root/home/fernandocelmer/.config/linuxp/\"",
+                    "USER_CONFIG=\"/mnt/home/fernandocelmer/.config/linuxp/\"",
                     "",
                     "ROO_BASHRC=\"/mnt/root/.bashrc\"",
-                    "USER_BASHRC=\"/mnt/root/home/fernandocelmer/.config/linuxp/\"",
+                    "USER_BASHRC=\"/mnt/home/fernandocelmer/.config/linuxp/\"",
                     "",
                     "mkdir -p \"$APP\"",
                     "mkdir -p \"$ROOT_CONFIG\"",
                     "mkdir -p \"$USER_CONFIG\"",
                     "",
                     "cp -r \"/opt/linuxp/*\" \"$APP\"",
-                    "cp -r \"$HOME/.config/linuxp/*\" \"$ROOT_CONFIG\"",
-                    "cp -r \"$HOME/.config/linuxp/*\" \"$USER_CONFIG\"",
+                    "cp -r \"/root/.config/linuxp/*\" \"$ROOT_CONFIG\"",
+                    "cp -r \"/root/.config/linuxp/*\" \"$USER_CONFIG\"",
                     "",
-                    "cp \"$HOME/.bashrc\" \"$ROO_BASHRC\"",
-                    "cp \"$HOME/.bashrc\" \"$USER_BASHRC\""
+                    "cp \"/root/.bashrc\" \"$ROO_BASHRC\"",
+                    "cp \"/root/.bashrc\" \"$USER_BASHRC\""
                 ],
                 "shebang": null,
                 "description": "No description"
