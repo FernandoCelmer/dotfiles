@@ -350,7 +350,7 @@
                 "type": "shell",
                 "name": "step_4",
                 "body": [
-                    "APP=\"/mnt/opt/linuxp\"",
+                    "APP=\"/mnt/opt/linuxp/\"",
                     "ROOT_CONFIG=\"/mnt/root/.config/linuxp/\"",
                     "USER_CONFIG=\"/mnt/home/fernandocelmer/.config/linuxp/\"",
                     "",
