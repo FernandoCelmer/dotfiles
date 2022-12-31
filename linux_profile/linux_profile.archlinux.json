@@ -23,7 +23,7 @@
         "config": [
             {
                 "id": "10B4A3B31E074452850EF882BA96F8AD",
-                "tag": "python",
+                "tag": "config",
                 "type": "pacman",
                 "name": "archlinux-keyring",
                 "url": null,
