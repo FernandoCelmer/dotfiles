@@ -355,7 +355,7 @@
                     "USER_CONFIG=\"/mnt/home/fernandocelmer/.config/linuxp/\"",
                     "",
                     "ROO_BASHRC=\"/mnt/root/.bashrc\"",
-                    "USER_BASHRC=\"/mnt/home/fernandocelmer/.config/linuxp/\"",
+                    "USER_BASHRC=\"/mnt/home/fernandocelmer/.bashrc\"",
                     "",
                     "mkdir -p \"$APP\"",
                     "mkdir -p \"$ROOT_CONFIG\"",
