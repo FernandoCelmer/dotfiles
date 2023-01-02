@@ -494,6 +494,51 @@
                 "body": "pip install -r requirements.txt --no-cache-dir",
                 "description": "No description",
                 "type": "exec"
+            },
+            {
+                "id": "591D110962C444EBB93608CC34BEA78F",
+                "tag": "python",
+                "name": "python27",
+                "command": "python2.7",
+                "body": "~/.asdf/installs/python/2.7.18/bin/python",
+                "description": "v2.7.18",
+                "type": "exec"
+            },
+            {
+                "id": "52775BF79B244786834F055492F8FB3E",
+                "tag": "python",
+                "name": "python36",
+                "command": "python3.6",
+                "body": "~/.asdf/installs/python/3.6.15/bin/python",
+                "description": "v3.6.15",
+                "type": "exec"
+            },
+            {
+                "id": "B025A7AFD3634E57B5D828D2E7288638",
+                "tag": "python",
+                "name": "python37",
+                "command": "python3.7",
+                "body": "~/.asdf/installs/python/3.7.16/bin/python",
+                "description": "v3.7.16",
+                "type": "exec"
+            },
+            {
+                "id": "5929699DD3014563837F95865ABE4725",
+                "tag": "python",
+                "name": "python38",
+                "command": "python3.8",
+                "body": "~/.asdf/installs/python/3.8.16/bin/python",
+                "description": "v3.8.16",
+                "type": "exec"
+            },
+            {
+                "id": "A09E69622E274FE1BB997943C7B37456",
+                "tag": "python",
+                "name": "python38",
+                "command": "python3.8",
+                "body": "~/.asdf/installs/python/3.8.16/bin/python",
+                "description": "v3.8.16",
+                "type": "exec"
             }
         ],
         "django": [
