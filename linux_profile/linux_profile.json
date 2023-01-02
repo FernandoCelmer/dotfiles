@@ -346,16 +346,7 @@
                 "description": "No description"
             }
         ],
-        "system": [
-            {
-                "id": "836635553688471DA26DF1B720F2BF17",
-                "tag": "system",
-                "type": "apt-get",
-                "name": "task-gnome-desktop",
-                "url": null,
-                "file": null
-            }
-        ],
+        "system": [],
         "text": [
             {
                 "id": "05EE79814C714A11964177860539426C",
