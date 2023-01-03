@@ -215,6 +215,15 @@
                 "url": null,
                 "file": null,
                 "description": "No description"
+            },
+            {
+                "id": "74B9D0CF4AB747E4932681E7E5E0BE3B",
+                "tag": "system",
+                "type": "pacman",
+                "name": "base-devel",
+                "url": null,
+                "file": null,
+                "description": "No description"
             }
         ],
         "util": [
@@ -250,6 +259,15 @@
                 "tag": "util",
                 "type": "pacman",
                 "name": "alsa-utils",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "70849A11DE8E40BEB08630FF23D9EE68",
+                "tag": "util",
+                "type": "pacman",
+                "name": "flatpak",
                 "url": null,
                 "file": null,
                 "description": "No description"
@@ -488,6 +506,22 @@
                 ],
                 "shebang": null,
                 "description": "USER: Keyboard Settings (i3)"
+            }
+        ],
+        "install": [
+            {
+                "id": "5BB6BCCD5742424AA66AB414F3081316",
+                "tag": "install",
+                "type": "shell",
+                "name": "snap",
+                "body": [
+                    "cd /tmp && git clone https://aur.archlinux.org/snapd.git",
+                    "cd /tmp/snapd && makepkg -si",
+                    "sudo systemctl enable --now snapd.socket",
+                    "sudo ln -s /var/lib/snapd/snap /snap"
+                ],
+                "shebang": null,
+                "description": "No description"
             }
         ]
     },
