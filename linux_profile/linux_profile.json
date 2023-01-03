@@ -102,15 +102,6 @@
                 "url": null,
                 "file": null,
                 "description": "No description"
-            },
-            {
-                "id": "85DF35AAE88B4F1EAEC022501817F47B",
-                "tag": "dev",
-                "type": "apt",
-                "name": "tox",
-                "url": null,
-                "file": null,
-                "description": "No description"
             }
         ],
         "music": [
@@ -341,6 +332,15 @@
                 "tag": "python",
                 "type": "apt",
                 "name": "virtualenv",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "FE4D34AA59F245BF9344C3EB4581034E",
+                "tag": "python",
+                "type": "apt",
+                "name": "tox",
                 "url": null,
                 "file": null,
                 "description": "No description"
