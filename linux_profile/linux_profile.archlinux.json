@@ -303,6 +303,17 @@
                 "file": null,
                 "description": "No description"
             }
+        ],
+        "dev": [
+            {
+                "id": "E89230C8BFD5433CA9362C2730CC83CA",
+                "tag": "dev",
+                "type": "pacman",
+                "name": "git",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            }
         ]
     },
     "script": {
@@ -493,18 +504,6 @@
                 "shebang": null,
                 "description": "USER: Window manager configuration (i3)"
             },
-                        {
-                "id": "703AD5EC282D4C0BACF2B4F9A8851ADF",
-                "tag": "init",
-                "type": "shell",
-                "name": "step_15",
-                "body": [
-                    "linuxp install -m package -t util --sudo on",
-                    "linuxp install -m package -t driver_vbox --sudo on"
-                ],
-                "shebang": null,
-                "description": "USER: installation Utils"
-            },
             {
                 "id": "EE959D7607694622B030BEEA1174AF56",
                 "tag": "init",
@@ -516,6 +515,20 @@
                 ],
                 "shebang": null,
                 "description": "USER: Keyboard Settings (i3)"
+            },
+            {
+                "id": "703AD5EC282D4C0BACF2B4F9A8851ADF",
+                "tag": "init",
+                "type": "shell",
+                "name": "step_15",
+                "body": [
+                    "linuxp install -m package -t dev --sudo on",
+                    "linuxp install -m package -t util --sudo on",
+                    "linuxp install -m package -t driver_vbox --sudo on"
+                    
+                ],
+                "shebang": null,
+                "description": "USER: Final installation of packages"
             }
         ],
         "install": [
