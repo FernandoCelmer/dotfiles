@@ -663,28 +663,28 @@
         ]
     },
     "script": {
-        "dev": [
+        "install": [
             {
                 "id": "6838D757DAD4491CB74E47454953B434",
-                "tag": "dev",
+                "tag": "install",
                 "type": "shell",
-                "name": "install_poetry",
+                "name": "poetry",
                 "description": "Poetry installation script",
                 "shebang": null,
                 "body": [
-                    "sudo apt install curl git",
-                    "curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -"
+                    "apt install curl git",
+                    "curl -sSL https://install.python-poetry.org | python3 -"
                 ]
             },
             {
                 "id": "DC7EC742C7BA4AD5AE0A393AB6398A8B",
-                "tag": "dev",
+                "tag": "install",
                 "type": "shell",
-                "name": "install_asdf",
+                "name": "asdf",
                 "description": "ASDF installation script",
                 "shebang": null,
                 "body": [
-                    "sudo apt install curl git",
+                    "apt install curl git",
                     "git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2",
                     ". $HOME/.asdf/asdf.sh",
                     ". $HOME/.asdf/completions/asdf.bash",
@@ -692,10 +692,7 @@
                     "echo '' >> ~/.bashrc",
                     "echo '# ASDF' >> ~/.bashrc",
                     "echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc",
-                    "echo '. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc",
-                    "",
-                    "echo 'INSTALL: python'",
-                    "asdf plugin-add python"
+                    "echo '. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc"
                 ]
             }
         ],
@@ -723,22 +720,6 @@
                 ]
             }
         ],
-        "django": [
-            {
-                "id": "0A50759C27B34C279668219F84972F91",
-                "tag": "django",
-                "type": "python3",
-                "name": "sqlmigrate",
-                "description": "Script to generate 'sqlmigrate' from Django framework",
-                "shebang": null,
-                "body": [
-                    "from os import system",
-                    "",
-                    "module = input('Module: ')",
-                    "migration_name = input('Migration Name: ')",
-                    "system(f'python src/manage.py sqlmigrate {module} {migration_name}')"
-                ]
-            }
-        ]
+        "django": []
     }
 }
