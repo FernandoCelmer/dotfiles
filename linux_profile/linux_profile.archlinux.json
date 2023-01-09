@@ -485,18 +485,6 @@
                 "type": "shell",
                 "name": "step_13",
                 "body": [
-                    "linuxp install -m package -t xorg --sudo on --group on",
-                    "linuxp install -m package -t i3 --sudo on --group on"
-                ],
-                "shebang": null,
-                "description": "USER: Window manager installation (i3)"
-            },
-            {
-                "id": "703AD5EC282D4C0BACF2B4F9A8851ADF",
-                "tag": "init",
-                "type": "shell",
-                "name": "step_14",
-                "body": [
                     "linuxp install -m package -t dev --sudo on --group on",
                     "linuxp install -m package -t util --sudo on --group on",
                     "linuxp install -m package -t driver_vbox --sudo on --group on"
@@ -504,6 +492,18 @@
                 ],
                 "shebang": null,
                 "description": "USER: Final installation of packages"
+            },
+            {
+                "id": "703AD5EC282D4C0BACF2B4F9A8851ADF",
+                "tag": "init",
+                "type": "shell",
+                "name": "step_14",
+                "body": [
+                    "linuxp install -m package -t xorg --sudo on --group on",
+                    "linuxp install -m package -t i3 --sudo on --group on"
+                ],
+                "shebang": null,
+                "description": "USER: Window manager installation (i3)"
             },
             {
                 "id": "6C5C1A13EC434063983A80CC40EAB25C",
