@@ -492,10 +492,24 @@
                 "description": "USER: Window manager installation (i3)"
             },
             {
-                "id": "6C5C1A13EC434063983A80CC40EAB25C",
+                "id": "703AD5EC282D4C0BACF2B4F9A8851ADF",
                 "tag": "init",
                 "type": "shell",
                 "name": "step_14",
+                "body": [
+                    "linuxp install -m package -t dev --sudo on --group on",
+                    "linuxp install -m package -t util --sudo on --group on",
+                    "linuxp install -m package -t driver_vbox --sudo on --group on"
+                    
+                ],
+                "shebang": null,
+                "description": "USER: Final installation of packages"
+            },
+            {
+                "id": "6C5C1A13EC434063983A80CC40EAB25C",
+                "tag": "init",
+                "type": "shell",
+                "name": "step_15",
                 "body": [
                     "cp /etc/X11/xinit/xinitrc ~/.xinitrc",
                     "echo 'exec i3' >> ~/.xinitrc",
@@ -515,20 +529,6 @@
                 ],
                 "shebang": null,
                 "description": "USER: Keyboard Settings (i3)"
-            },
-            {
-                "id": "703AD5EC282D4C0BACF2B4F9A8851ADF",
-                "tag": "init",
-                "type": "shell",
-                "name": "step_15",
-                "body": [
-                    "linuxp install -m package -t dev --sudo on --group on",
-                    "linuxp install -m package -t util --sudo on --group on",
-                    "linuxp install -m package -t driver_vbox --sudo on --group on"
-                    
-                ],
-                "shebang": null,
-                "description": "USER: Final installation of packages"
             }
         ],
         "install": [
