@@ -435,7 +435,7 @@
                 "type": "shell",
                 "name": "step_09",
                 "body": [
-                    "linuxp install -m package -t system --sudo of"
+                    "linuxp install -m package -t system --sudo of --group on"
                 ],
                 "shebang": null,
                 "description": "ROOT: Installation of Useful Packages"
@@ -485,8 +485,8 @@
                 "type": "shell",
                 "name": "step_13",
                 "body": [
-                    "linuxp install -m package -t xorg --sudo on",
-                    "linuxp install -m package -t i3 --sudo on"
+                    "linuxp install -m package -t xorg --sudo on --group on",
+                    "linuxp install -m package -t i3 --sudo on --group on"
                 ],
                 "shebang": null,
                 "description": "USER: Window manager installation (i3)"
@@ -522,9 +522,9 @@
                 "type": "shell",
                 "name": "step_15",
                 "body": [
-                    "linuxp install -m package -t dev --sudo on",
-                    "linuxp install -m package -t util --sudo on",
-                    "linuxp install -m package -t driver_vbox --sudo on"
+                    "linuxp install -m package -t dev --sudo on --group on",
+                    "linuxp install -m package -t util --sudo on --group on",
+                    "linuxp install -m package -t driver_vbox --sudo on --group on"
                     
                 ],
                 "shebang": null,
