@@ -401,80 +401,6 @@
                 "url": null,
                 "file": null
             }
-        ],
-        "foxdot": [
-            {
-                "id": "F51A3A4EF78D49B1BD505A7DAA4AB522",
-                "tag": "foxdot",
-                "type": "apt-get",
-                "name": "build-essential",
-                "url": null,
-                "file": null,
-                "description": "C++ compiler"
-            },
-            {
-                "id": "2A06DCF9A80749449D9C1CB9859CB7F7",
-                "tag": "foxdot",
-                "type": "apt-get",
-                "name": "cmake",
-                "url": null,
-                "file": null,
-                "description": "cmake"
-            },
-            {
-                "id": "B8A4BF9514944610B6FCD0A1F7A06C09",
-                "tag": "foxdot",
-                "type": "apt-get",
-                "name": "libfftw3-dev",
-                "url": null,
-                "file": null,
-                "description": "FFTW"
-            },
-            {
-                "id": "EE2DB41CE5F1409BA211739652AB04A7",
-                "tag": "foxdot",
-                "type": "apt-get",
-                "name": "git",
-                "url": null,
-                "file": null,
-                "description": "git"
-            },
-            {
-                "id": "64F080A0FA714200B1E7B599CA0A8949",
-                "tag": "foxdot",
-                "type": "apt-get",
-                "name": "python3-tk",
-                "url": null,
-                "file": null,
-                "description": "Tkinter"
-            },
-            {
-                "id": "BA6F957F09024C6184805CEB13564179",
-                "tag": "foxdot",
-                "type": "apt-get",
-                "name": "supercollider-ide",
-                "url": null,
-                "file": null,
-                "description": "SuperCollider"
-            },
-            {
-                "id": "26C4198C402640A29CFCF79798ACA81F",
-                "tag": "foxdot",
-                "type": "apt-get",
-                "name": "supercollider-dev",
-                "url": null,
-                "file": null,
-                "description": "SuperCollider-Dev"
-            },
-            {
-                "id": "86BFE7458CBC4D71A90E35D3584B32A9",
-                "tag": "foxdot",
-                "type": "pip",
-                "name": "foxdot",
-                "url": null,
-                "file": null,
-                "description": "FoxDot"
-            }
         ]
     },
     "alias": {
@@ -692,7 +618,7 @@
                 "tag": "system",
                 "name": "clean_linux",
                 "command": "clean_linux",
-                "body": "linuxp install --module script --tag system --item clean_linux --sudo on",
+                "body": "linuxp install --module script --tag system --item clean_linux --sudo",
                 "type": "exec"
             },
             {
@@ -768,19 +694,6 @@
                     "echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc",
                     "echo '. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc"
                 ]
-            },
-            {
-                "id": "7FDA2967CC524764BAC7292720997FBD",
-                "tag": "install",
-                "type": "shell",
-                "name": "foxdot",
-                "body": [
-                    "sudo add-apt-repository ppa:supercollider/ppa",
-                    "sudo apt-get update",
-                    "linuxp install -m package -t foxdot --sudo on"
-                ],
-                "shebang": null,
-                "description": "No description"
             }
         ],
         "system": [
@@ -806,6 +719,7 @@
                     "sudo du -h /var/cache/apt/archives"
                 ]
             }
-        ]
+        ],
+        "django": []
     }
 }
