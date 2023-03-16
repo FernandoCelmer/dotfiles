@@ -722,7 +722,7 @@
                     "",
                     "for file in ${array[@]}; do",
                     "    touch /etc/vim/$file",
-                    "    echo \"$(linuxp list -m file -i $file --field body --print)\" > /etc/vim/$file",
+                    "    echo '$(linuxp list -m file -i $file --field body --print)' > /etc/vim/$file",
                     "done"
                 ],
                 "shebang": null,
