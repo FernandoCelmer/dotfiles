@@ -102,6 +102,15 @@
                 "url": null,
                 "file": null,
                 "description": "No description"
+            },
+            {
+                "id": "A826932889A54D70A400C1BD31972C09",
+                "tag": "dev",
+                "type": "apt",
+                "name": "git",
+                "url": null,
+                "file": null,
+                "description": "No description"
             }
         ],
         "music": [
@@ -672,7 +681,8 @@
                 "description": "Poetry installation script",
                 "shebang": null,
                 "body": [
-                    "apt install curl git",
+                    "linuxp install -m package -i git",
+                    "",
                     "curl -sSL https://install.python-poetry.org | python3 -"
                 ]
             },
@@ -681,19 +691,37 @@
                 "tag": "install",
                 "type": "shell",
                 "name": "asdf",
-                "description": "ASDF installation script",
-                "shebang": null,
                 "body": [
-                    "apt install curl git",
+                    "linuxp install -m package -i git",
+                    "",
                     "git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2",
                     ". $HOME/.asdf/asdf.sh",
                     ". $HOME/.asdf/completions/asdf.bash",
                     "",
-                    "echo '' >> ~/.bashrc",
-                    "echo '# ASDF' >> ~/.bashrc",
                     "echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc",
                     "echo '. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc"
-                ]
+                ],
+                "shebang": null,
+                "description": "No description"
+            },
+            {
+                "id": "28791AB64CA44A57A4508B18642EE631",
+                "tag": "install",
+                "type": "shell",
+                "name": "vim",
+                "body": [
+                    "linuxp install -m package -i vim",
+                    "linuxp install -m package -i curl",
+                    "",
+                    "array=('vimrc' 'vimrc.local' '.vimrc.plug')",
+                    "sudo curl -fLo /etc/vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim",
+                    "",
+                    "for file in ${array[@]}; do",
+                    "    echo \"$(linuxp list -m file -i $file --field body --print )\" > /etc/vim/$file",
+                    "done"
+                ],
+                "shebang": null,
+                "description": "No description"
             }
         ],
         "system": [
@@ -721,5 +749,30 @@
             }
         ],
         "django": []
+    },
+    "file": {
+        "vim": [
+            {
+                "id": "DD4CF00EF1674C4DB1402B00596DF29C",
+                "tag": "vim",
+                "name": "vimrc",
+                "file_path": "/etc/vim/vimrc",
+                "body": "if filereadable(expand(\"/etc/vim/.vimrc.plug\"))\n\nsource /etc/vim/.vimrc.plug\n\nendif\n\nruntime! debian.vim\n\nif has(\"syntax\")\n  syntax on\nendif\n\nset showcmd\nset showmatch\nset ignorecase\nset smartcase\nset incsearch\nset autowrite\nset hidden\nset mouse=a\n\nif filereadable(\"/etc/vim/vimrc.local\")\n  source /etc/vim/vimrc.local\nendif\n"
+            },
+            {
+                "id": "80266A3A9E794836A7E9E542C123842E",
+                "tag": "vim",
+                "name": "vimrc.local",
+                "file_path": "/etc/vim/vimrc.local",
+                "body": "\"===== NERDTree =====\"\nlet NERDTreeShowHidden=1\nautocmd VimEnter * NERDTree\nautocmd VimEnter * NERDTree | wincmd p\nautocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif\n\"===== NERDTree =====\"\n\n\"===== vim-gitgutter =====\"\nlet g:gitgutter_sign_added = '\u2705'\nlet g:gitgutter_sign_modified = '\ud83d\udd35'\nlet g:gitgutter_sign_removed = '\u274c'\nlet g:gitgutter_sign_removed_first_line = '\u2b55'\nlet g:gitgutter_sign_modified_removed = '\ud83d\udd36'\nlet g:gitgutter_override_sign_column_highlight = 1\n\nset updatetime=250\n\"===== vim-gitgutter =====\"\n"
+            },
+            {
+                "id": "2141CE455BB040948EFF221DA783B930",
+                "tag": "vim",
+                "name": ".vimrc.plug",
+                "file_path": "/etc/vim/.vimrc.plug",
+                "body": "call plug#begin('/etc/vim/plugged')\n\n\"Quickrun.vim\n\nPlug 'thinca/vim-quickrun'\n\nPlug 'scrooloose/nerdtree'\n\nPlug 'davidhalter/jedi-vim'\n\nPlug 'airblade/vim-gitgutter'\n\ncall plug#end()\n"
+            }
+        ]
     }
 }
