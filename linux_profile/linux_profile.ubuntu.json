@@ -355,7 +355,6 @@
                 "description": "No description"
             }
         ],
-        "system": [],
         "text": [
             {
                 "id": "05EE79814C714A11964177860539426C",
@@ -646,7 +645,7 @@
                 "tag": "util",
                 "name": "profile",
                 "command": "profile",
-                "body": "code ~/.config/linuxp/linux_profile.json",
+                "body": "code ~/.config/linuxp/profiles",
                 "type": "exec"
             },
             {
@@ -665,7 +664,25 @@
                 "tag": "pip",
                 "name": "pip_uninstall",
                 "command": "pip_uninstall",
-                "body": "pip freeze > uninstall.txt && pip uninstall -r uninstall.txt -y && rm -r uninstall.txt",
+                "body": "activate && pip freeze > uninstall.txt && pip uninstall -r uninstall.txt -y && rm -r uninstall.txt",
+                "description": "No description",
+                "type": "exec"
+            },
+            {
+                "id": "DF248E43B7DD43BCA83995B29AE9E718",
+                "tag": "pip",
+                "name": "pip_install",
+                "command": "pip_install",
+                "body": "activate && pip install -r requirements.txt --no-cache-dir",
+                "description": "No description",
+                "type": "exec"
+            },
+            {
+                "id": "E17A10311EF14BE889DDA0B1F207A00F",
+                "tag": "pip",
+                "name": "pip_install",
+                "command": "pip_install_dev",
+                "body": "activate && pip install -r requirements-dev.txt --no-cache-dir",
                 "description": "No description",
                 "type": "exec"
             }
@@ -752,8 +769,7 @@
                     "sudo du -h /var/cache/apt/archives"
                 ]
             }
-        ],
-        "django": []
+        ]
     },
     "file": {
         "vim": [
