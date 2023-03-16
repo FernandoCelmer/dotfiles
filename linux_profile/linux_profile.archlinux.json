@@ -345,8 +345,8 @@
                 "type": "shell",
                 "name": "step_02",
                 "body": [
-                    "linuxp install -m package -t config --sudo of",
-                    "linuxp install -m package -t python --sudo of"
+                    "linuxp install -m package -t config --sudo",
+                    "linuxp install -m package -t python --sudo"
                 ],
                 "shebang": null,
                 "description": "LIVE: Arch Linux PGP keyring"
@@ -435,7 +435,7 @@
                 "type": "shell",
                 "name": "step_09",
                 "body": [
-                    "linuxp install -m package -t system --sudo of --group"
+                    "linuxp install -m package -t system --sudo --group"
                 ],
                 "shebang": null,
                 "description": "ROOT: Installation of Useful Packages"
