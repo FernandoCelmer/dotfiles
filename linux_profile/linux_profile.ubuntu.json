@@ -681,7 +681,7 @@
                 "description": "Poetry installation script",
                 "shebang": null,
                 "body": [
-                    "linuxp install -m package -i git",
+                    "linuxp install -m package -i git --sudo",
                     "",
                     "curl -sSL https://install.python-poetry.org | python3 -"
                 ]
@@ -692,7 +692,7 @@
                 "type": "shell",
                 "name": "asdf",
                 "body": [
-                    "linuxp install -m package -i git",
+                    "linuxp install -m package -i git --sudo",
                     "",
                     "git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2",
                     ". $HOME/.asdf/asdf.sh",
@@ -710,14 +710,19 @@
                 "type": "shell",
                 "name": "vim",
                 "body": [
-                    "linuxp install -m package -i vim",
-                    "linuxp install -m package -i curl",
+                    "linuxp install -m package -i vim --sudo",
+                    "linuxp install -m package -i curl --sudo",
                     "",
-                    "array=('vimrc' 'vimrc.local' '.vimrc.plug')",
+                    "if [ ! -n '/etc/vim' ]; then",
+                    "    mkdir /etc/vim/",
+                    "fi",
+                    "",
+                    "array=('vimrc', 'vimrc.local', '.vimrc.plug')",
                     "sudo curl -fLo /etc/vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim",
                     "",
                     "for file in ${array[@]}; do",
-                    "    echo \"$(linuxp list -m file -i $file --field body --print )\" > /etc/vim/$file",
+                    "    touch /etc/vim/$file",
+                    "    echo \"$(linuxp list -m file -i $file --field body --print)\" > /etc/vim/$file",
                     "done"
                 ],
                 "shebang": null,
