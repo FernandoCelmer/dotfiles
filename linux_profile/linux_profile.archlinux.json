@@ -345,8 +345,8 @@
                 "type": "shell",
                 "name": "step_02",
                 "body": [
-                    "linuxp install -m package -t config --sudo",
-                    "linuxp install -m package -t python --sudo"
+                    "linuxp install -m package -t config --sudo --group",
+                    "linuxp install -m package -t python --sudo --group"
                 ],
                 "shebang": null,
                 "description": "LIVE: Arch Linux PGP keyring"
@@ -488,7 +488,6 @@
                     "linuxp install -m package -t dev --sudo --group",
                     "linuxp install -m package -t util --sudo --group",
                     "linuxp install -m package -t driver_vbox --sudo --group"
-                    
                 ],
                 "shebang": null,
                 "description": "USER: Final installation of packages"
@@ -551,33 +550,11 @@
     "file": {
         "i3": [
             {
-                "id": "0713673951EF409AAB56B09858C4DEA8",
+                "id": "6EACF95374B0464C871377642DE016CA",
                 "tag": "i3",
-                "type": "update",
-                "name": "xinitrc_step_0",
+                "name": ".xinitrc",
                 "file_path": "~/.xinitrc",
-                "line_operation": "39",
-                "body": "# exec xterm -geometry 80x66+0+0 -name login"
-            },
-            {
-                "id": "55AC5E0BDF9D43A98B17568D870F000E",
-                "tag": "i3",
-                "type": "update",
-                "name": "xinitrc_step_1",
-                "file_path": "~/.xinitrc",
-                "line_operation": "40",
-                "body": "exec i3"
-            }
-        ],
-        "sudoers": [
-            {
-                "id": "8BA46D4A446940859AFDCB4D0D79362D",
-                "tag": "sudoers",
-                "type": "update",
-                "name": "sudoers_step_0",
-                "file_path": "/etc/sudoers",
-                "line_operation": "38",
-                "body": "%wheel ALL=(ALL) ALL"
+                "body": "#!/bin/sh\n\nuserresources=$HOME/.Xresources\nusermodmap=$HOME/.Xmodmap\nsysresources=/etc/X11/xinit/.Xresources\nsysmodmap=/etc/X11/xinit/.Xmodmap\n\n# merge in defaults and keymaps\n\nif [ -f $sysresources ]; then\n    xrdb -merge $sysresources\nfi\n\nif [ -f $sysmodmap ]; then\n    xmodmap $sysmodmap\nfi\n\nif [ -f \"$userresources\" ]; then\n    xrdb -merge \"$userresources\"\nfi\n\nif [ -f \"$usermodmap\" ]; then\n    xmodmap \"$usermodmap\"\nfi\n\n# start some nice programs\n\nif [ -d /etc/X11/xinit/xinitrc.d ] ; then\n for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do\n  [ -x \"$f\" ] && . \"$f\"\n done\n unset f\nfi\n\ntwm &\nxclock -geometry 50x50-1+1 &\nxterm -geometry 80x50+494+51 &\nxterm -geometry 80x20+494-0 &\n# exec xterm -geometry 80x66+0+0 -name login\nexec i3\n"
             }
         ]
     }
