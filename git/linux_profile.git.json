@@ -1,0 +1,95 @@
+{
+    "file": {
+        "git": [
+            {
+                "id": "CEEDF6F967C54F0B890EC93CFF9B817E",
+                "tag": "git",
+                "name": ".gitconfig",
+                "file_path": "~/.gitconfig",
+                "body": "[user]\n        name = FernandoCelmer\n        email = email@fernandocelmer.com\n[credential]\n        helper = store\n[init]\n        defaultBranch = master\n"
+            },
+            {
+                "id": "EA3D6E82B7564213B9F23CC7759DD0C5",
+                "tag": "git",
+                "name": ".gitignore",
+                "file_path": "~/.gitignore",
+                "body": "# Byte-compiled / optimized / DLL files\n__pycache__/\n*.py[cod]\n*$py.class\n\n# C extensions\n*.so\n\n# Distribution / packaging\n.Python\nbuild/\ndevelop-eggs/\ndist/\ndownloads/\neggs/\n.eggs/\nlib/\nlib64/\nparts/\nsdist/\nvar/\nwheels/\npip-wheel-metadata/\nshare/python-wheels/\n*.egg-info/\n.installed.cfg\n*.egg\nMANIFEST\n\n# PyInstaller\n#  Usually these files are written by a python script from a template\n#  before PyInstaller builds the exe, so as to inject date/other infos into it.\n*.manifest\n*.spec\n\n# Installer logs\npip-log.txt\npip-delete-this-directory.txt\n\n# Unit test / coverage reports\nhtmlcov/\n.tox/\n.nox/\n.coverage\n.coverage.*\n.cache\nnosetests.xml\ncoverage.xml\n*.cover\n*.py,cover\n.hypothesis/\n.pytest_cache/\n\n# Translations\n*.mo\n*.pot\n\n# Django stuff:\n*.log\nlocal_settings.py\ndb.sqlite3\ndb.sqlite3-journal\n\n# Flask stuff:\ninstance/\n.webassets-cache\n\n# Scrapy stuff:\n.scrapy\n\n# Sphinx documentation\ndocs/_build/\n\n# PyBuilder\ntarget/\n\n# Jupyter Notebook\n.ipynb_checkpoints\n\n# IPython\nprofile_default/\nipython_config.py\n\n# pyenv\n.python-version\n\n# PEP 582; used by e.g. github.com/David-OConnor/pyflow\n__pypackages__/\n\n# Celery stuff\ncelerybeat-schedule\ncelerybeat.pid\n\n# SageMath parsed files\n*.sage.py\n\n# Environments\n.env\n.venv\nenv/\nvenv/\nENV/\nenv.bak/\nvenv.bak/\n\n# Spyder project settings\n.spyderproject\n.spyproject\n\n# Rope project settings\n.ropeproject\n\n# mkdocs documentation\n/site\n.site\n\n# mypy\n.mypy_cache/\n.dmypy.json\ndmypy.json\n\n# Pyre type checker\n.pyre/\n\n# Others\n*.config\n*.configsite/\n"
+            }
+        ]
+    },
+    "alias": {
+        "git": [
+            {
+                "id": "F49431717CED4D1294434C0D44CC37A9",
+                "tag": "git",
+                "name": "git_setemail",
+                "command": "git_setemail",
+                "body": "git config --local user.email email@fernandocelmer.com",
+                "description": "No description",
+                "type": "exec"
+            },
+            {
+                "id": "E196D50A719C4A43A334639CB858FADB",
+                "tag": "git",
+                "name": "git_setname",
+                "command": "git_setname",
+                "body": "git config --local user.name FernandoCelmer\"",
+                "description": "No description",
+                "type": "exec"
+            },
+            {
+                "id": "BD3F63052FE0492B89D55E2B63F130EE",
+                "tag": "git",
+                "name": "git_name",
+                "command": "git_name",
+                "body": "git config --global user.name",
+                "type": "exec"
+            },
+            {
+                "id": "65780977FA8443F38FCA18EBDE56A757",
+                "tag": "git",
+                "name": "git_email",
+                "command": "git_email",
+                "body": "git config --global user.email",
+                "type": "exec"
+            },
+            {
+                "id": "026A4965E1DB4C38965CA5605B55A5B5",
+                "tag": "git",
+                "name": "git_setpwd",
+                "command": "git_setpwd",
+                "body": "git config --local credential.helper store",
+                "type": "exec"
+            }
+        ]
+    },
+    "package": {
+        "dev": [
+            {
+                "id": "FB39899B9D204B659552451FC5403E92",
+                "tag": "dev",
+                "type": "apt-get",
+                "name": "git",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            }
+        ]
+    },
+    "script": {
+        "git": [
+            {
+                "id": "367106C340A44C5980B6161C0D921BE6",
+                "tag": "git",
+                "type": "shell",
+                "name": "install_git",
+                "body": [
+                    "echo \"$(linuxp list -m file -i .gitconfig --print --field body)\" > ~/.gitconfig",
+                    "echo \"$(linuxp list -m file -i .gitignore --print --field body)\" > ~/.gitignore"
+                ],
+                "shebang": null,
+                "description": "No description"
+            }
+        ]
+    }
+}
