@@ -8,5 +8,5 @@
 
 ## My Profiles
 
-- [linux_profile.archlinux.json](https://github.com/FernandoCelmer/dotfiles/blob/master/linux_profile/linux_profile.archlinux.json)
-- [linux_profile.ubuntu.json](https://github.com/FernandoCelmer/dotfiles/blob/master/linux_profile/linux_profile.ubuntu.json)
+- [linux_profile.archlinux.json](https://github.com/FernandoCelmer/dotfiles/blob/master/linux-archlinux/linux_profile.archlinux.json)
+- [linux_profile.ubuntu.json](https://github.com/FernandoCelmer/dotfiles/blob/master/linux-ubuntu/linux_profile.ubuntu.json)
