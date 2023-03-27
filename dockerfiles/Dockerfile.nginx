@@ -1,0 +1,10 @@
+ARG APP_NAME=app
+ARG APP_PATH=/opt
+
+FROM nginx:alpine
+
+ARG APP_NAME
+ARG APP_PATH
+
+COPY . /usr/share/nginx/html
+COPY ./app $APP_PATH/app
