@@ -10,3 +10,19 @@
 
 - [linux_profile.archlinux.json](https://github.com/FernandoCelmer/dotfiles/blob/master/linux-archlinux/linux_profile.archlinux.json)
 - [linux_profile.ubuntu.json](https://github.com/FernandoCelmer/dotfiles/blob/master/linux-ubuntu/linux_profile.ubuntu.json)
+
+## Commit Style
+
+- ⚙️ FEATURE
+- 📝 PEP8
+- 📌 ISSUE
+- 🪲 BUG
+- 📘 DOCS
+- 📦 PyPI
+- ❤️️ TEST
+- ⬆️ CI/CD
+- ⚠️ SECURITY
+
+## License
+
+This project is licensed under the terms of the MIT license.
