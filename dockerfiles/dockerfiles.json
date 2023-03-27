@@ -1,0 +1,107 @@
+{
+    "file": {
+        "app": [
+            {
+                "id": "2F4B1A61D4AA4ABCA9CB16B9BAC573C8",
+                "tag": "app",
+                "name": "Dockerfile.chrome",
+                "file_path": "~/Dockerfile.chrome",
+                "body": "ARG APP_PATH=/opt\n\nFROM python:3.9.15-slim\nARG APP_PATH\nWORKDIR $APP_PATH\n\nRUN apt-get -y update\nRUN apt-get install -y wget gnupg unzip\n\n# ===== Chrome stuff =====\nRUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -\nRUN sh -c 'echo \"deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main\" >> /etc/apt/sources.list.d/google-chrome.list'\n\nRUN apt-get -y update\nRUN apt-get install -y google-chrome-stable\n\nRUN wget -O /tmp/chromedriver.zip https://chromedriver.storage.googleapis.com/100.0.4896.20/chromedriver_linux64.zip\nRUN unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/\n# ===== Chrome stuff =====\n"
+            },
+            {
+                "id": "618F4B4CC79B4C90A1DC0D49DF875BA9",
+                "tag": "app",
+                "name": "Dockerfile.tor",
+                "file_path": "~/Dockerfile.tor",
+                "body": "ARG APP_PATH=/opt\n\nFROM python:3.9.15-slim\nARG APP_PATH\nWORKDIR $APP_PATH\n\nRUN apt-get -y update\nRUN apt-get install -y libegl-dev libpci-dev wget xz-utils\n\n# ===== Tor stuff =====\nRUN echo \"deb http://deb.debian.org/debian/ unstable main contrib non-free\" >> /etc/apt/sources.list.d/debian.list\n\nRUN wget https://dist.torproject.org/torbrowser/12.0.4/tor-browser-linux64-12.0.4_ALL.tar.xz -O ./tor-browser-linux.tar.xz\nRUN tar -xvJf ./tor-browser-linux.tar.xz\n\nRUN apt-get -y update\nRUN apt-get install -y tor \n# ===== Tor stuff =====\n\nRUN service tor restart\n"
+            }
+        ],
+        "server": [
+            {
+                "id": "72AEA646136E4BE9AE2886C3E0D22BF3",
+                "tag": "server",
+                "name": "Dockerfile.nginx",
+                "file_path": "~/Dockerfile.nginx",
+                "body": "ARG APP_NAME=app\nARG APP_PATH=/opt\n\nFROM nginx:alpine\n\nARG APP_NAME\nARG APP_PATH\n\nCOPY . /usr/share/nginx/html\n"
+            }
+        ]
+    },
+    "script": {
+        "build": [
+            {
+                "id": "06CD3F31D7244DCCAF3E30FE2C5574D4",
+                "tag": "build",
+                "type": "shell",
+                "name": "chrome",
+                "body": [
+                    "DOCKER_IMAGE=\"Dockerfile.chrome\"",
+                    "linuxp list -m file -i \"$DOCKER_IMAGE\" --field body --print > \"$DOCKER_IMAGE\"",
+                    "docker build --tag chrome/dev --file \"$DOCKER_IMAGE\" ."
+                ],
+                "shebang": null,
+                "description": "No description"
+            },
+            {
+                "id": "B0EE2902DECF480FADA3235BD7A6A379",
+                "tag": "build",
+                "type": "shell",
+                "name": "tor",
+                "body": [
+                    "DOCKER_IMAGE=\"Dockerfile.tor\"",
+                    "linuxp list -m file -i \"$DOCKER_IMAGE\" --field body --print > \"$DOCKER_IMAGE\"",
+                    "docker build --tag tor/dev --file \"$DOCKER_IMAGE\" ."
+                ],
+                "shebang": null,
+                "description": "No description"
+            },
+            {
+                "id": "8AE844D481874CA39DF087F5C76CFD8F",
+                "tag": "build",
+                "type": "shell",
+                "name": "nginx",
+                "body": [
+                    "DOCKER_IMAGE=\"Dockerfile.nginx\"",
+                    "linuxp list -m file -i \"$DOCKER_IMAGE\" --field body --print > \"$DOCKER_IMAGE\"",
+                    "docker build --tag nginx/dev --file \"$DOCKER_IMAGE\" ."
+                ],
+                "shebang": null,
+                "description": "No description"
+            }
+        ],
+        "run": [
+            {
+                "id": "5B757531667641B7A60206C8A55B5876",
+                "tag": "run",
+                "type": "shell",
+                "name": "chrome",
+                "body": [
+                    "docker run -d -t chrome/dev"
+                ],
+                "shebang": null,
+                "description": "No description"
+            },
+            {
+                "id": "95B9F2B9269B4913A1E85F2C8FFCEBB0",
+                "tag": "run",
+                "type": "shell",
+                "name": "tor",
+                "body": [
+                    "docker run -d -t tor/dev"
+                ],
+                "shebang": null,
+                "description": "No description"
+            },
+            {
+                "id": "1F2E61A0E1834765952CB8642487E3DB",
+                "tag": "run",
+                "type": "shell",
+                "name": "nginx",
+                "body": [
+                    "docker run -d -t -p 80:80 nginx/dev"
+                ],
+                "shebang": null,
+                "description": "No description"
+            }
+        ]
+    }
+}
