@@ -1,5 +1,19 @@
 # dockerfiles
 
+> Dockerfile.chrome
+
+```bash
+docker build --tag chrome/dev --file Dockerfile.chrome .
+docker run -d -t chrome/dev
+```
+
+> Dockerfile.tor
+
+```bash
+docker build --tag tor/dev --file Dockerfile.tor .
+docker run -d -t tor/dev
+```
+
 > Dockerfile.nginx
 
 ```bash
