@@ -584,7 +584,7 @@
                 "tag": "git",
                 "name": "git_setemail",
                 "command": "git_setemail",
-                "body": "git config --global user.email email@fernandocelmer.com",
+                "body": "git config --local user.email email@fernandocelmer.com",
                 "type": "exec"
             },
             {
@@ -592,7 +592,7 @@
                 "tag": "git",
                 "name": "git_setname",
                 "command": "git_setname",
-                "body": "git config --global user.name FernandoCelmer",
+                "body": "git config --local user.name FernandoCelmer",
                 "type": "exec"
             },
             {
@@ -600,7 +600,7 @@
                 "tag": "git",
                 "name": "git_name",
                 "command": "git_name",
-                "body": "git config --global user.name",
+                "body": "git config --local user.name",
                 "type": "exec"
             },
             {
@@ -608,7 +608,7 @@
                 "tag": "git",
                 "name": "git_email",
                 "command": "git_email",
-                "body": "git config --global user.email",
+                "body": "git config --local user.email",
                 "type": "exec"
             },
             {
