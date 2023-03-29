@@ -314,6 +314,278 @@
                 "file": null,
                 "description": "No description"
             }
+        ],
+        "intel": [
+            {
+                "id": "59452C9D37D04EBFB89DF506A0E9562D",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-ucode",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "BDA3715D1C0349B4BABD04AEE7432568",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "libva-intel-driver",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "E31CE56EE32443A2A8573D87B977D83C",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "vulkan-intel",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "91C18C127C8A478AB6621E33F71B9435",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "xf86-video-intel",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "B2A95AADF863431382325DA224322BED",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-compute-runtime",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "B351AD8EA78E406E97FD29C1C10BBBD3",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-gmmlib",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "C9C06B7AA0B3466999740BB63775C0B4",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-gpu-tools",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "3749D373DB884C6AA20527EAFA59CCD8",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-graphics-compiler",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "74D20E9CD4AD42DE87B9DD22E1B8587A",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-media-driver",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "B6DC20FDF73B43A992AFE70ADBD1530A",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-media-sdk",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "A8E79A3BD27F428E966D92D0385218AA",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-metee",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "6EA4F2B4A76445A2834017F4F154B16B",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-metee-doc",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "1FF2BDD542534807BFD69BA6022EBF41",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-oneapi-basekit",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "AB7B3B2D57DF4125BF55B9B6F8C7E492",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-oneapi-common",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "83099DDB42FB493F8C678C5E6BD00076",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-oneapi-compiler-dpcpp-cpp-runtime",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "6088D3366C8543FF9DC65EFE612C7846",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-oneapi-compiler-dpcpp-cpp-runtime-libs",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "AB0B7A1D610748939A3B8E718A90ECA0",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-oneapi-compiler-shared",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "197B4C427C8F4D60AD80202C96FEC7A4",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-oneapi-compiler-shared-opencl-cpu",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "294387AA30AD4F3DB1932276B736CDE1",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-oneapi-compiler-shared-runtime",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "D78A537C3FA84599BA8DBF935FF6E9FF",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-oneapi-compiler-shared-runtime-libs",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "22B1FE6763AE451AA373A161ADE003B3",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-oneapi-dev-utilities",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "D016F61E15234C1FBF4D029E5F0EAE41",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-oneapi-dpcpp-cpp",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "3B08A550EF0F4A8EA41E23713A09C83C",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-oneapi-dpcpp-debugger",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "6B04C10521964BAE93A486D613825B8A",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-oneapi-mkl",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "AA7217D2C34B43EB806C1A0C9020B3AA",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-oneapi-openmp",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "66AECF12D52C4986B125D1301E1A0158",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-oneapi-tbb",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "7CE41DC102B443C1AC8BC729333C7FE2",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-opencl-clang",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "54125778C6C041B4998FA3EF31212231",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intel-undervolt",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "507DBB01F03B417EB6586622ECBEB51B",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "intellij-idea-community-edition",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "A5C33C3CA79C453CAA5EFA758AA1448E",
+                "tag": "intel",
+                "type": "pacman",
+                "name": "onevpl-intel-gpu",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            }
         ]
     },
     "script": {
@@ -435,7 +707,7 @@
                 "type": "shell",
                 "name": "step_09",
                 "body": [
-                    "linuxp install -m package -t system --sudo --group"
+                    "linuxp install -m package -t system --group"
                 ],
                 "shebang": null,
                 "description": "ROOT: Installation of Useful Packages"
@@ -518,16 +790,16 @@
                 "description": "USER: Window manager configuration (i3)"
             },
             {
-                "id": "EE959D7607694622B030BEEA1174AF56",
+                "id": "E0E30896CA0D426F91A49AC01F0268A7",
                 "tag": "init",
                 "type": "shell",
                 "name": "step_16",
                 "body": [
                     "setxkbmap -layout br -model pc105 -option grp:alt_caps_toggle",
-                    "echo 'exec --no-startup-id \"setxkbmap -layout br -model pc105 -option grp:alt_caps_toggle\"' >> ~/.config/i3/config"
+                    "echo \"$(linuxp list -m file -i layout --print --field body)\" >> ~/.config/i3/config"
                 ],
                 "shebang": null,
-                "description": "USER: Keyboard Settings (i3)"
+                "description": "USER: Script to configure keyboard layout"
             }
         ],
         "install": [
@@ -550,11 +822,20 @@
     "file": {
         "i3": [
             {
-                "id": "6EACF95374B0464C871377642DE016CA",
+                "id": "65EA04E80A4D4F329922158C9467E635",
                 "tag": "i3",
                 "name": ".xinitrc",
                 "file_path": "~/.xinitrc",
-                "body": "#!/bin/sh\n\nuserresources=$HOME/.Xresources\nusermodmap=$HOME/.Xmodmap\nsysresources=/etc/X11/xinit/.Xresources\nsysmodmap=/etc/X11/xinit/.Xmodmap\n\n# merge in defaults and keymaps\n\nif [ -f $sysresources ]; then\n    xrdb -merge $sysresources\nfi\n\nif [ -f $sysmodmap ]; then\n    xmodmap $sysmodmap\nfi\n\nif [ -f \"$userresources\" ]; then\n    xrdb -merge \"$userresources\"\nfi\n\nif [ -f \"$usermodmap\" ]; then\n    xmodmap \"$usermodmap\"\nfi\n\n# start some nice programs\n\nif [ -d /etc/X11/xinit/xinitrc.d ] ; then\n for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do\n  [ -x \"$f\" ] && . \"$f\"\n done\n unset f\nfi\n\ntwm &\nxclock -geometry 50x50-1+1 &\nxterm -geometry 80x50+494+51 &\nxterm -geometry 80x20+494-0 &\n# exec xterm -geometry 80x66+0+0 -name login\nexec i3\n"
+                "body": "#!/bin/sh\n\nuserresources=$HOME/.Xresources\nusermodmap=$HOME/.Xmodmap\nsysresources=/etc/X11/xinit/.Xresources\nsysmodmap=/etc/X11/xinit/.Xmodmap\n\n# merge in defaults and keymaps\n\nif [ -f $sysresources ]; then\n    xrdb -merge $sysresources\nfi\n\nif [ -f $sysmodmap ]; then\n    xmodmap $sysmodmap\nfi\n\nif [ -f \"$userresources\" ]; then\n    xrdb -merge \"$userresources\"\nfi\n\nif [ -f \"$usermodmap\" ]; then\n    xmodmap \"$usermodmap\"\nfi\n\n# start some nice programs\n\nif [ -d /etc/X11/xinit/xinitrc.d ] ; then\n for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do\n  [ -x \"$f\" ] && . \"$f\"\n done\n unset f\nfi\n\ntwm &\nxclock -geometry 50x50-1+1 &\nxterm -geometry 80x50+494+51 &\nxterm -geometry 80x20+494-0 &\n#exec xterm -geometry 80x66+0+0 -name login\n\nsetxkbmap -layout br -model pc105 -option grp:alt_caps_toggle\nexec --no-startup-id \"setxkbmap -layout br -model pc105 -option grp:alt_caps_toggle\"\nexec i3\n"
+            }
+        ],
+        "settings": [
+            {
+                "id": "ED411DFE08944458978D0D1BE46C9A49",
+                "tag": "settings",
+                "name": "layout",
+                "file_path": "~/.config/i3/config",
+                "body": "setxkbmap -layout br -model pc105 -option grp:alt_caps_toggle\nexec --no-startup-id \"setxkbmap -layout br -model pc105 -option grp:alt_caps_toggle\"\n\n"
             }
         ]
     }
