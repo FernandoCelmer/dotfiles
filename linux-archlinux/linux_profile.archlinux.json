@@ -18,6 +18,15 @@
                 "url": null,
                 "file": null,
                 "description": "No description"
+            },
+            {
+                "id": "E5F7F0DE954D4F94B668302350A0E7B0",
+                "tag": "python",
+                "type": "pacman",
+                "name": "tk",
+                "url": null,
+                "file": null,
+                "description": "No description"
             }
         ],
         "config": [
