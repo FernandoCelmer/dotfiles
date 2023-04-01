@@ -378,6 +378,26 @@
                 "description": "No description"
             }
         ],
+        "docker": [
+            {
+                "id": "657365A0DE3547FDB91FE80EC29003D9",
+                "tag": "docker",
+                "type": "pacman",
+                "name": "docker",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "78D63DA31CC24BB689A8003E82974C22",
+                "tag": "docker",
+                "type": "pacman",
+                "name": "docker-compose",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            }
+        ],
         "intel": [
             {
                 "id": "59452C9D37D04EBFB89DF506A0E9562D",
@@ -741,6 +761,37 @@
                     "cd /tmp/snapd && makepkg -si",
                     "sudo systemctl enable --now snapd.socket",
                     "sudo ln -s /var/lib/snapd/snap /snap"
+                ],
+                "shebang": null,
+                "description": "No description"
+            },
+            {
+                "id": "0559BD38C33244378A84194300D07BFA",
+                "tag": "install",
+                "type": "shell",
+                "name": "docker",
+                "body": [
+                    "linuxp install -m package -t docker --group --sudo",
+                    "sudo groupadd docker",
+                    "sudo usermod -aG docker $USER",
+                    "newgrp docker",
+                    "docker run hello-world"
+                ],
+                "shebang": null,
+                "description": "No description"
+            },
+            {
+                "id": "ED43F551809E4EAEB75DD4DD65881964",
+                "tag": "install",
+                "type": "shell",
+                "name": "asdf",
+                "body": [
+                    "linuxp install -m package -t dev --sudo --group",
+                    "git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.3",
+                    ". $HOME/.asdf/asdf.sh",
+                    ". $HOME/.asdf/completions/asdf.bash",
+                    "echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc",
+                    "echo '. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc"
                 ],
                 "shebang": null,
                 "description": "No description"
