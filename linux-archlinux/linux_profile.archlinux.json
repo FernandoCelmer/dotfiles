@@ -385,6 +385,15 @@
                 "url": null,
                 "file": null,
                 "description": "No description"
+            },
+            {
+                "id": "36B71FC3841B455A8A243F5832F0E6D0",
+                "tag": "dev",
+                "type": "pacman",
+                "name": "python",
+                "url": null,
+                "file": null,
+                "description": "No description"
             }
         ],
         "docker": [
@@ -909,6 +918,35 @@
                 "name": "pip_uninstall",
                 "command": "pip_uninstall",
                 "body": "pip freeze > uninstall.txt && pip uninstall -r uninstall.txt -y && rm -r uninstall.txt",
+                "description": "No description",
+                "type": "exec"
+            }
+        ],
+        "git": [
+            {
+                "id": "39BF6E4AF7EC45EEB5E4F0C82D166672",
+                "tag": "git",
+                "name": "git_setname",
+                "command": "git_setname",
+                "body": "git config --local user.name 'FernandoCelmer'",
+                "description": "No description",
+                "type": "exec"
+            },
+            {
+                "id": "4C28737D9FC645FA9B85D7D0BCDE2AE0",
+                "tag": "git",
+                "name": "git_setemail",
+                "command": "git_setemail",
+                "body": "git config --local user.email 'email@fernandocelmer.com'",
+                "description": "No description",
+                "type": "exec"
+            },
+            {
+                "id": "4F3B98F76B584668B10679139C9AFD60",
+                "tag": "git",
+                "name": "git_set",
+                "command": "git_set",
+                "body": "git_setname && git_setemail",
                 "description": "No description",
                 "type": "exec"
             }
