@@ -425,143 +425,6 @@
                 "description": "No description"
             }
         ],
-        "intel": [
-            {
-                "id": "59452C9D37D04EBFB89DF506A0E9562D",
-                "tag": "intel",
-                "type": "pacman",
-                "name": "intel-ucode",
-                "url": null,
-                "file": null,
-                "description": "No description"
-            },
-            {
-                "id": "BDA3715D1C0349B4BABD04AEE7432568",
-                "tag": "intel",
-                "type": "pacman",
-                "name": "libva-intel-driver",
-                "url": null,
-                "file": null,
-                "description": "No description"
-            },
-            {
-                "id": "E31CE56EE32443A2A8573D87B977D83C",
-                "tag": "intel",
-                "type": "pacman",
-                "name": "vulkan-intel",
-                "url": null,
-                "file": null,
-                "description": "No description"
-            },
-            {
-                "id": "91C18C127C8A478AB6621E33F71B9435",
-                "tag": "intel",
-                "type": "pacman",
-                "name": "xf86-video-intel",
-                "url": null,
-                "file": null,
-                "description": "No description"
-            },
-            {
-                "id": "B2A95AADF863431382325DA224322BED",
-                "tag": "intel",
-                "type": "pacman",
-                "name": "intel-compute-runtime",
-                "url": null,
-                "file": null,
-                "description": "No description"
-            },
-            {
-                "id": "B351AD8EA78E406E97FD29C1C10BBBD3",
-                "tag": "intel",
-                "type": "pacman",
-                "name": "intel-gmmlib",
-                "url": null,
-                "file": null,
-                "description": "No description"
-            },
-            {
-                "id": "C9C06B7AA0B3466999740BB63775C0B4",
-                "tag": "intel",
-                "type": "pacman",
-                "name": "intel-gpu-tools",
-                "url": null,
-                "file": null,
-                "description": "No description"
-            },
-            {
-                "id": "3749D373DB884C6AA20527EAFA59CCD8",
-                "tag": "intel",
-                "type": "pacman",
-                "name": "intel-graphics-compiler",
-                "url": null,
-                "file": null,
-                "description": "No description"
-            },
-            {
-                "id": "74D20E9CD4AD42DE87B9DD22E1B8587A",
-                "tag": "intel",
-                "type": "pacman",
-                "name": "intel-media-driver",
-                "url": null,
-                "file": null,
-                "description": "No description"
-            },
-            {
-                "id": "B6DC20FDF73B43A992AFE70ADBD1530A",
-                "tag": "intel",
-                "type": "pacman",
-                "name": "intel-media-sdk",
-                "url": null,
-                "file": null,
-                "description": "No description"
-            },
-            {
-                "id": "A8E79A3BD27F428E966D92D0385218AA",
-                "tag": "intel",
-                "type": "pacman",
-                "name": "intel-metee",
-                "url": null,
-                "file": null,
-                "description": "No description"
-            },
-            {
-                "id": "6EA4F2B4A76445A2834017F4F154B16B",
-                "tag": "intel",
-                "type": "pacman",
-                "name": "intel-metee-doc",
-                "url": null,
-                "file": null,
-                "description": "No description"
-            },
-            {
-                "id": "1FF2BDD542534807BFD69BA6022EBF41",
-                "tag": "intel",
-                "type": "pacman",
-                "name": "intel-oneapi-basekit",
-                "url": null,
-                "file": null,
-                "description": "No description"
-            },
-            {
-                "id": "AB7B3B2D57DF4125BF55B9B6F8C7E492",
-                "tag": "intel",
-                "type": "pacman",
-                "name": "intel-oneapi-common",
-                "url": null,
-                "file": null,
-                "description": "No description"
-            },
-            {
-                "id": "A5C33C3CA79C453CAA5EFA758AA1448E",
-                "tag": "intel",
-                "type": "pacman",
-                "name": "onevpl-intel-gpu",
-                "url": null,
-                "file": null,
-                "description": "No description"
-            }
-        ],
         "terminal": [
             {
                 "id": "5E080CD6AE4D4D6BBEC9B96B928BAFBE",
@@ -570,7 +433,7 @@
                 "name": "bat",
                 "url": "https://github.com/sharkdp/bat",
                 "file": null,
-                "description": "A cat(1) clone with wings"
+                "description": "A cat clone with wings"
             },
             {
                 "id": "B8AAB082E6474A159042E88B172CEC20",
@@ -579,7 +442,7 @@
                 "name": "exa",
                 "url": "https://github.com/ogham/exa",
                 "file": null,
-                "description": "A modern replacement for \u2018ls\u2019"
+                "description": "A modern replacement for ls"
             }
         ]
     },
