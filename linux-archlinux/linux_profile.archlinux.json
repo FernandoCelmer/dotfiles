@@ -113,7 +113,7 @@
                 "name": "picom",
                 "url": null,
                 "file": null,
-                "description": "No description"
+                "description": "A lightweight compositor for X11"
             },
             {
                 "id": "7B859212974C422086B0AAE94A289EBA",
@@ -122,7 +122,7 @@
                 "name": "feh",
                 "url": null,
                 "file": null,
-                "description": "No description"
+                "description": "Utility for Wallpaper and Images"
             }
         ],
         "system": [
@@ -250,7 +250,7 @@
                 "name": "bluez",
                 "url": null,
                 "file": null,
-                "description": "No description"
+                "description": "Bluetooth"
             },
             {
                 "id": "A5C4BB0EFE1444BABC38BF52AF836A32",
@@ -259,13 +259,22 @@
                 "name": "bluez-utils",
                 "url": null,
                 "file": null,
-                "description": "No description"
+                "description": "Bluetooth utils"
             },
             {
                 "id": "6673F8A636FC4F53B69A666C32ACB686",
                 "tag": "system",
                 "type": "pacman",
                 "name": "alsa-utils",
+                "url": null,
+                "file": null,
+                "description": "Linux sound architecture"
+            },
+            {
+                "id": "BAA4CBBC43C14E8EA80DDAF5014C2E8B",
+                "tag": "system",
+                "type": "pacman",
+                "name": "xclip",
                 "url": null,
                 "file": null,
                 "description": "No description"
@@ -325,6 +334,15 @@
                 "url": null,
                 "file": null,
                 "description": "No description"
+            },
+            {
+                "id": "497E23245407454CB08561CE0D2683C9",
+                "tag": "util",
+                "type": "pacman",
+                "name": "bottom",
+                "url": "https://github.com/ClementTsang/bottom",
+                "file": null,
+                "description": "Graphical process/system monitor"
             }
         ],
         "driver": [
@@ -382,15 +400,6 @@
                 "tag": "dev",
                 "type": "pacman",
                 "name": "git",
-                "url": null,
-                "file": null,
-                "description": "No description"
-            },
-            {
-                "id": "36B71FC3841B455A8A243F5832F0E6D0",
-                "tag": "dev",
-                "type": "pacman",
-                "name": "python",
                 "url": null,
                 "file": null,
                 "description": "No description"
@@ -551,6 +560,26 @@
                 "url": null,
                 "file": null,
                 "description": "No description"
+            }
+        ],
+        "terminal": [
+            {
+                "id": "5E080CD6AE4D4D6BBEC9B96B928BAFBE",
+                "tag": "terminal",
+                "type": "pacman",
+                "name": "bat",
+                "url": "https://github.com/sharkdp/bat",
+                "file": null,
+                "description": "A cat(1) clone with wings"
+            },
+            {
+                "id": "B8AAB082E6474A159042E88B172CEC20",
+                "tag": "terminal",
+                "type": "pacman",
+                "name": "exa",
+                "url": "https://github.com/ogham/exa",
+                "file": null,
+                "description": "A modern replacement for \u2018ls\u2019"
             }
         ]
     },
@@ -949,6 +978,40 @@
                 "body": "git_setname && git_setemail",
                 "description": "No description",
                 "type": "exec"
+            }
+        ]
+    },
+    "text": {
+        "process": [
+            {
+                "id": "F664D418F1F14509A30DE49EB6C52ACB",
+                "tag": "process",
+                "name": "kill",
+                "text": "kill <ID> - Kill a process by ID",
+                "label": [
+                    "process"
+                ]
+            },
+            {
+                "id": "5D04F079DBD34D34ACFD74151AD23FDD",
+                "tag": "process",
+                "name": "kill",
+                "text": "killall <NAME> - Kill a process by name",
+                "label": []
+            },
+            {
+                "id": "A95F14F0346741FC8784F8F59AFDEF0B",
+                "tag": "process",
+                "name": "top",
+                "text": "top | grep <NAME> - Search a process by name",
+                "label": []
+            },
+            {
+                "id": "5AA94866BAB4442B80A39260C69B7F41",
+                "tag": "process",
+                "name": "bottom",
+                "text": "btm - Run bottom",
+                "label": []
             }
         ]
     }
