@@ -36,6 +36,24 @@
                 "url": null,
                 "file": null,
                 "description": "No description"
+            },
+            {
+                "id": "771AD716AECD4391A9946CE207C25471",
+                "tag": "python",
+                "type": "pacman",
+                "name": "python-poetry",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "9A8EF91E1A9849989BF03E2C5F0C4EF1",
+                "tag": "python",
+                "type": "pacman",
+                "name": "pyenv",
+                "url": null,
+                "file": null,
+                "description": "No description"
             }
         ],
         "config": [
