@@ -834,6 +834,16 @@
                 "file_path": "~/.bash_profile",
                 "body": "[[ -f ~/.bashrc ]] && . ~/.bashrc\n\nif [ -z \"${DISPLAY}\" ] && [ \"${XDG_VTNR}\" -eq 1 ]; then\n  exec startx\nfi\n"
             }
+        ],
+        "default": [
+            {
+                "id": "51D53F0BE4CB45A68239F841C24ECE74",
+                "tag": "default",
+                "name": "sdfs",
+                "file_path": "fdsf",
+                "body": null,
+                "description": "No description"
+            }
         ]
     },
     "alias": {
@@ -921,6 +931,15 @@
                 "command": "pip_uninstall",
                 "body": "pip freeze > uninstall.txt && pip uninstall -r uninstall.txt -y && rm -r uninstall.txt",
                 "description": "No description",
+                "type": "exec"
+            },
+            {
+                "id": "2B6971C4118543FEB5D4C80334689A75",
+                "tag": "python",
+                "name": "python3.8",
+                "command": "python3.8",
+                "body": "~/.asdf/installs/python/3.8.10/bin/python",
+                "description": "v3.8.10",
                 "type": "exec"
             }
         ],
