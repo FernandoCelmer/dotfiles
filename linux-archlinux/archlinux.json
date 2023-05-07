@@ -920,7 +920,7 @@
                 "tag": "python",
                 "name": "pip_install",
                 "command": "pip_install",
-                "body": "pip install -r requirements.txt --no-cache-dir",
+                "body": "pip install -r $(find . -name requirements.txt) --no-cache-dir",
                 "description": "No description",
                 "type": "exec"
             },
@@ -934,12 +934,39 @@
                 "type": "exec"
             },
             {
-                "id": "2B6971C4118543FEB5D4C80334689A75",
+                "id": "41A74A0560BB4835A97545246A7C5C4B",
                 "tag": "python",
-                "name": "python3.8",
-                "command": "python3.8",
-                "body": "~/.asdf/installs/python/3.8.10/bin/python",
-                "description": "v3.8.10",
+                "name": "v311",
+                "command": "v311",
+                "body": "python3.11 -m venv venv && act && pip install --upgrade pip",
+                "description": "No description",
+                "type": "exec"
+            },
+            {
+                "id": "45A868DED95B420994AE1597CBAE3CDF",
+                "tag": "python",
+                "name": "v310",
+                "command": "v310",
+                "body": "python3.10 -m venv venv && act && pip install --upgrade pip",
+                "description": "No description",
+                "type": "exec"
+            },
+            {
+                "id": "202FA58B70F140F799478B8D7D2088B6",
+                "tag": "python",
+                "name": "v39",
+                "command": "v39",
+                "body": "python3.9 -m venv venv && act && pip install --upgrade pip",
+                "description": "No description",
+                "type": "exec"
+            },
+            {
+                "id": "0F69A35FCD7448C5BAF1DDCA9CDC224E",
+                "tag": "python",
+                "name": "v38",
+                "command": "v38",
+                "body": "python -m venv venv && act && pip install --upgrade pip",
+                "description": "No description",
                 "type": "exec"
             }
         ],
@@ -968,6 +995,35 @@
                 "name": "git_set",
                 "command": "git_set",
                 "body": "git_setname && git_setemail",
+                "description": "No description",
+                "type": "exec"
+            }
+        ],
+        "django": [
+            {
+                "id": "5CC05C2C9CE9455D9FB61235EF0DECBD",
+                "tag": "django",
+                "name": "runserver",
+                "command": "runserver",
+                "body": "python $(find . -name manage.py) runserver",
+                "description": "No description",
+                "type": "exec"
+            },
+            {
+                "id": "6C4F01AC8C3B49389E5B023CB8B40403",
+                "tag": "django",
+                "name": "makemigrations",
+                "command": "makemigrations",
+                "body": "python $(find . -name manage.py) makemigrations",
+                "description": "No description",
+                "type": "exec"
+            },
+            {
+                "id": "9CB6944A84074B49AD008FE0FFBB0711",
+                "tag": "django",
+                "name": "migrate",
+                "command": "migrate",
+                "body": "python $(find . -name manage.py) migrate",
                 "description": "No description",
                 "type": "exec"
             }
