@@ -1,0 +1,13 @@
+FROM archlinux:base-devel
+
+RUN useradd -m build && \
+    pacman -Syu --noconfirm && \
+    pacman -Sy --noconfirm git && \
+    echo "build ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/build
+
+USER build
+WORKDIR /home/build
+
+RUN git clone https://aur.archlinux.org/google-chrome.git && \
+    cd google-chrome && \
+    makepkg --noconfirm --syncdeps --rmdeps --install --clean
