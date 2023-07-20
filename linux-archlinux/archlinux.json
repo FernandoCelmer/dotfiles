@@ -851,8 +851,8 @@
             {
                 "id": "AB7DD4ECF6204022BA925EA3B1D9DC96",
                 "tag": "services",
-                "name": "start_bluetooth",
-                "command": "start_bluetooth",
+                "name": "start_headphone",
+                "command": "start_headphone",
                 "body": "bluetoothctl power on && bluetoothctl connect FC:58:FA:88:44:C0",
                 "description": "Start Bluetooth and connects to my headphone",
                 "type": "exec"
@@ -920,7 +920,7 @@
                 "tag": "python",
                 "name": "pip_install",
                 "command": "pip_install",
-                "body": "pip install -r $(find . -name requirements.txt) --no-cache-dir",
+                "body": "pip install -r requirements.txt --no-cache-dir",
                 "description": "No description",
                 "type": "exec"
             },
@@ -968,6 +968,15 @@
                 "body": "python -m venv venv && act && pip install --upgrade pip",
                 "description": "No description",
                 "type": "exec"
+            },
+            {
+                "id": "0C3D3B7B3EB74558A276BFDED98962EF",
+                "tag": "python",
+                "name": "ipython",
+                "command": "ipython",
+                "body": "source ~/.ipython/bin/activate && ipython",
+                "description": "No description",
+                "type": "exec"
             }
         ],
         "git": [
@@ -1005,7 +1014,7 @@
                 "tag": "django",
                 "name": "runserver",
                 "command": "runserver",
-                "body": "python $(find . -name manage.py) runserver",
+                "body": "python manage.py runserver",
                 "description": "No description",
                 "type": "exec"
             },
@@ -1014,7 +1023,7 @@
                 "tag": "django",
                 "name": "makemigrations",
                 "command": "makemigrations",
-                "body": "python $(find . -name manage.py) makemigrations",
+                "body": "python manage.py makemigrations",
                 "description": "No description",
                 "type": "exec"
             },
@@ -1023,7 +1032,7 @@
                 "tag": "django",
                 "name": "migrate",
                 "command": "migrate",
-                "body": "python $(find . -name manage.py) migrate",
+                "body": "python manage.py migrate",
                 "description": "No description",
                 "type": "exec"
             }
