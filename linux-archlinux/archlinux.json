@@ -54,6 +54,16 @@
                 "url": null,
                 "file": null,
                 "description": "No description"
+            },
+            {
+                "id": "6C8124B5F2AF4C86AD8109E10026434E",
+                "tag": "python",
+                "type": "pip",
+                "name": "ipython",
+                "version": "8.14.0",
+                "url": null,
+                "file": null,
+                "description": "No description"
             }
         ],
         "config": [
@@ -853,7 +863,7 @@
                 "tag": "services",
                 "name": "start_headphone",
                 "command": "start_headphone",
-                "body": "bluetoothctl power on && bluetoothctl connect FC:58:FA:88:44:C0",
+                "body": "bluetoothctl power on && bluetoothctl connect 40:58:99:45:0F:0F",
                 "description": "Start Bluetooth and connects to my headphone",
                 "type": "exec"
             },
