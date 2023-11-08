@@ -427,6 +427,16 @@
                 "url": null,
                 "file": null,
                 "description": "No description"
+            },
+            {
+                "id": "D37CF58808AF403F99CDD37A0D79F652",
+                "tag": "driver",
+                "type": "pacman",
+                "name": "sof-firmware",
+                "version": null,
+                "url": null,
+                "file": null,
+                "description": "No description"
             }
         ],
         "driver_vbox": [
@@ -995,7 +1005,7 @@
                 "tag": "git",
                 "name": "git_setname",
                 "command": "git_setname",
-                "body": "git config --local user.name 'FernandoCelmer'",
+                "body": "git config --global user.name 'FernandoCelmer'",
                 "description": "No description",
                 "type": "exec"
             },
@@ -1004,7 +1014,7 @@
                 "tag": "git",
                 "name": "git_setemail",
                 "command": "git_setemail",
-                "body": "git config --local user.email 'email@fernandocelmer.com'",
+                "body": "git config --global user.email 'email@fernandocelmer.com'",
                 "description": "No description",
                 "type": "exec"
             },
