@@ -818,7 +818,7 @@
                 "name": "asdf",
                 "body": [
                     "linuxp install -m package -t dev --sudo --group",
-                    "git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.3",
+                    "git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1",
                     ". $HOME/.asdf/asdf.sh",
                     ". $HOME/.asdf/completions/asdf.bash",
                     "echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc",
