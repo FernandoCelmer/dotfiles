@@ -54,16 +54,6 @@
                 "url": null,
                 "file": null,
                 "description": "No description"
-            },
-            {
-                "id": "6C8124B5F2AF4C86AD8109E10026434E",
-                "tag": "python",
-                "type": "pip",
-                "name": "ipython",
-                "version": "8.14.0",
-                "url": null,
-                "file": null,
-                "description": "No description"
             }
         ],
         "config": [
@@ -281,33 +271,6 @@
                 "description": "No description"
             },
             {
-                "id": "92F6E05DD1744ED29A0F0E73B751EE77",
-                "tag": "system",
-                "type": "pacman",
-                "name": "bluez",
-                "url": null,
-                "file": null,
-                "description": "Bluetooth"
-            },
-            {
-                "id": "A5C4BB0EFE1444BABC38BF52AF836A32",
-                "tag": "system",
-                "type": "pacman",
-                "name": "bluez-utils",
-                "url": null,
-                "file": null,
-                "description": "Bluetooth utils"
-            },
-            {
-                "id": "6673F8A636FC4F53B69A666C32ACB686",
-                "tag": "system",
-                "type": "pacman",
-                "name": "alsa-utils",
-                "url": null,
-                "file": null,
-                "description": "Linux sound architecture"
-            },
-            {
                 "id": "BAA4CBBC43C14E8EA80DDAF5014C2E8B",
                 "tag": "system",
                 "type": "pacman",
@@ -459,6 +422,16 @@
                 "url": null,
                 "file": null,
                 "description": "No description"
+            },
+            {
+                "id": "C58D50264F0A477F86CCCB82162A2EB7",
+                "tag": "dev",
+                "type": "pacman",
+                "name": "dbeaver",
+                "version": null,
+                "url": null,
+                "file": null,
+                "description": "No description"
             }
         ],
         "docker": [
@@ -564,6 +537,100 @@
                 "url": null,
                 "file": null,
                 "description": "No description"
+            }
+        ],
+        "audio": [
+            {
+                "id": "EB45522D48C94CA7BE6DD01407868D63",
+                "tag": "audio",
+                "type": "pacman",
+                "name": "alsa-utils",
+                "version": null,
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "50985842E80A4289B9F3C4002DDE76DE",
+                "tag": "audio",
+                "type": "pacman",
+                "name": "alsa-plugins",
+                "version": null,
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "951DB8B2C12045E6B986ECFC4DCE4AF4",
+                "tag": "audio",
+                "type": "pacman",
+                "name": "pulseaudio",
+                "version": null,
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "AD40227FFAAA4AE69B7E5311AF670556",
+                "tag": "audio",
+                "type": "pacman",
+                "name": "pulseaudio-alsa",
+                "version": null,
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "2BCBAE62206247BC92C68D637B0F629A",
+                "tag": "audio",
+                "type": "pacman",
+                "name": "pulseaudio-equalizer",
+                "version": null,
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "77ECB767F5974AFDA1133ABC8BA6F834",
+                "tag": "audio",
+                "type": "pacman",
+                "name": "kmix",
+                "version": null,
+                "url": null,
+                "file": null,
+                "description": "KDE Volume Control"
+            }
+        ],
+        "bluetooth": [
+            {
+                "id": "2889870F7A2440F9A742FB9062C2ADED",
+                "tag": "bluetooth",
+                "type": "pacman",
+                "name": "bluez",
+                "version": null,
+                "url": null,
+                "file": null,
+                "description": "Bluetooth"
+            },
+            {
+                "id": "2B8FF591E14149CE91632E00F1435DD6",
+                "tag": "bluetooth",
+                "type": "pacman",
+                "name": "bluez-utils",
+                "version": null,
+                "url": null,
+                "file": null,
+                "description": "Bluetooth Utils"
+            },
+            {
+                "id": "E99A03F9C481476EADA9E37374C397FE",
+                "tag": "bluetooth",
+                "type": "pacman",
+                "name": "pulseaudio-bluetooth",
+                "version": null,
+                "url": null,
+                "file": null,
+                "description": "Bluetooth Driver"
             }
         ]
     },
