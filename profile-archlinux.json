@@ -47,10 +47,21 @@
                 "description": "No description"
             },
             {
-                "id": "9A8EF91E1A9849989BF03E2C5F0C4EF1",
+                "id": "8757D6A172BE46D68595F8C435A30E17",
+                "tag": "python",
+                "type": "pacman",
+                "name": "python-gobject",
+                "version": null,
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "88DF15060C2A4A1C9E6B3D9AAFCCA7C6",
                 "tag": "python",
                 "type": "pacman",
                 "name": "pyenv",
+                "version": null,
                 "url": null,
                 "file": null,
                 "description": "No description"
@@ -284,6 +295,26 @@
                 "tag": "system",
                 "type": "pacman",
                 "name": "gcc",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "8A65AAB863BB474381D4897188191453",
+                "tag": "system",
+                "type": "pacman",
+                "name": "brightnessctl",
+                "version": null,
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "F9423D3922FA4D78A6B1DE26FE82076B",
+                "tag": "system",
+                "type": "pacman",
+                "name": "glib2",
+                "version": null,
                 "url": null,
                 "file": null,
                 "description": "No description"
@@ -979,6 +1010,24 @@
                 "name": "ls",
                 "command": "ls",
                 "body": "exa -l --icons -G -B --no-user --no-permissions",
+                "description": "No description",
+                "type": "exec"
+            },
+            {
+                "id": "257E3A5AE5EA47759E81859968611EB4",
+                "tag": "system",
+                "name": "keyboard_on",
+                "command": "keyboard_on",
+                "body": "brightnessctl --device=\"dell::kbd_backlight\" set 1",
+                "description": "No description",
+                "type": "exec"
+            },
+            {
+                "id": "243DFD9DFF73423DBADF4BF69E116B8F",
+                "tag": "system",
+                "name": "keyboard_of",
+                "command": "keyboard_of",
+                "body": "brightnessctl --device=\"dell::kbd_backlight\" set 0",
                 "description": "No description",
                 "type": "exec"
             }
