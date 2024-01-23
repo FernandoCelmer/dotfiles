@@ -1,0 +1,385 @@
+{
+    "package": {
+        "docker": [
+            {
+                "id": "9B163E4B325C46AD9A169C4B98E4275B",
+                "tag": "docker",
+                "type": "brew",
+                "name": "docker",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "F485C6178B954AB59A01C1098A5535C1",
+                "tag": "docker",
+                "type": "brew",
+                "name": "virtualbox",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "6B213BEBCB624C9283D649A1B6C3E5DD",
+                "tag": "docker",
+                "type": "brew",
+                "name": "docker-machine",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "3879E433F80A46C3A5645036A2F1A375",
+                "tag": "docker",
+                "type": "brew",
+                "name": "colima",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "BA7386C7A4F749BBAA176A87BDD72702",
+                "tag": "docker",
+                "type": "brew",
+                "name": "docker-compose",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "CE60EE9370B641D1A3CFCFFFC87F8FBA",
+                "tag": "docker",
+                "type": "brew",
+                "name": "docker-credential-helper",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            }
+        ],
+        "dev": [
+            {
+                "id": "39C7A83FE650417EA92D8AE73914A520",
+                "tag": "dev",
+                "type": "brew",
+                "name": "git",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "420BC1794EDA4B70A56C0FE23AD40098",
+                "tag": "dev",
+                "type": "brew",
+                "name": "gh",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            }
+        ],
+        "chat": [
+            {
+                "id": "6CF42501811F4221A4CB8C8297BF5F32",
+                "tag": "chat",
+                "type": "brew",
+                "name": "discord",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "DEFA5BD3937D4F519614049CAA8352F2",
+                "tag": "chat",
+                "type": "brew",
+                "name": "slack",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            }
+        ],
+        "database": [
+            {
+                "id": "313AC1D2A30C43B48E3326B7DE451559",
+                "tag": "database",
+                "type": "brew",
+                "name": "dbeaver-community",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            }
+        ],
+        "text": [
+            {
+                "id": "BB78B9A6F3CB47A396DFDBDDD4924958",
+                "tag": "text",
+                "type": "brew",
+                "name": "neovim",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            }
+        ],
+        "python": [
+            {
+                "id": "D3005578B9C34E529D2DBE5051DDD0C0",
+                "tag": "python",
+                "type": "brew",
+                "name": "pyenv",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "558F3ED5B8CA40EAB01574AC72A3B2DA",
+                "tag": "python",
+                "type": "brew",
+                "name": "pipenv",
+                "url": null,
+                "file": null,
+                "description": "No description"
+            }
+        ],
+        "java": [
+            {
+                "id": "E126BCE53E4E44AD99376432549FC25F",
+                "tag": "java",
+                "type": "sdk",
+                "name": "gradle",
+                "version": null,
+                "url": null,
+                "file": null,
+                "description": "No description"
+            },
+            {
+                "id": "6032761CDF2642158773A2139A3575E6",
+                "tag": "java",
+                "type": "sdk",
+                "name": "springboot",
+                "version": null,
+                "url": null,
+                "file": null,
+                "description": "No description"
+            }
+        ]
+    },
+    "alias": {
+        "python": [
+            {
+                "id": "6502999AAB464B909469BEAAC3468B1C",
+                "tag": "python",
+                "name": "act",
+                "command": "act",
+                "body": "source venv/bin/activate",
+                "description": "Enable Python virtual environment",
+                "type": "exec"
+            },
+            {
+                "id": "F143556337284E89B45AF4A32A519D7C",
+                "tag": "python",
+                "name": "dct",
+                "command": "dct",
+                "body": "deactivate",
+                "description": "Disable Python virtual environment",
+                "type": "exec"
+            },
+            {
+                "id": "06BA617547B94E75B0087F7C1C45AB14",
+                "tag": "python",
+                "name": "pip_install",
+                "command": "pip_install",
+                "body": "pip install -r requirements.txt --no-cache-dir",
+                "description": "No description",
+                "type": "exec"
+            },
+            {
+                "id": "B562033B83B54CE6955FD45EE3078E0F",
+                "tag": "python",
+                "name": "pip_uninstall",
+                "command": "pip_uninstall",
+                "body": "pip freeze > uninstall.txt && pip uninstall -r uninstall.txt -y && rm -r uninstall.txt",
+                "description": "No description",
+                "type": "exec"
+            }
+        ],
+        "git": [
+            {
+                "id": "39BF6E4AF7EC45EEB5E4F0C82D166672",
+                "tag": "git",
+                "name": "git_setname",
+                "command": "git_setname",
+                "body": "git config --global user.name 'REPLACE_NAME'",
+                "description": "No description",
+                "type": "exec"
+            },
+            {
+                "id": "4C28737D9FC645FA9B85D7D0BCDE2AE0",
+                "tag": "git",
+                "name": "git_setemail",
+                "command": "git_setemail",
+                "body": "git config --global user.email 'REPLACE_EMAIL'",
+                "description": "No description",
+                "type": "exec"
+            },
+            {
+                "id": "4F3B98F76B584668B10679139C9AFD60",
+                "tag": "git",
+                "name": "git_set",
+                "command": "git_set",
+                "body": "git_setname && git_setemail",
+                "description": "No description",
+                "type": "exec"
+            }
+        ],
+        "docker": [
+            {
+                "id": "FA6CED4078DA4E8499AA48CAA0262273",
+                "tag": "docker",
+                "name": "start_docker",
+                "command": "start_docker",
+                "body": "colima delete && colima start",
+                "description": "No description",
+                "type": "exec"
+            },
+            {
+                "id": "6684285F115E46D3BDEF96B45F20573B",
+                "tag": "docker",
+                "name": "start_mysql",
+                "command": "start_mysql",
+                "body": "linuxp install -m script -i start_mysql",
+                "description": "No description",
+                "type": "exec"
+            }
+        ],
+        "nodejs": [
+            {
+                "id": "F08053A2CB094684A137D6A25BAC61BC",
+                "tag": "nodejs",
+                "name": "nodejs_reset",
+                "command": "nodejs_reset",
+                "body": "linuxp install -m script -i nodejs_reset",
+                "description": "No description",
+                "type": "exec"
+            }
+        ]
+    },
+    "script": {
+        "install": [
+            {
+                "id": "E98F4B8654D94729B60F69DFE1B8627D",
+                "tag": "install",
+                "type": "shell",
+                "name": "install_docker",
+                "body": [
+                    "linuxp install -m package -t docker",
+                    "colima delete default",
+                    "colima start",
+                    "colima status",
+                    "brew link docker",
+                    "docker context use colima",
+                    "docker ps -a"
+                ],
+                "shebang": null,
+                "description": "No description"
+            },
+            {
+                "id": "AF41DACAEC9C413B86C2262D5F286F88",
+                "tag": "install",
+                "type": "shell",
+                "name": "install_brew",
+                "body": [
+                    "export HOMEBREW_NO_INSTALL_FROM_API=1",
+                    "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)\""
+                ],
+                "shebang": null,
+                "description": "No description"
+            },
+            {
+                "id": "719DC30379B84690A149D93B0574FFE9",
+                "tag": "install",
+                "type": "shell",
+                "name": "install_sdk",
+                "body": [
+                    "curl -s \"https://get.sdkman.io\" | bash"
+                ],
+                "shebang": null,
+                "description": "No description"
+            },
+            {
+                "id": "E49D1C14E8BB4C988A74147C3C8B24E3",
+                "tag": "install",
+                "type": "shell",
+                "name": "install_lunarvim",
+                "body": [
+                    "LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)"
+                ],
+                "shebang": null,
+                "description": "No description"
+            }
+        ],
+        "docker": [
+            {
+                "id": "B80AA4F26E7E40FB87502CF938E3B2D5",
+                "tag": "docker",
+                "type": "shell",
+                "name": "start_mysql",
+                "body": [
+                    "echo '=====Start MySQL====='",
+                    "read -p 'Database: ' database",
+                    "read -p 'Username: ' username",
+                    "read -s -p 'Password: ' password",
+                    "",
+                    "docker run -d -p 3306:3306 -e \"MYSQL_DATABASE=$database\" -e \"MYSQL_USER=$username\" -e \"MYSQL_PASSWORD=$password\" -e \"MYSQL_ROOT_PASSWORD=$password\" -e \"SET GLOBAL sql_mode = '';\" mysql:5.7.8 --max_allowed_packet=32505856",
+                    "docker ps"
+                ],
+                "shebang": null,
+                "description": "No description"
+            }
+        ],
+        "dev": [
+            {
+                "id": "47DC1493E8A347669F1D1D8E3BAC7865",
+                "tag": "dev",
+                "type": "shell",
+                "name": "new_ssh",
+                "body": [
+                    "read -p 'Email: ' email",
+                    "ssh-keygen -t ed25519 -C $email",
+                    "eval \"$(ssh-agent -s)\"",
+                    "",
+                    "read -p 'SSH File Name: ' configfile",
+                    "read -p 'Host Name: ' confighost",
+                    "read -p 'Host Domain: ' configdomain",
+                    "",
+                    "mv $configfile ~/.ssh/$configfile",
+                    "mv $configfile.pub ~/.ssh/$configfile.pub",
+                    "",
+                    "ssh-add --apple-use-keychain ~/.ssh/$configfile",
+                    "echo -e \"\\nHost $confighost $configdomain\\n  AddKeysToAgent yes\\n  UseKeychain yes\\n  IdentityFile ~/.ssh/$configfile\" >> ~/.ssh/config",
+                    "",
+                    "echo -e \"\\n=====PUBLIC-KEY=====\\n\"",
+                    "cat ~/.ssh/$configfile.pub",
+                    "echo -e \"\\n=====PUBLIC-KEY=====\\n\""
+                ],
+                "shebang": null,
+                "description": "No description"
+            }
+        ],
+        "nodejs": [
+            {
+                "id": "95338395C7BF4DDAAEA23064F6E9EACC",
+                "tag": "nodejs",
+                "type": "shell",
+                "name": "nodejs_reset",
+                "body": [
+                    "echo '\u25b6 Removing node_modules'",
+                    "rm -Rf node_modules/",
+                    "echo '\u25b6 Clearing cache'",
+                    "npm cache clean --force > /dev/null 2>&1",
+                    "echo '\u25b6 Installing again'",
+                    "npm install"
+                ],
+                "shebang": null,
+                "description": "No description"
+            }
+        ]
+    }
+}
