@@ -8,9 +8,9 @@
 
 ## My Profiles -> [LinuxProfile](https://github.com/linux-profile/linux-profile)
 
-- [archlinux.json](https://github.com/FernandoCelmer/dotfiles/blob/master/linux-archlinux/archlinux.json)
-- [git.json](https://github.com/FernandoCelmer/dotfiles/blob/master/linux-git/git.json)
-- [ubuntu.json](https://github.com/FernandoCelmer/dotfiles/blob/master/linux-ubuntu/ubuntu.json)
+- [profile-archlinux.json](https://github.com/FernandoCelmer/dotfiles/blob/master/profile-archlinux.json)
+- [profile-macos.json](https://github.com/FernandoCelmer/dotfiles/blob/master/profile-macos.json)
+- [profile-ubuntu.json](https://github.com/FernandoCelmer/dotfiles/blob/master/profile-ubuntu.json)
 
 
 ## Commit Style
