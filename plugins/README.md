@@ -1,55 +1,33 @@
 # Plugins
 
-Tool plugins available in this marketplace.
+Each plugin lives in its own directory and follows the Claude Code plugin format.
 
-## Categories
-
-| Category | Path | Description |
-|---|---|---|
-| vim | [vim/](vim/) | Vim editor plugins and configurations |
-| zsh | [zsh/](zsh/) | Zsh shell plugins and configurations |
-| tmux | [tmux/](tmux/) | Tmux multiplexer plugins and configurations |
-
-## How to install a plugin
-
-Ask Claude to install a plugin from this marketplace:
+## Structure
 
 ```
-Install the plugin "<name>" from https://github.com/FernandoCelmer/dotfiles
+plugins/<plugin-name>/
+├── commands/
+│   └── <command-name>.md   # Claude Code slash command
+└── README.md               # optional
 ```
 
-Or run the installer directly:
+## How to add a plugin
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/FernandoCelmer/dotfiles/master/install.sh | bash -s plugin <name>
-```
+1. Create `plugins/<name>/commands/<name>.md`
+2. Add the entry to [.claude-plugin/marketplace.json](../.claude-plugin/marketplace.json)
+3. Register it in [registry.json](../registry.json)
+4. Open a Pull Request
 
-## How to contribute
+## How to install via Claude Code
 
-1. Fork this repository
-2. Create a folder for your plugin in the appropriate category
-3. Add an `install.sh` and a `plugin.json` metadata file inside it
-4. Add the plugin entry to [registry.json](../registry.json)
-5. Open a Pull Request
-
-### Plugin structure
+Add this marketplace in Claude Code:
 
 ```
-plugins/<category>/<plugin-name>/
-├── plugin.json      # metadata
-├── install.sh       # installation script
-└── ...              # plugin files
+FernandoCelmer/dotfiles
 ```
 
-### plugin.json format
+Then install any plugin:
 
-```json
-{
-  "name": "plugin-name",
-  "description": "What this plugin does",
-  "category": "vim",
-  "version": "1.0.0",
-  "author": "your-github-username",
-  "tags": ["tag1", "tag2"]
-}
+```
+/marketplace install plugin <name>
 ```

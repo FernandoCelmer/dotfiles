@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "fernandocelmer-dotfiles",
+  "description": "Skills and plugins for daily development workflows by FernandoCelmer",
+  "owner": {
+    "name": "Fernando Celmer",
+    "email": "fernandocelmer@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "marketplace",
+      "description": "Install, list or search skills and plugins from this marketplace",
+      "version": "1.0.0",
+      "author": {
+        "name": "Fernando Celmer"
+      },
+      "source": "./plugins/marketplace",
+      "category": "productivity",
+      "strict": false
+    }
+  ]
+}
