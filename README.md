@@ -15,26 +15,22 @@
 
 ## Marketplace
 
-A public marketplace for Claude Code skills and tool plugins.
+A public marketplace for Claude Code skills and plugins.
 
 Browse skills in [`skills/`](skills/) and plugins in [`plugins/`](plugins/).
 
-All items are indexed in [`registry.json`](registry.json).
+### Install
 
-### Install via Claude Code
-
-First install the `marketplace` skill:
+Add this marketplace to Claude Code:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/FernandoCelmer/dotfiles/master/skills/marketplace.md -o ~/.claude/commands/marketplace.md
+claude plugin marketplace add FernandoCelmer/dotfiles
 ```
 
-Then in any Claude Code session:
+Install a skill:
 
-```
-/marketplace list
-/marketplace install skill <name>
-/marketplace install plugin <name>
+```bash
+claude plugin install smart-review-pr
 ```
 
 > Contributions via Pull Request are welcome.
