@@ -8,13 +8,13 @@
   },
   "plugins": [
     {
-      "name": "review-pr",
+      "name": "smart-review-pr",
       "description": "Review a pull request with detailed feedback on code quality, bugs, security and best practices",
       "version": "1.0.0",
       "author": {
         "name": "Fernando Celmer"
       },
-      "source": "./plugins/review-pr",
+      "source": "./plugins/smart-review-pr",
       "category": "development",
       "strict": false
     },

@@ -4,12 +4,12 @@
   "author": "FernandoCelmer",
   "skills": [
     {
-      "name": "review-pr",
+      "name": "smart-review-pr",
       "description": "Review a pull request with detailed feedback on code quality, bugs, security and best practices",
       "category": "development",
       "version": "1.0.0",
       "author": "FernandoCelmer",
-      "path": "plugins/review-pr/commands/review-pr.md",
+      "path": "plugins/smart-review-pr/commands/smart-review-pr.md",
       "tags": ["git", "pr", "review", "code-quality"]
     },
     {
