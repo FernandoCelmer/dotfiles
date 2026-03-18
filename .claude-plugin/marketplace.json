@@ -14,7 +14,7 @@
       "author": {
         "name": "Fernando Celmer"
       },
-      "source": "./plugins/smart-review-pr",
+      "source": "./skills/smart-review-pr",
       "category": "development",
       "strict": false
     },

@@ -9,7 +9,7 @@
       "category": "development",
       "version": "1.0.0",
       "author": "FernandoCelmer",
-      "path": "plugins/smart-review-pr/commands/smart-review-pr.md",
+      "path": "skills/smart-review-pr/commands/smart-review-pr.md",
       "tags": ["git", "pr", "review", "code-quality"]
     },
     {
