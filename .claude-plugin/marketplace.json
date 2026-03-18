@@ -1,6 +1,6 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "fernandocelmer-dotfiles",
+  "name": "FernandoCelmer-dotfiles",
   "description": "Skills and plugins for daily development workflows by FernandoCelmer",
   "owner": {
     "name": "Fernando Celmer",
