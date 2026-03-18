@@ -5,39 +5,38 @@ description: Install, list or search skills and plugins from FernandoCelmer's do
 
 You are helping the user interact with the dotfiles marketplace at https://github.com/FernandoCelmer/dotfiles.
 
-The installer script is available at:
-https://raw.githubusercontent.com/FernandoCelmer/dotfiles/master/install.sh
-
-The registry is available at:
+The registry is at:
 https://raw.githubusercontent.com/FernandoCelmer/dotfiles/master/registry.json
 
-## Commands
-
-### List everything available
-Run:
-```bash
-curl -fsSL https://raw.githubusercontent.com/FernandoCelmer/dotfiles/master/install.sh | bash -s list
-```
-
-### Install a skill
-Skills are installed to ~/.claude/commands/<name>.md and become available as /<name> in Claude Code.
-```bash
-curl -fsSL https://raw.githubusercontent.com/FernandoCelmer/dotfiles/master/install.sh | bash -s skill <name>
-```
-
-### Install a plugin
-```bash
-curl -fsSL https://raw.githubusercontent.com/FernandoCelmer/dotfiles/master/install.sh | bash -s plugin <name>
-```
+The raw base URL for files is:
+https://raw.githubusercontent.com/FernandoCelmer/dotfiles/master
 
 ## Instructions
 
-1. If the user asks to **list** or **search**: fetch the registry.json, parse the skills and plugins arrays, and display them in a readable table showing name, version, description and category.
+### List or search
+Fetch registry.json and display skills and plugins in a readable table with name, version, description and category.
 
-2. If the user asks to **install a skill**: run the install command above with the skill name. Confirm when done and tell the user to start a new Claude Code session to use the new skill.
+### Install a skill
+1. Fetch registry.json
+2. Find the entry where `name` matches
+3. Download the file at `<base_url>/<entry.path>`
+4. Save it to `~/.claude/commands/<name>.md`
+5. Confirm to the user and tell them to start a new Claude Code session to use `/<name>`
 
-3. If the user asks to **install a plugin**: run the install command above with the plugin name. Confirm when done.
+Use this bash pattern:
+```bash
+curl -fsSL https://raw.githubusercontent.com/FernandoCelmer/dotfiles/master/<path> -o ~/.claude/commands/<name>.md
+```
 
-4. If the user provides no specific action, show the list of available items and ask what they want to install.
+### Install a plugin
+1. Fetch registry.json
+2. Find the entry where `name` matches
+3. Download the file at `<base_url>/<entry.install>`
+4. Run it with bash
 
-Always prefer running the install.sh from the repo if it is locally available at ~/Lab/FernandoCelmer/dotfiles/install.sh.
+Use this bash pattern:
+```bash
+curl -fsSL https://raw.githubusercontent.com/FernandoCelmer/dotfiles/master/<install_path> | bash
+```
+
+If the user provides no specific action, list available items and ask what they want to install.

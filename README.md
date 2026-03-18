@@ -17,29 +17,27 @@
 
 A public marketplace for Claude Code skills and tool plugins.
 
-### Skills — Claude Code slash commands
+Browse skills in [`skills/`](skills/) and plugins in [`plugins/`](plugins/).
 
-Browse and install skills from [`skills/`](skills/):
+All items are indexed in [`registry.json`](registry.json).
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/FernandoCelmer/dotfiles/master/install.sh | bash -s skill <name>
-```
+### Install via Claude Code
 
-### Plugins — shell, vim, tmux and more
-
-Browse and install plugins from [`plugins/`](plugins/):
+First install the `marketplace` skill:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/FernandoCelmer/dotfiles/master/install.sh | bash -s plugin <name>
+curl -fsSL https://raw.githubusercontent.com/FernandoCelmer/dotfiles/master/skills/marketplace.md -o ~/.claude/commands/marketplace.md
 ```
 
-### List everything available
+Then in any Claude Code session:
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/FernandoCelmer/dotfiles/master/install.sh | bash -s list
+```
+/marketplace list
+/marketplace install skill <name>
+/marketplace install plugin <name>
 ```
 
-> All items are indexed in [`registry.json`](registry.json). Contributions via Pull Request are welcome.
+> Contributions via Pull Request are welcome.
 
 ---
 
