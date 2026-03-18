@@ -1,124 +1,308 @@
 ---
-allowed-tools: Bash(gh pr view:*), Bash(gh pr diff:*), Bash(gh pr list:*), Bash(git log:*), Bash(git diff:*), Bash(git ls-files:*)
-description: Review a pull request with detailed feedback on code quality, security, project structure, design patterns and best practices.
+allowed-tools: Bash(gh pr view:*), Bash(gh pr diff:*), Bash(gh pr list:*), Bash(gh pr edit:*), Bash(gh api:*), Bash(gh repo view:*), Bash(git log:*), Bash(git diff:*), Bash(git blame:*), Bash(git ls-files:*), Bash(jq:*), Bash(python3:*)
+description: Use this skill when the user asks to "validar PR", "validate PR", "review PR", "revisar PR", "checar PR", "check PR", mentions a PR number to review/validate, or asks to review a pull request before merging. Performs a comprehensive PR review covering code quality, security, architecture, design patterns, CLAUDE.md compliance and historical context — posts inline comments directly on the PR.
+version: 2.0.0
 ---
 
-## Task
+# Review PR
 
-Review the pull request provided by the user. If no PR number or URL is given, list open PRs and ask which one to review.
+Perform a comprehensive, high-signal review of a pull request. Catch real bugs and non-compliance issues. Avoid false positives and nitpicks.
 
-## Steps
-
-1. Fetch PR metadata:
-```bash
-gh pr view <number> --json title,body,author,baseRefName,headRefName,additions,deletions,changedFiles,commits
-```
-
-2. Fetch the full diff:
-```bash
-gh pr diff <number>
-```
-
-3. Analyze and provide a structured review covering all dimensions below.
+Make a todo list and track progress through all steps.
 
 ---
 
-## Review dimensions
+## Step 1 — Check eligibility
 
-### 1. Correctness & Logic
-- Logic errors, wrong conditions, inverted boolean checks
-- Off-by-one errors, boundary conditions
+Use a Haiku agent to verify:
+- PR is open and not a draft
+- Has actual code changes worth reviewing
+- Has not already been reviewed in this session
+
+If any condition fails, stop and inform the user.
+
+---
+
+## Step 2 — Collect context
+
+Run in parallel:
+
+**2a. Collect CLAUDE.md files** (Haiku agent)
+List paths (not contents) of:
+- Root `CLAUDE.md` if it exists
+- Any `CLAUDE.md` inside directories modified by the PR
+
+**2b. Summarize the PR** (Haiku agent)
+Read title, description and diff. Return a concise summary of what changed and why.
+
+**2c. Validate PR structure** (Haiku agent)
+Evaluate:
+- **Title**: clear, concise, follows conventional commit format if the project uses it
+- **Description**: explains *what* changed and *why*, links to issue/ticket if applicable
+- **Size**: flag if changes more than ~500 lines across unrelated concerns
+- **Tests**: are there tests for new/changed behavior?
+- **Labels/assignees**: set appropriately?
+
+---
+
+## Step 3 — Run 5 parallel analysis agents (Sonnet)
+
+**Agent 1 – CLAUDE.md compliance**
+Read CLAUDE.md files from step 2a. Check changes comply with all rules. Only flag explicit violations.
+
+**Agent 2 – Bug hunting, code quality & security**
+Scan the diff for:
+
+*Correctness & Logic*
+- Logic errors, wrong conditions, inverted booleans
+- Off-by-one, boundary conditions
 - Null/undefined/empty handling
-- Async/concurrency issues (race conditions, missing awaits, deadlocks)
+- Async issues: race conditions, missing awaits, deadlocks
 - Error handling: silent catches, swallowed exceptions, missing rollbacks
 
-### 2. Security (OWASP Top 10 + extras)
+*Security (OWASP Top 10 + extras)*
 - Injection: SQL, command, LDAP, XPath, template injection
-- Broken authentication: weak tokens, missing expiration, insecure session handling
-- Sensitive data exposure: secrets in code, logs, responses or error messages
-- Broken access control: missing authorization checks, IDOR, privilege escalation
+- Broken authentication: weak tokens, missing expiration, insecure sessions
+- Sensitive data exposure: secrets in code, logs, responses or errors
+- Broken access control: missing auth checks, IDOR, privilege escalation
 - Security misconfiguration: permissive CORS, debug mode on, default credentials
 - XSS: unescaped output, unsafe innerHTML, missing CSP
 - Insecure deserialization
-- Using components with known vulnerabilities (outdated deps)
-- Insufficient logging of security events
 - SSRF, path traversal, open redirects
 
-### 3. Project Structure & Architecture
-- Files placed in wrong layers (e.g. business logic in controllers, DB queries in views)
+*Project Structure & Architecture*
+- Business logic in wrong layer (controllers, views)
 - Violated separation of concerns
 - Circular dependencies
-- Hardcoded configuration that should be in env vars or config files
-- Missing or broken dependency injection
-- Inconsistency with existing project conventions (naming, folder structure, module organization)
-- Dead code, commented-out blocks left in
+- Hardcoded config that should be in env vars
+- Dead code or commented-out blocks
 
-### 4. Design Patterns & Best Practices
-- God classes or functions doing too much (violates SRP)
-- Missing abstraction where duplication exists (violates DRY)
-- Premature optimization or over-engineering
-- Inappropriate use of patterns (e.g. Singleton hiding global state)
-- Missing patterns where they would help (Strategy, Factory, Repository, etc.)
-- Law of Demeter violations (excessive chaining)
-- Feature envy (method using another class's data more than its own)
-- Magic numbers and strings without named constants
+*Design Patterns & Best Practices*
+- SOLID violations: SRP, OCP, LSP, ISP, DIP
+- God classes, shotgun surgery, feature envy, premature optimization
+- DRY / KISS violations
+- Missing or misused design patterns (Strategy, Factory, Repository, etc.)
+- Law of Demeter violations, magic numbers
 
-### 5. Code Quality
-- Function/variable naming: unclear, misleading, inconsistent
+*Code Quality*
+- Unclear or misleading naming
 - Functions too long or with too many parameters
-- Deeply nested code (arrow anti-pattern)
-- Missing or inadequate comments on non-obvious logic
-- Inconsistent formatting or style vs the rest of the codebase
-- Return types and error contracts unclear or undocumented
+- Deeply nested code
+- Missing comments on non-obvious logic
+- Algorithmic complexity issues (e.g. O(n²) where O(n) is straightforward)
 
-### 6. Tests
-- Missing tests for new behavior
-- Missing edge case coverage (empty input, max values, error paths)
-- Tests testing implementation instead of behavior
-- Mocking too much (fragile tests, false confidence)
-- Flaky tests (time-dependent, order-dependent, network-dependent)
-- No integration or contract test where needed
-
-### 7. Performance
-- N+1 queries
-- Missing pagination on unbounded queries
-- Unnecessary re-renders or recomputations
-- Large memory allocations in hot paths
-- Missing caching where appropriate
+*Performance*
+- N+1 queries, missing pagination
+- Unnecessary recomputation in hot paths
 - Blocking I/O in async contexts
+- Missing caching where appropriate
+
+Ignore pre-existing issues. Focus only on changes introduced by this PR.
+
+**Agent 3 – Git history context**
+Read `git blame` and recent commit history of modified files. Identify bugs or regressions that only make sense with this historical context.
+
+**Agent 4 – PR history**
+Read previous PRs that touched the same files. Check if comments or issues raised in those PRs also apply here.
+
+**Agent 5 – Code comment compliance**
+Read code comments in modified files. Ensure the changes respect any guidance or invariants expressed in comments.
 
 ---
 
-## Review format
+## Step 4 — Score each issue
 
-### Overview
-- **Title**: PR title
-- **Author**: who opened it
-- **Base → Head**: branch names
-- **Changes**: +additions / -deletions across N files
+For every issue found in step 3, launch a parallel Haiku agent that scores it 0–100:
 
-### Summary
-What the PR does, in 2-3 sentences based on the description and diff.
+| Score | Meaning |
+|---|---|
+| 0 | False positive, pre-existing, or doesn't hold up to scrutiny |
+| 25 | Possible issue but uncertain; stylistic issue not in CLAUDE.md |
+| 50 | Real but minor or infrequent |
+| 75 | Highly likely real, important, or explicitly in CLAUDE.md |
+| 100 | Confirmed issue that will occur frequently |
 
-### Issues found
+**Discard any issue scored below 75.** If none remain, skip to step 7 with "no issues found".
 
-Group findings by file or feature area. For each issue use:
+---
+
+## Step 5 — Show report and ask for confirmation
+
+Before posting anything to GitHub, output the final report (same format as step 7) and ask:
+
+> "Would you like me to post these comments to the PR?"
+
+Wait for explicit confirmation. If the user asks to remove or adjust specific issues, update accordingly and ask again. Only proceed after confirmation.
+
+---
+
+## Step 6 — Post inline review comments
+
+Build a JSON payload and post all comments in a single review:
+
+```bash
+gh api repos/<owner>/<repo>/pulls/<number>/reviews --method POST --input /tmp/review_<number>.json
+```
+
+Build the JSON in Python to avoid shell escaping issues:
+
+```python
+import json, subprocess
+
+comments = [
+  {
+    "path": "src/file.py",
+    "position": 12,  # position within the diff hunk, NOT the file line number
+    "body": "..."
+  },
+  # ...
+]
+
+review = {
+  "body": "🔍 Code Review\n\n**Code issues found: N**\n\n| # | Severity | Comment |\n|---|----------|---------|\n| 1 | [Blocking] | [Short title](url) |",
+  "event": "COMMENT",
+  "comments": comments
+}
+
+with open("/tmp/review_<number>.json", "w") as f:
+    json.dump(review, f)
+```
+
+### Comment body format
+
+Each comment body must be **didactic and educational**, structured as:
 
 ```
-[SEVERITY] Category — short title
-File: path/to/file.ext (line N)
-Problem: what is wrong and why it matters
-Suggestion: what to do instead (with code example if helpful)
+[Blocking]
+
+**Problem** — clear description of what is wrong and *why* it matters.
+
+**Failure scenario** — concrete example showing when/how it breaks in production.
+
+**Fix** — code suggestion with explanation of why the fix works.
+
+**References** — (if applicable) link to relevant docs, RFC, or well-known article.
 ```
 
-Severity scale:
-- 🔴 **Blocker** — must fix before merge (bugs, security vulnerabilities, broken contracts)
-- 🟡 **Warning** — should fix (bad patterns, missing tests, structural issues)
-- 🔵 **Suggestion** — optional improvement (readability, minor refactors)
-- ✅ **Good** — highlight positive patterns worth keeping
+Severity to indicator mapping:
+- 🔴 Blocker → `[Blocking]`
+- 🟡 Warning → `[Suggestion]` or `[Blocking]` depending on impact
+- 🔵 Suggestion → `[Suggestion]`
+- Unclear intent → `[Question]`
+- Positive highlight → `[Comment]`
 
-### Verdict
+NVC examples:
+- `[Question]\n\nCould you clarify the purpose of this variable? I couldn't quite understand why it's needed here.`
+- `[Suggestion]\n\nConsidering readability and maintainability, it might be worth extracting this block into a separate function.`
+- `[Blocking]\n\nI found a bug on this line that could cause a system failure. We need to fix it before merging.`
+- `[Comment]\n\nThe documentation is well written and helps understand the code logic. Great work!`
 
-- ✅ **Approve** — ready to merge
-- 🟡 **Approve with suggestions** — minor issues, author decides
-- 🔴 **Request changes** — blockers or security issues must be addressed first
+### Review body format
+
+After posting, fetch comment IDs from the API response and build the review `body`:
+
+```
+🔍 Code Review
+
+**Code issues found: N**
+
+| # | Severity | Comment |
+|---|----------|---------|
+| 1 | [Blocking] | [Short title](https://github.com/owner/repo/pull/N#discussion_r<id>) |
+| 2 | [Suggestion] | [Short title](url) |
+```
+
+Each row links directly to its inline comment using `html_url` from the API response, with a 3–5 word title summarizing the issue.
+
+**Never include**: "🤖 Generated with Claude Code", "automated review", "generated by AI", or any attribution. Comments must read as written by a human engineer.
+
+---
+
+## Step 7 — Update PR description
+
+Use a Haiku agent to:
+1. Fetch the repo's PR template from `.github/PULL_REQUEST_TEMPLATE.md` via `gh api`
+2. If no template exists, use the **Default PR Template** at the end of this skill
+3. Compare the template with the current PR description and rebuild it section by section:
+   - **Description**: list modified files/modules with a brief explanation of each change
+   - **Motivation**: why the change was made, what problem it solves, ticket reference (pattern `[A-Z]+-[0-9]+`)
+   - **Types of changes**: check applicable boxes based on actual diff
+   - **Checklist**: check only items with evidence in the diff
+   - Remove broken `diffhunk://` links, rewriting affected bullets in plain text
+4. Update via `gh pr edit --body` only if changes are needed
+5. Report what was changed (or "description already complete")
+
+---
+
+## Step 8 — Final report
+
+```
+### PR Review Report
+
+**PR**: #[number] — [title]
+
+**Summary**: [1-2 sentences]
+
+**Structure**: [PASS / WARNING — brief note]
+
+**Code issues found**: [N]
+
+1. [Brief description] ([source: CLAUDE.md / bug / history / comment])
+   [https://github.com/owner/repo/blob/<full-sha>/path/to/file.ext#L10-L15]
+
+2. ...
+
+*(or "No issues found")*
+```
+
+---
+
+## Guidelines
+
+- Use `gh` CLI for all GitHub interactions. Do not use WebFetch for GitHub URLs.
+- Link to code using the **full commit SHA** (not `HEAD`): `https://github.com/owner/repo/blob/<sha>/file.ext#L10-L15`
+- `position` in diff comments = line count from the start of the `@@` hunk (including the `@@` line as position 1), not the file line number
+- Do not run builds or tests — assume CI handles that
+- **Didactic tone**: explain *why* something is wrong at a conceptual level. A developer reading the comment should understand the underlying principle and apply it elsewhere
+- **Nonviolent Communication**: prefix every comment with `[Blocking]`, `[Suggestion]`, `[Question]`, or `[Comment]`. Write with empathy — goal is growth, not criticism
+- **Technical references**: when an issue relates to a known standard or documented behavior, add a `**References:**` section with real links only — never fabricate URLs
+- **No AI attribution** anywhere in the payload
+
+## False positives to avoid
+
+- Pre-existing issues not introduced by this PR
+- Issues a linter/compiler/typechecker would catch (assume CI runs those)
+- Nitpicks a senior engineer would not raise in a real code review
+- General concerns unless explicitly required by CLAUDE.md
+- Issues silenced with lint-ignore comments
+- Intentional changes clearly part of the PR's goal
+
+---
+
+## Default PR Template
+
+Use when the repo has no `.github/PULL_REQUEST_TEMPLATE.md`:
+
+```markdown
+## Description
+
+<!-- Describe your changes in detail. List modified files/modules with a brief explanation of each change. -->
+
+## Motivation and Context
+
+<!-- Why is this change required? What problem does it solve? -->
+<!-- If it fixes an open issue or ticket, please reference it here (e.g. Closes PROJ-123) -->
+
+## Types of changes
+
+- [ ] Bug fix (change that fixes an issue)
+- [ ] New feature (change which adds functionality)
+- [ ] Documentation
+
+## Checklist
+
+- [ ] I have performed a self-review of my own code
+- [ ] I have added tests that prove my fix is effective or that my feature works
+- [ ] I have updated the CHANGELOG
+- [ ] I have updated the documentation accordingly
+```
