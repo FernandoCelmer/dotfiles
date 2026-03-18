@@ -8,6 +8,17 @@
   },
   "plugins": [
     {
+      "name": "review-issues",
+      "description": "Review and analyze open issues across repositories — prioritizes, detects duplicates, flags stale issues and identifies quick wins",
+      "version": "1.0.0",
+      "author": {
+        "name": "Fernando Celmer"
+      },
+      "source": "./skills/review-issues",
+      "category": "productivity",
+      "strict": false
+    },
+    {
       "name": "smart-review-pr",
       "description": "Review a pull request with detailed feedback on code quality, bugs, security and best practices",
       "version": "1.0.0",
