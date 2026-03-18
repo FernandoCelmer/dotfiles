@@ -4,6 +4,15 @@
   "author": "FernandoCelmer",
   "skills": [
     {
+      "name": "review-pr",
+      "description": "Review a pull request with detailed feedback on code quality, bugs, security and best practices",
+      "category": "development",
+      "version": "1.0.0",
+      "author": "FernandoCelmer",
+      "path": "plugins/review-pr/commands/review-pr.md",
+      "tags": ["git", "pr", "review", "code-quality"]
+    },
+    {
       "name": "marketplace",
       "description": "Install, list or search skills and plugins from this marketplace",
       "category": "meta",
