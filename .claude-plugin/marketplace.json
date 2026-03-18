@@ -17,17 +17,6 @@
       "source": "./skills/smart-review-pr",
       "category": "development",
       "strict": false
-    },
-    {
-      "name": "marketplace",
-      "description": "Install, list or search skills and plugins from this marketplace",
-      "version": "1.0.0",
-      "author": {
-        "name": "Fernando Celmer"
-      },
-      "source": "./plugins/marketplace",
-      "category": "productivity",
-      "strict": false
     }
   ]
 }
