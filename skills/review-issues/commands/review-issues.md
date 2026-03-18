@@ -1,5 +1,5 @@
 ---
-allowed-tools: Bash(gh issue list:*), Bash(gh issue view:*), Bash(gh repo list:*), Bash(gh repo view:*), Bash(gh api:*), Bash(jq:*), Bash(python3:*)
+allowed-tools: Bash(gh issue list:*), Bash(gh issue view:*), Bash(gh repo list:*), Bash(gh repo view:*), Bash(gh api:*), Bash(gh issue comment:*), Bash(jq:*), Bash(python3:*)
 description: Use this skill when the user asks to "review issues", "revisar issues", "ver issues abertas", "listar issues", "analisar issues", "checar issues" or wants to review open issues across their repositories.
 version: 1.0.0
 ---
@@ -9,6 +9,31 @@ version: 1.0.0
 Analyze open issues across one or more repositories. Identify priorities, patterns, duplicates and gaps.
 
 Make a todo list and track progress through all steps.
+
+---
+
+## Step 0 — Check for single issue
+
+If the user provided a specific issue URL (e.g. `https://github.com/owner/repo/issues/42`) or a repo + issue number, treat this as **single-issue mode**:
+
+1. Extract owner, repo, and issue number from the URL or arguments.
+2. Fetch the issue:
+```bash
+gh issue view <number> --repo <owner/repo> --comments
+```
+3. Analyze the issue and produce a structured review **in English** covering:
+   - **Summary**: one-paragraph description of what is being requested or reported.
+   - **Analysis**: relevance, complexity, and current status.
+   - **Implementation Options**: list 2–4 concrete options with trade-offs.
+   - **Recommendation**: the preferred approach and why.
+4. Post the review as a comment on the issue:
+```bash
+gh issue comment <number> --repo <owner/repo> --body "<review>"
+```
+
+Format the comment in Markdown. Do not mention AI or automated tools in the comment.
+
+After posting, show the user the comment that was posted and stop — do not continue to Step 1.
 
 ---
 
