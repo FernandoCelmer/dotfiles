@@ -234,7 +234,22 @@ Use a Haiku agent to:
 
 ---
 
-## Step 8 — Final report
+## Step 8 — Apply labels
+
+1. Fetch available labels: `gh label list --repo <owner>/<repo> --json name --jq '.[].name'`
+2. Based on the diff and issues found in step 3, select labels from the available list using this mapping:
+   - Changes to docs/README/comments → `documentation` (if available)
+   - New functionality added → `enhancement` or `feature` (if available)
+   - Bug introduced or fixed → `bug` (if available)
+   - Security issue found (score ≥ 75) → `security` (if available)
+   - Breaking change → `breaking change` (if available)
+   - Only select labels that **exist** in the repo — never invent labels
+3. Apply selected labels: `gh pr edit <number> --repo <owner>/<repo> --add-label "<label1>,<label2>"`
+4. Report which labels were applied (or "no matching labels found")
+
+---
+
+## Step 9 — Final report
 
 ```
 ### PR Review Report
