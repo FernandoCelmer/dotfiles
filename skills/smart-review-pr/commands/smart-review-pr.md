@@ -218,9 +218,11 @@ Each row links directly to its inline comment using `html_url` from the API resp
 
 ---
 
-## Step 7 — Update PR description
+## Step 7 — Update PR description and labels
 
-Use a Haiku agent to:
+Run in parallel:
+
+**7a. Update PR description** (Haiku agent)
 1. Fetch the repo's PR template from `.github/PULL_REQUEST_TEMPLATE.md` via `gh api`
 2. If no template exists, use the **Default PR Template** at the end of this skill
 3. Compare the template with the current PR description and rebuild it section by section:
@@ -231,6 +233,18 @@ Use a Haiku agent to:
    - Remove broken `diffhunk://` links, rewriting affected bullets in plain text
 4. Update via `gh pr edit --body` only if changes are needed
 5. Report what was changed (or "description already complete")
+
+**7b. Apply labels**
+1. Fetch available labels: `gh label list --repo <owner>/<repo> --json name --jq '.[].name'`
+2. Based on the diff and issues found in step 3, select labels from the available list using this mapping:
+   - Changes to docs/README/comments → `documentation` (if available)
+   - New functionality added → `enhancement` or `feature` (if available)
+   - Bug introduced or fixed → `bug` (if available)
+   - Security issue found (score ≥ 75) → `security` (if available)
+   - Breaking change → `breaking change` (if available)
+   - Only select labels that **exist** in the repo — never invent labels
+3. Apply selected labels: `gh pr edit <number> --repo <owner>/<repo> --add-label "<label1>,<label2>"`
+4. Report which labels were applied (or "no matching labels found")
 
 ---
 
