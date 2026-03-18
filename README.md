@@ -13,6 +13,36 @@
 - [profile-ubuntu.json](https://github.com/FernandoCelmer/dotfiles/blob/master/profile-ubuntu.json)
 
 
+## Marketplace
+
+A public marketplace for Claude Code skills and tool plugins.
+
+### Skills — Claude Code slash commands
+
+Browse and install skills from [`skills/`](skills/):
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/FernandoCelmer/dotfiles/master/install.sh | bash -s skill <name>
+```
+
+### Plugins — shell, vim, tmux and more
+
+Browse and install plugins from [`plugins/`](plugins/):
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/FernandoCelmer/dotfiles/master/install.sh | bash -s plugin <name>
+```
+
+### List everything available
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/FernandoCelmer/dotfiles/master/install.sh | bash -s list
+```
+
+> All items are indexed in [`registry.json`](registry.json). Contributions via Pull Request are welcome.
+
+---
+
 ## Commit Style
 
 - ⚙️ FEATURE
