@@ -10,7 +10,7 @@ set -euo pipefail
 
 REPO_RAW="https://raw.githubusercontent.com/FernandoCelmer/dotfiles/master"
 REGISTRY_URL="${REPO_RAW}/registry.json"
-SKILLS_DIR="${HOME}/.claude/skills"
+SKILLS_DIR="${HOME}/.claude/commands"
 PLUGINS_DIR="${HOME}/.local/share/dotfiles-plugins"
 
 RED='\033[0;31m'
@@ -63,7 +63,7 @@ install_skill() {
   curl -fsSL "${REPO_RAW}/${path}" -o "$dest" || error "Failed to download skill file."
 
   log "Skill installed at ${dest}"
-  log "Reload Claude Code to use: /${name}"
+  log "Use it in Claude terminal: /${name}"
 }
 
 # ─────────────────────────────────────────────
