@@ -1,0 +1,33 @@
+{
+  "skills": [
+    {
+      "name": "marketplace",
+      "version": "1.0.0",
+      "description": "Install, list or search skills and plugins from the dotfiles marketplace",
+      "category": "productivity",
+      "path": "skills/marketplace.md"
+    },
+    {
+      "name": "review-issues",
+      "version": "1.0.0",
+      "description": "Analyze open issues across one or more repositories",
+      "category": "development",
+      "path": "skills/review-issues/commands/review-issues.md"
+    },
+    {
+      "name": "smart-review-pr",
+      "version": "2.0.0",
+      "description": "Comprehensive PR review covering code quality, security, architecture and design patterns",
+      "category": "development",
+      "path": "skills/smart-review-pr/commands/smart-review-pr.md"
+    },
+    {
+      "name": "repo-audit",
+      "version": "1.0.0",
+      "description": "Deep technical audit of a repository: find bugs, gaps, missing tests and security issues, then create GitHub issues for findings",
+      "category": "development",
+      "path": "skills/repo-audit/commands/repo-audit.md"
+    }
+  ],
+  "plugins": []
+}
