@@ -19,13 +19,13 @@ Fetch registry.json and display skills and plugins in a readable table with name
 ### Install a skill
 1. Fetch registry.json
 2. Find the entry where `name` matches
-3. Download the file at `<base_url>/<entry.path>`
+3. Download the file at `entry.url`
 4. Save it to `~/.claude/commands/<name>.md`
 5. Confirm to the user and tell them to start a new Claude Code session to use `/<name>`
 
 Use this bash pattern:
 ```bash
-curl -fsSL https://raw.githubusercontent.com/FernandoCelmer/dotfiles/master/<path> -o ~/.claude/commands/<name>.md
+curl -fsSL <entry.url> -o ~/.claude/commands/<name>.md
 ```
 
 ### Install a plugin
