@@ -1,0 +1,13 @@
+[project]
+name = "01m2chpn52x2m56hf3hhm79n5e"
+type = "empty"
+ci = "github"
+language = ""
+
+[source_host]
+kind = "github"
+repo = "FernandoCelmer/dotfiles"
+
+[release]
+strategy = "semver"
+changelog = "conventional"
